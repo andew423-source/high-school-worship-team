@@ -1,0 +1,1512 @@
+{"kind":"deck","id":"pr/5mdb6a","name":"Deck"}
+{"kind":"layout","layoutId":"b8dd88ab-edb7-4cdb-b118-3f912247e916","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"3cbd7d8e-5bdf-4f17-b511-448bb766cc6e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/1xid7r","slide":1,"title":"🎲","textShapes":12}
+{"kind":"shape","id":"sh/x8zipcb2","slide":1,"bbox":[0,0,1680,28]}
+{"kind":"textbox","id":"sh/al8zuxsb","slide":1,"text":"🎲","textPreview":"🎲","textChars":2,"textLines":1,"bbox":[108,154,240,240]}
+{"kind":"textbox","id":"sh/b6h0n2tw","slide":1,"text":"고등부 찬양팀","textPreview":"고등부 찬양팀","textChars":7,"textLines":1,"bbox":[378,190,1080,74]}
+{"kind":"textbox","id":"sh/ojqhsna5","slide":1,"text":"나눔마블","textPreview":"나눔마블","textChars":4,"textLines":1,"bbox":[370,265,1140,165]}
+{"kind":"textbox","id":"sh/9kzilsbq","slide":1,"text":"3번의 새로운 그룹 · 3개의 질문판 · 최대한 다양한 만남","textPreview":"3번의 새로운 그룹 · 3개의 질문판 · 최대한 다양한 만남","textChars":33,"textLines":1,"bbox":[378,438,1100,60]}
+{"kind":"shape","id":"sh/mh8zqdsf","slide":1,"bbox":[210,650,380,198]}
+{"kind":"textbox","id":"sh/nih0jitk","slide":1,"text":"ROUND 1","textPreview":"ROUND 1","textChars":7,"textLines":1,"bbox":[240,684,320,42]}
+{"kind":"textbox","id":"sh/8fa14rap","slide":1,"text":"취향으로 가볍게","textPreview":"취향으로 가볍게","textChars":8,"textLines":1,"bbox":[240,732,320,70]}
+{"kind":"shape","id":"sh/tg3ixwba","slide":1,"bbox":[640,650,380,198]}
+{"kind":"textbox","id":"sh/xofm18fu","slide":1,"text":"ROUND 2","textPreview":"ROUND 2","textChars":7,"textLines":1,"bbox":[670,684,320,42]}
+{"kind":"textbox","id":"sh/wn6ls3y9","slide":1,"text":"음악으로 함께","textPreview":"음악으로 함께","textChars":7,"textLines":1,"bbox":[670,732,320,70]}
+{"kind":"shape","id":"sh/b2x4zixo","slide":1,"bbox":[1070,650,380,198]}
+{"kind":"textbox","id":"sh/a143qdg3","slide":1,"text":"ROUND 3","textPreview":"ROUND 3","textChars":7,"textLines":1,"bbox":[1100,684,320,42]}
+{"kind":"textbox","id":"sh/90vmx8fi","slide":1,"text":"응원으로 깊게","textPreview":"응원으로 깊게","textChars":7,"textLines":1,"bbox":[1100,732,320,70]}
+{"kind":"textbox","id":"sh/ozmlo3yx","slide":1,"text":"11:30–12:30  |  27–31명  |  4그룹","textPreview":"11:30–12:30  |  27–31명  |  4그룹","textChars":30,"textLines":1,"bbox":[490,958,700,52]}
+{"kind":"textbox","id":"sh/nyd4vyhc","slide":1,"text":"편집·인쇄 가능한 운영안 및 게임판","textPreview":"편집·인쇄 가능한 운영안 및 게임판","textChars":19,"textLines":1,"bbox":[490,1016,700,36]}
+{"kind":"notes","id":"nt/1xid7r","slide":1,"text":""}
+{"kind":"slide","id":"sl/m0nyra","slide":2,"title":"1 · 프로그램 운영안","textShapes":16}
+{"kind":"textbox","id":"sh/5gn6xcvi","slide":2,"text":"1 · 프로그램 운영안","textPreview":"1 · 프로그램 운영안","textChars":12,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/idcnmhc7","slide":2,"text":"20분마다 새롭게 만나고, 12–14분은 온전히 이야기합니다","textPreview":"20분마다 새롭게 만나고, 12–14분은 온전히 이야기합니다","textChars":33,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/jelovmds","slide":2,"text":"첫 라운드만 설명에 2분 더 쓰고 이후에는 이동 시간을 줄입니다.","textPreview":"첫 라운드만 설명에 2분 더 쓰고 이후에는 이동 시간을 줄입니다.","textChars":36,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/sjepsru9","slide":2,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/tkn61wvu","slide":2,"bbox":[90,278,1500,168]}
+{"kind":"shape","id":"sh/6hw7qhc3","slide":2,"bbox":[90,278,270,168]}
+{"kind":"textbox","id":"sh/ri5ozmdo","slide":2,"text":"11:30–11:50","textPreview":"11:30–11:50","textChars":11,"textLines":1,"bbox":[115,302,220,44]}
+{"kind":"textbox","id":"sh/8nu5gne5","slide":2,"text":"ROUND 1","textPreview":"ROUND 1","textChars":7,"textLines":1,"bbox":[115,350,220,60]}
+{"kind":"textbox","id":"sh/9o36psvq","slide":2,"text":"0–3분 그룹핑·이동  |  3–5분 규칙 안내  |  5–17분 게임  |  17–20분 한마디·이동","textPreview":"0–3분 그룹핑·이동  |  3–5분 규칙 안내  |  5–17분 게임  |  17–20분 한마디·이동","textChars":57,"textLines":1,"bbox":[400,304,1130,112]}
+{"kind":"shape","id":"sh/xgz6xwj2","slide":2,"bbox":[90,486,1500,168]}
+{"kind":"shape","id":"sh/wfq5or2h","slide":2,"bbox":[90,486,270,168]}
+{"kind":"textbox","id":"sh/behovm1w","slide":2,"text":"11:50–12:10","textPreview":"11:50–12:10","textChars":11,"textLines":1,"bbox":[115,510,220,44]}
+{"kind":"textbox","id":"sh/ad8nmhkb","slide":2,"text":"ROUND 2","textPreview":"ROUND 2","textChars":7,"textLines":1,"bbox":[115,558,220,60]}
+{"kind":"textbox","id":"sh/5kz61wjy","slide":2,"text":"0–2분 그룹핑·이동  |  2–3분 리셋 안내  |  3–17분 게임  |  17–20분 한마디·이동","textPreview":"0–2분 그룹핑·이동  |  2–3분 리셋 안내  |  3–17분 게임  |  17–20분 한마디·이동","textChars":57,"textLines":1,"bbox":[400,512,1130,112]}
+{"kind":"shape","id":"sh/kjq5sr2d","slide":2,"bbox":[90,694,1500,168]}
+{"kind":"shape","id":"sh/jihoz61s","slide":2,"bbox":[90,694,270,168]}
+{"kind":"textbox","id":"sh/yh8nq1kn","slide":2,"text":"12:10–12:30","textPreview":"12:10–12:30","textChars":11,"textLines":1,"bbox":[115,718,220,44]}
+{"kind":"textbox","id":"sh/toj65gja","slide":2,"text":"ROUND 3","textPreview":"ROUND 3","textChars":7,"textLines":1,"bbox":[115,766,220,60]}
+{"kind":"textbox","id":"sh/snapwbip","slide":2,"text":"0–2분 그룹핑·이동  |  2–3분 리셋 안내  |  3–17분 게임  |  17–20분 격려·전체 마무리","textPreview":"0–2분 그룹핑·이동  |  2–3분 리셋 안내  |  3–17분 게임  |  17–20분 격려·전체 마무리","textChars":60,"textLines":1,"bbox":[400,720,1130,112]}
+{"kind":"shape","id":"sh/c32hojux","slide":2,"bbox":[90,932,1500,138]}
+{"kind":"textbox","id":"sh/d4byhovi","slide":2,"text":"권장 구성","textPreview":"권장 구성","textChars":5,"textLines":1,"bbox":[122,958,190,42]}
+{"kind":"textbox","id":"sh/q10zm9cr","slide":2,"text":"그룹당 7–8명  ·  테이블 진행자 1명  ·  그룹당 주사위 1개·말 1개  ·  답변 10–20초","textPreview":"그룹당 7–8명  ·  테이블 진행자 1명  ·  그룹당 주사위 1개·말 1개  ·  답변 10–20초","textChars":57,"textLines":1,"bbox":[330,948,1200,64]}
+{"kind":"textbox","id":"sh/r2tgfedc","slide":2,"text":"진행자 외에 면접 호출 담당 1명을 별도로 둡니다.","textPreview":"진행자 외에 면접 호출 담당 1명을 별도로 둡니다.","textChars":28,"textLines":1,"bbox":[330,1006,1200,36]}
+{"kind":"textbox","id":"sh/0r2hsju9","slide":2,"text":"고등부 찬양팀 나눔마블  ·  02","textPreview":"고등부 찬양팀 나눔마블  ·  02","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/m0nyra","slide":2,"text":""}
+{"kind":"slide","id":"sl/0ncmjz","slide":3,"title":"1 · 프로그램 운영안","textShapes":29}
+{"kind":"textbox","id":"sh/4zmpgj6t","slide":3,"text":"1 · 프로그램 운영안","textPreview":"1 · 프로그램 운영안","textChars":12,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/3ydo7ep8","slide":3,"text":"한 명이 나가도 말과 순서는 그대로 이어집니다","textPreview":"한 명이 나가도 말과 순서는 그대로 이어집니다","textChars":25,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/ixk7e9o3","slide":3,"text":"‘한 말·두 답변’ 규칙으로 면접 이탈과 복귀를 자연스럽게 처리합니다.","textPreview":"‘한 말·두 답변’ 규칙으로 면접 이탈과 복귀를 자연스럽게 처리합니다.","textChars":39,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/d4vqdonq","slide":3,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/s3mpkj65","slide":3,"bbox":[92,282,704,200]}
+{"kind":"shape","id":"sh/r2d8be5k","slide":3,"bbox":[110,300,68,68]}
+{"kind":"textbox","id":"sh/q147itoz","slide":3,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,300,68,68]}
+{"kind":"textbox","id":"sh/t8b61476","slide":3,"text":"🎲","textPreview":"🎲","textChars":2,"textLines":1,"bbox":[686,302,78,58]}
+{"kind":"textbox","id":"sh/872p8z6l","slide":3,"text":"한 말로 이동","textPreview":"한 말로 이동","textChars":7,"textLines":1,"bbox":[202,304,455,46]}
+{"kind":"textbox","id":"sh/ql83qpob","slide":3,"text":"그룹마다 말 1개만 사용하고 주사위는 시계 방향으로 굴립니다.","textPreview":"그룹마다 말 1개만 사용하고 주사위는 시계 방향으로 굴립니다.","textChars":34,"textLines":1,"bbox":[204,364,548,92]}
+{"kind":"shape","id":"sh/bmh4ju5w","slide":3,"bbox":[852,282,704,200]}
+{"kind":"shape","id":"sh/cnqlsf6h","slide":3,"bbox":[870,300,68,68]}
+{"kind":"textbox","id":"sh/xojmlkn2","slide":3,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[870,300,68,68]}
+{"kind":"textbox","id":"sh/yps3upon","slide":3,"text":"💬","textPreview":"💬","textChars":2,"textLines":1,"bbox":[1446,302,78,58]}
+{"kind":"textbox","id":"sh/zq14nu58","slide":3,"text":"두 명이 답하기","textPreview":"두 명이 답하기","textChars":8,"textLines":1,"bbox":[962,304,455,46]}
+{"kind":"textbox","id":"sh/kralwz6d","slide":3,"text":"굴린 학생이 10–20초 답한 뒤, 아직 덜 말한 학생 한 명을 지목합니다.","textPreview":"굴린 학생이 10–20초 답한 뒤, 아직 덜 말한 학생 한 명을 지목합니다.","textChars":42,"textLines":1,"bbox":[964,364,548,92]}
+{"kind":"shape","id":"sh/lsjmp4ny","slide":3,"bbox":[92,524,704,200]}
+{"kind":"shape","id":"sh/mts3y9oj","slide":3,"bbox":[110,542,68,68]}
+{"kind":"textbox","id":"sh/7u14re54","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,542,68,68]}
+{"kind":"textbox","id":"sh/jilkfelc","slide":3,"text":"⏭️","textPreview":"⏭️","textChars":2,"textLines":1,"bbox":[686,544,78,58]}
+{"kind":"textbox","id":"sh/ihc369kr","slide":3,"text":"한 번 패스 가능","textPreview":"한 번 패스 가능","textChars":9,"textLines":1,"bbox":[202,546,455,46]}
+{"kind":"textbox","id":"sh/5k32h43i","slide":3,"text":"답하기 어려운 질문은 이유 설명 없이 한 번 건너뛸 수 있습니다.","textPreview":"답하기 어려운 질문은 이유 설명 없이 한 번 건너뛸 수 있습니다.","textChars":36,"textLines":1,"bbox":[204,606,548,92]}
+{"kind":"shape","id":"sh/4jul8j2x","slide":3,"bbox":[852,524,704,200]}
+{"kind":"shape","id":"sh/vu1kbul0","slide":3,"bbox":[870,542,68,68]}
+{"kind":"textbox","id":"sh/uts32p4v","slide":3,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[870,542,68,68]}
+{"kind":"textbox","id":"sh/hw32d436","slide":3,"text":"🚪","textPreview":"🚪","textChars":2,"textLines":1,"bbox":[1446,544,78,58]}
+{"kind":"textbox","id":"sh/wvul4z2l","slide":3,"text":"자리 비우면 건너뛰기","textPreview":"자리 비우면 건너뛰기","textChars":11,"textLines":1,"bbox":[962,546,455,46]}
+{"kind":"textbox","id":"sh/7q1k7ul4","slide":3,"text":"면접 호출을 받으면 진행 중인 답변 뒤 이동하고, 차례는 기다리지 않습니다.","textPreview":"면접 호출을 받으면 진행 중인 답변 뒤 이동하고, 차례는 기다리지 않습니다.","textChars":42,"textLines":1,"bbox":[964,606,548,92]}
+{"kind":"shape","id":"sh/mpsjyp4j","slide":3,"bbox":[92,766,704,200]}
+{"kind":"shape","id":"sh/cv6h8v2h","slide":3,"bbox":[110,784,68,68]}
+{"kind":"textbox","id":"sh/dwzih0j2","slide":3,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[110,784,68,68]}
+{"kind":"textbox","id":"sh/qtoz6lkb","slide":3,"text":"↩️","textPreview":"↩️","textChars":2,"textLines":1,"bbox":[686,786,78,58]}
+{"kind":"textbox","id":"sh/bux0fq1w","slide":3,"text":"복귀하면 다음 차례","textPreview":"복귀하면 다음 차례","textChars":10,"textLines":1,"bbox":[202,788,455,46]}
+{"kind":"textbox","id":"sh/kzqhcvid","slide":3,"text":"돌아온 학생은 현재 질문을 듣고 합류한 뒤, 첫 순환에서 빠졌다면 다음 주사위를 굴립니다.","textPreview":"돌아온 학생은 현재 질문을 듣고 합류한 뒤, 첫 순환에서 빠졌다면 다음 주사위를 굴립니다.","textChars":50,"textLines":1,"bbox":[204,848,548,92]}
+{"kind":"shape","id":"sh/l0zil0jy","slide":3,"bbox":[852,766,704,200]}
+{"kind":"shape","id":"sh/yx8zal0n","slide":3,"bbox":[870,784,68,68]}
+{"kind":"textbox","id":"sh/zyh0jq1s","slide":3,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[870,784,68,68]}
+{"kind":"textbox","id":"sh/g3mh0b29","slide":3,"text":"⚖️","textPreview":"⚖️","textChars":2,"textLines":1,"bbox":[1446,786,78,58]}
+{"kind":"textbox","id":"sh/14vy9gju","slide":3,"text":"발언 균형 지키기","textPreview":"발언 균형 지키기","textChars":9,"textLines":1,"bbox":[962,788,455,46]}
+{"kind":"textbox","id":"sh/tk7a9wjy","slide":3,"text":"진행자는 이름표에 작은 점을 표시해 모두 최소 한 번 답하게 합니다.","textPreview":"진행자는 이름표에 작은 점을 표시해 모두 최소 한 번 답하게 합니다.","textChars":38,"textLines":1,"bbox":[964,848,548,92]}
+{"kind":"textbox","id":"sh/8jy9gb2d","slide":3,"text":"말이 적은 학생에게는 “한 단어만 말해도 좋아”라고 안내하고, 새 친구는 첫 답변 전에 진행자가 자기 답을 짧게 시범 보입니다.","textPreview":"말이 적은 학생에게는 “한 단어만 말해도 좋아”라고 안내하고, 새 친구는 첫 답변 전에 진행자가 자기 답을 짧게 시범 보입니다.","textChars":71,"textLines":1,"bbox":[130,1026,1420,54]}
+{"kind":"textbox","id":"sh/7yp87618","slide":3,"text":"고등부 찬양팀 나눔마블  ·  03","textPreview":"고등부 찬양팀 나눔마블  ·  03","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/0ncmjz","slide":3,"text":""}
+{"kind":"slide","id":"sl/7zkou1","slide":4,"title":"2 · 1차 그룹핑","textShapes":19}
+{"kind":"textbox","id":"sh/twfe14n6","slide":4,"text":"2 · 1차 그룹핑","textPreview":"2 · 1차 그룹핑","textChars":10,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/6tov694f","slide":4,"text":"쉬는 날, 딱 3시간이 생기면 가장 끌리는 계획은?","textPreview":"쉬는 날, 딱 3시간이 생기면 가장 끌리는 계획은?","textChars":28,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/7uxwze50","slide":4,"text":"선택은 존중하고, 두 선택 사이에서 고민하는 학생의 자원 이동으로 7–8명에 맞춥니다.","textPreview":"선택은 존중하고, 두 선택 사이에서 고민하는 학생의 자원 이동으로 7–8명에 맞춥니다.","textChars":48,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/gjqdcjmh","slide":4,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/hkze5on2","slide":4,"bbox":[92,282,342,268]}
+{"kind":"textbox","id":"sh/uxova94r","slide":4,"text":"🎧","textPreview":"🎧","textChars":2,"textLines":1,"bbox":[182,306,162,94]}
+{"kind":"textbox","id":"sh/vixw3e5w","slide":4,"text":"플레이리스트·콘텐츠 정주행","textPreview":"플레이리스트·콘텐츠 정주행","textChars":14,"textLines":1,"bbox":[122,408,282,104]}
+{"kind":"shape","id":"sh/cnmd0z6d","slide":4,"bbox":[474,282,342,268]}
+{"kind":"textbox","id":"sh/xovutkny","slide":4,"text":"🍕","textPreview":"🍕","textChars":2,"textLines":1,"bbox":[564,306,162,94]}
+{"kind":"textbox","id":"sh/tc72pone","slide":4,"text":"맛있는 것 먹으러 가기","textPreview":"맛있는 것 먹으러 가기","textChars":12,"textLines":1,"bbox":[504,408,282,104]}
+{"kind":"shape","id":"sh/sby1gj6t","slide":4,"bbox":[856,282,342,268]}
+{"kind":"textbox","id":"sh/rapkny5o","slide":4,"text":"🏃","textPreview":"🏃","textChars":2,"textLines":1,"bbox":[946,306,162,94]}
+{"kind":"textbox","id":"sh/69gjeto3","slide":4,"text":"밖으로 나가 몸쓰기","textPreview":"밖으로 나가 몸쓰기","textChars":10,"textLines":1,"bbox":[886,408,282,104]}
+{"kind":"shape","id":"sh/10r2t8nq","slide":4,"bbox":[1238,282,342,268]}
+{"kind":"textbox","id":"sh/gfi1k365","slide":4,"text":"🛋️","textPreview":"🛋️","textChars":3,"textLines":1,"bbox":[1328,306,162,94]}
+{"kind":"textbox","id":"sh/fe9kry5k","slide":4,"text":"아무 계획 없이 충전","textPreview":"아무 계획 없이 충전","textChars":11,"textLines":1,"bbox":[1268,408,282,104]}
+{"kind":"shape","id":"sh/edgjitoz","slide":4,"bbox":[92,612,1496,108]}
+{"kind":"textbox","id":"sh/p4r2x8nm","slide":4,"text":"고르게 나뉘는 이유","textPreview":"고르게 나뉘는 이유","textChars":10,"textLines":1,"bbox":[120,632,220,68]}
+{"kind":"textbox","id":"sh/o3ilo3m1","slide":4,"text":"콘텐츠·음식·활동·휴식이라는 서로 다른 일상 선호라 선택이 직관적이고, 고민하는 학생이 생겨 자원 조정도 쉽다.","textPreview":"콘텐츠·음식·활동·휴식이라는 서로 다른 일상 선호라 선택이 직관적이고, 고민하는 학생이 생겨 자원 조정도 쉽다.","textChars":62,"textLines":1,"bbox":[350,626,1200,80]}
+{"kind":"shape","id":"sh/8jadgbyp","slide":4,"bbox":[92,744,1496,108]}
+{"kind":"textbox","id":"sh/9kju9gza","slide":4,"text":"몰렸을 때 조정","textPreview":"몰렸을 때 조정","textChars":8,"textLines":1,"bbox":[120,764,220,68]}
+{"kind":"textbox","id":"sh/mxsvelgj","slide":4,"text":"가장 큰 그룹에서 ‘두 번째 선택’이 있는 학생을 먼저 모집한다. 그래도 크면 콘텐츠↔휴식, 음식↔활동 사이의 고민자를 작은 그룹으로 안내한다.","textPreview":"가장 큰 그룹에서 ‘두 번째 선택’이 있는 학생을 먼저 모집한다. 그래도 크면 콘텐츠↔휴식, 음식↔활동 사이의 고민자를 작은 그룹으로 안내한다.","textChars":80,"textLines":1,"bbox":[350,758,1200,80]}
+{"kind":"shape","id":"sh/7i1c76h4","slide":4,"bbox":[92,876,1496,108]}
+{"kind":"textbox","id":"sh/wnudkvyl","slide":4,"text":"진행자 멘트","textPreview":"진행자 멘트","textChars":6,"textLines":1,"bbox":[120,896,220,68]}
+{"kind":"textbox","id":"sh/ho3ed0z6","slide":4,"text":"“정답은 없어요. 지금 딱 끌리는 곳으로 이동하되, 두 군데가 비슷하면 사람이 적은 쪽을 골라 주세요!”","textPreview":"“정답은 없어요. 지금 딱 끌리는 곳으로 이동하되, 두 군데가 비슷하면 사람이 적은 쪽을 골라 주세요!”","textChars":58,"textLines":1,"bbox":[350,890,1200,80]}
+{"kind":"textbox","id":"sh/ulsvilgv","slide":4,"text":"연결 질문  ·  세 시간 자유라면 가장 먼저 할 일?  /  내 선택의 최고의 장점은?","textPreview":"연결 질문  ·  세 시간 자유라면 가장 먼저 할 일?  /  내 선택의 최고의 장점은?","textChars":49,"textLines":1,"bbox":[130,1016,1420,54]}
+{"kind":"textbox","id":"sh/vm1wbqh0","slide":4,"text":"고등부 찬양팀 나눔마블  ·  04","textPreview":"고등부 찬양팀 나눔마블  ·  04","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/7zkou1","slide":4,"text":""}
+{"kind":"slide","id":"sl/ao0rlb","slide":5,"title":"2 · 2차 그룹핑","textShapes":19}
+{"kind":"textbox","id":"sh/ah0za1kb","slide":5,"text":"2 · 2차 그룹핑","textPreview":"2 · 2차 그룹핑","textChars":10,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/x4ri5gjm","slide":5,"text":"찬양 한 곡을 함께 완성할 때 먼저 맡아보고 싶은 역할은?","textPreview":"찬양 한 곡을 함께 완성할 때 먼저 맡아보고 싶은 역할은?","textChars":32,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/c3ihcb21","slide":5,"text":"선택은 존중하고, 두 선택 사이에서 고민하는 학생의 자원 이동으로 7–8명에 맞춥니다.","textPreview":"선택은 존중하고, 두 선택 사이에서 고민하는 학생의 자원 이동으로 7–8명에 맞춥니다.","textChars":48,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/z6t07q1s","slide":5,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/y5kzelk7","slide":5,"bbox":[92,282,342,268]}
+{"kind":"textbox","id":"sh/l8bi90jy","slide":5,"text":"🎤","textPreview":"🎤","textChars":2,"textLines":1,"bbox":[182,306,162,94]}
+{"kind":"textbox","id":"sh/k72hgv2d","slide":5,"text":"분위기를 열기","textPreview":"분위기를 열기","textChars":7,"textLines":1,"bbox":[122,408,282,104]}
+{"kind":"shape","id":"sh/fapgvm18","slide":5,"bbox":[474,282,342,268]}
+{"kind":"textbox","id":"sh/e9gz2hk3","slide":5,"text":"🥁","textPreview":"🥁","textChars":2,"textLines":1,"bbox":[564,306,162,94]}
+{"kind":"textbox","id":"sh/w3yx0b2h","slide":5,"text":"리듬과 박자 지키기","textPreview":"리듬과 박자 지키기","textChars":10,"textLines":1,"bbox":[504,408,282,104]}
+{"kind":"shape","id":"sh/x47y9g32","slide":5,"bbox":[856,282,342,268]}
+{"kind":"textbox","id":"sh/a1gfy1kr","slide":5,"text":"🎹","textPreview":"🎹","textChars":2,"textLines":1,"bbox":[946,306,162,94]}
+{"kind":"textbox","id":"sh/v2pg76lc","slide":5,"text":"화음과 소리 채우기","textPreview":"화음과 소리 채우기","textChars":10,"textLines":1,"bbox":[886,408,282,104]}
+{"kind":"shape","id":"sh/k7ix4b2t","slide":5,"bbox":[1238,282,342,268]}
+{"kind":"textbox","id":"sh/58rydg3e","slide":5,"text":"🎛️","textPreview":"🎛️","textChars":3,"textLines":1,"bbox":[1328,306,162,94]}
+{"kind":"textbox","id":"sh/i5gf2lkn","slide":5,"text":"흐름과 준비 챙기기","textPreview":"흐름과 준비 챙기기","textChars":10,"textLines":1,"bbox":[1268,408,282,104]}
+{"kind":"shape","id":"sh/j69gb6l8","slide":5,"bbox":[92,612,1496,108]}
+{"kind":"textbox","id":"sh/0bexsr2p","slide":5,"text":"고르게 나뉘는 이유","textPreview":"고르게 나뉘는 이유","textChars":10,"textLines":1,"bbox":[120,632,220,68]}
+{"kind":"textbox","id":"sh/lcne1w3u","slide":5,"text":"보컬·리듬·화성·운영의 네 기여 방식이 분명하고, 실제 지원 파트와 달라도 ‘해보고 싶은 역할’로 고를 수 있다.","textPreview":"보컬·리듬·화성·운영의 네 기여 방식이 분명하고, 실제 지원 파트와 달라도 ‘해보고 싶은 역할’로 고를 수 있다.","textChars":63,"textLines":1,"bbox":[350,626,1200,80]}
+{"kind":"shape","id":"sh/18fe58vy","slide":5,"bbox":[92,744,1496,108]}
+{"kind":"textbox","id":"sh/076dw3ed","slide":5,"text":"몰렸을 때 조정","textPreview":"몰렸을 때 조정","textChars":8,"textLines":1,"bbox":[120,764,220,68]}
+{"kind":"textbox","id":"sh/f6xw3ids","slide":5,"text":"지원 파트가 아니라 오늘 해보고 싶은 역할임을 강조한다. 큰 그룹의 학생에게 두 번째로 끌리는 역할로 자원 이동을 요청한다.","textPreview":"지원 파트가 아니라 오늘 해보고 싶은 역할임을 강조한다. 큰 그룹의 학생에게 두 번째로 끌리는 역할로 자원 이동을 요청한다.","textChars":69,"textLines":1,"bbox":[350,758,1200,80]}
+{"kind":"shape","id":"sh/e5ovudw7","slide":5,"bbox":[92,876,1496,108]}
+{"kind":"textbox","id":"sh/pwze9svu","slide":5,"text":"진행자 멘트","textPreview":"진행자 멘트","textChars":6,"textLines":1,"bbox":[120,896,220,68]}
+{"kind":"textbox","id":"sh/ovqd0nu9","slide":5,"text":"“지금 잘하는 파트 말고, 한 곡을 위해 오늘 먼저 해보고 싶은 기여를 골라 이동해 주세요!”","textPreview":"“지금 잘하는 파트 말고, 한 곡을 위해 오늘 먼저 해보고 싶은 기여를 골라 이동해 주세요!”","textChars":52,"textLines":1,"bbox":[350,890,1200,80]}
+{"kind":"textbox","id":"sh/nuxw7ido","slide":5,"text":"연결 질문  ·  우리 선택 역할의 강점은?  /  다른 역할과 만나면 생길 시너지는?","textPreview":"연결 질문  ·  우리 선택 역할의 강점은?  /  다른 역할과 만나면 생길 시너지는?","textChars":48,"textLines":1,"bbox":[130,1016,1420,54]}
+{"kind":"textbox","id":"sh/29ovydcj","slide":5,"text":"고등부 찬양팀 나눔마블  ·  05","textPreview":"고등부 찬양팀 나눔마블  ·  05","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/ao0rlb","slide":5,"text":""}
+{"kind":"slide","id":"sl/6uwm4d","slide":6,"title":"2 · 3차 그룹핑","textShapes":19}
+{"kind":"textbox","id":"sh/pwfyds7q","slide":6,"text":"2 · 3차 그룹핑","textPreview":"2 · 3차 그룹핑","textChars":10,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/2t4fid8f","slide":6,"text":"팀에서 지금 가장 듣고 싶은 응원 한마디는?","textPreview":"팀에서 지금 가장 듣고 싶은 응원 한마디는?","textChars":24,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/nuxgbipk","slide":6,"text":"선택은 존중하고, 두 선택 사이에서 고민하는 학생의 자원 이동으로 7–8명에 맞춥니다.","textPreview":"선택은 존중하고, 두 선택 사이에서 고민하는 학생의 자원 이동으로 7–8명에 맞춥니다.","textChars":48,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/0rmxg3q9","slide":6,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/1svy987u","slide":6,"bbox":[92,282,342,268]}
+{"kind":"textbox","id":"sh/e54fed83","slide":6,"text":"💡","textPreview":"💡","textChars":2,"textLines":1,"bbox":[182,306,162,94]}
+{"kind":"textbox","id":"sh/fqdg7ipo","slide":6,"text":"네 아이디어 좋아","textPreview":"네 아이디어 좋아","textChars":9,"textLines":1,"bbox":[122,408,282,104]}
+{"kind":"shape","id":"sh/knqhs7qd","slide":6,"bbox":[474,282,342,268]}
+{"kind":"textbox","id":"sh/lozylc7y","slide":6,"text":"🤝","textPreview":"🤝","textChars":2,"textLines":1,"bbox":[564,306,162,94]}
+{"kind":"textbox","id":"sh/pkvylgjm","slide":6,"text":"네가 있어 든든해","textPreview":"네가 있어 든든해","textChars":9,"textLines":1,"bbox":[504,408,282,104]}
+{"kind":"shape","id":"sh/4z2xsbih","slide":6,"bbox":[856,282,342,268]}
+{"kind":"textbox","id":"sh/3ytgj61w","slide":6,"text":"🌱","textPreview":"🌱","textChars":2,"textLines":1,"bbox":[946,306,162,94]}
+{"kind":"textbox","id":"sh/2xkfql0b","slide":6,"text":"실수해도 괜찮아","textPreview":"실수해도 괜찮아","textChars":8,"textLines":1,"bbox":[886,408,282,104]}
+{"kind":"shape","id":"sh/hwbyhgjq","slide":6,"bbox":[1238,282,342,268]}
+{"kind":"textbox","id":"sh/gv2xobi5","slide":6,"text":"🚀","textPreview":"🚀","textChars":2,"textLines":1,"bbox":[1328,306,162,94]}
+{"kind":"textbox","id":"sh/futgf61k","slide":6,"text":"같이 해보자","textPreview":"같이 해보자","textChars":6,"textLines":1,"bbox":[1268,408,282,104]}
+{"kind":"shape","id":"sh/utkfm10z","slide":6,"bbox":[92,612,1496,108]}
+{"kind":"textbox","id":"sh/1sfyt0ju","slide":6,"text":"고르게 나뉘는 이유","textPreview":"고르게 나뉘는 이유","textChars":10,"textLines":1,"bbox":[120,632,220,68]}
+{"kind":"textbox","id":"sh/0rmh0vi9","slide":6,"text":"인정·소속·안전·동행이라는 다른 응원 욕구를 가볍게 고르는 질문이라 이전의 취향·역할 기준과 조합이 달라질 가능성이 높다.","textPreview":"인정·소속·안전·동행이라는 다른 응원 욕구를 가볍게 고르는 질문이라 이전의 취향·역할 기준과 조합이 달라질 가능성이 높다.","textChars":68,"textLines":1,"bbox":[350,626,1200,80]}
+{"kind":"shape","id":"sh/k7e9c3ux","slide":6,"bbox":[92,744,1496,108]}
+{"kind":"textbox","id":"sh/l8nal8bi","slide":6,"text":"몰렸을 때 조정","textPreview":"몰렸을 때 조정","textChars":8,"textLines":1,"bbox":[120,764,220,68]}
+{"kind":"textbox","id":"sh/y5wratcr","slide":6,"text":"두 문장 모두 좋다는 학생을 부족한 그룹으로 초대한다. 특정 문장에 몰리면 진행자가 ‘오늘 가장 듣고 싶은 2순위’로 자원 이동을 부탁한다.","textPreview":"두 문장 모두 좋다는 학생을 부족한 그룹으로 초대한다. 특정 문장에 몰리면 진행자가 ‘오늘 가장 듣고 싶은 2순위’로 자원 이동을 부탁한다.","textChars":78,"textLines":1,"bbox":[350,758,1200,80]}
+{"kind":"shape","id":"sh/j658jytc","slide":6,"bbox":[92,876,1496,108]}
+{"kind":"textbox","id":"sh/w3e983ul","slide":6,"text":"진행자 멘트","textPreview":"진행자 멘트","textChars":6,"textLines":1,"bbox":[120,896,220,68]}
+{"kind":"textbox","id":"sh/x4nqhob6","slide":6,"text":"“네 문장 중 오늘 가장 듣고 싶은 말로 가 주세요. 두 개가 고민되면 사람이 적은 문장이 여러분을 기다립니다!”","textPreview":"“네 문장 중 오늘 가장 듣고 싶은 말로 가 주세요. 두 개가 고민되면 사람이 적은 문장이 여러분을 기다립니다!”","textChars":63,"textLines":1,"bbox":[350,890,1200,80]}
+{"kind":"textbox","id":"sh/ahwr6tcv","slide":6,"text":"연결 질문  ·  내가 고른 응원을 언제 듣고 싶나?  /  나도 다른 사람에게 건네고 싶은 응원은?","textPreview":"연결 질문  ·  내가 고른 응원을 언제 듣고 싶나?  /  나도 다른 사람에게 건네고 싶은 응원은?","textChars":56,"textLines":1,"bbox":[130,1016,1420,54]}
+{"kind":"textbox","id":"sh/b258fytg","slide":6,"text":"고등부 찬양팀 나눔마블  ·  06","textPreview":"고등부 찬양팀 나눔마블  ·  06","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/6uwm4d","slide":6,"text":""}
+{"kind":"slide","id":"sl/wharkg","slide":7,"title":"2 · 현장 보정","textShapes":15}
+{"kind":"textbox","id":"sh/snmdc76h","slide":7,"text":"2 · 현장 보정","textPreview":"2 · 현장 보정","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/7mdc32pw","slide":7,"text":"취향만으로는 ‘다른 만남’이 보장되지 않으니 30초만 확인합니다","textPreview":"취향만으로는 ‘다른 만남’이 보장되지 않으니 30초만 확인합니다","textChars":35,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/614vaxob","slide":7,"text":"선택을 바꾸라고 강요하지 않고, 두 선택 사이의 학생에게만 이동을 부탁합니다.","textPreview":"선택을 바꾸라고 강요하지 않고, 두 선택 사이의 학생에게만 이동을 부탁합니다.","textChars":43,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/50vu1s7q","slide":7,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/kz2t8n65","slide":7,"bbox":[118,306,434,390]}
+{"kind":"textbox","id":"sh/jytcz2pk","slide":7,"text":"👥","textPreview":"👥","textChars":2,"textLines":1,"bbox":[268,332,134,90]}
+{"kind":"textbox","id":"sh/ixkb6xoz","slide":7,"text":"그룹 목표","textPreview":"그룹 목표","textChars":5,"textLines":1,"bbox":[166,430,338,52]}
+{"kind":"textbox","id":"sh/xwbuxs7u","slide":7,"text":"27명: 7·7·7·6명\n28명: 7명씩\n29명: 8·7·7·7명\n30명: 8·8·7·7명\n31명: 8·8·8·7명","textPreview":"27명: 7·7·7·6명 | 28명: 7명씩 | 29명: 8·7·7·7명 | 30명: 8·8·7·7명 | 31명: 8·8·8·7명","textChars":64,"textLines":5,"bbox":[164,500,342,160]}
+{"kind":"shape","id":"sh/wv2t4n69","slide":7,"bbox":[628,306,434,390]}
+{"kind":"textbox","id":"sh/epo3il8z","slide":7,"text":"🏫","textPreview":"🏫","textChars":2,"textLines":1,"bbox":[778,332,134,90]}
+{"kind":"textbox","id":"sh/zqxkb69k","slide":7,"text":"학년 참고","textPreview":"학년 참고","textChars":5,"textLines":1,"bbox":[676,430,338,52]}
+{"kind":"textbox","id":"sh/0r6lkbq5","slide":7,"text":"그룹당 대략\n고1 4명\n고2 2명\n고3 1–2명","textPreview":"그룹당 대략 | 고1 4명 | 고2 2명 | 고3 1–2명","textChars":26,"textLines":4,"bbox":[674,500,342,160]}
+{"kind":"shape","id":"sh/1sf2dgrq","slide":7,"bbox":[1138,306,434,390]}
+{"kind":"textbox","id":"sh/q14je183","slide":7,"text":"🔁","textPreview":"🔁","textChars":2,"textLines":1,"bbox":[1288,332,134,90]}
+{"kind":"textbox","id":"sh/rmdk769o","slide":7,"text":"중복 경보","textPreview":"중복 경보","textChars":5,"textLines":1,"bbox":[1186,430,338,52]}
+{"kind":"textbox","id":"sh/snmlgbq9","slide":7,"text":"직전 라운드의 같은 친구가\n한 그룹에 3명 이상 다시 모이면\n자원 이동을 한 번 요청","textPreview":"직전 라운드의 같은 친구가 | 한 그룹에 3명 이상 다시 모이면 | 자원 이동을 한 번 요청","textChars":47,"textLines":3,"bbox":[1184,500,342,160]}
+{"kind":"shape","id":"sh/dov29gre","slide":7,"bbox":[118,760,1454,238]}
+{"kind":"textbox","id":"sh/ix4ja1sr","slide":7,"text":"30초 보정 순서","textPreview":"30초 보정 순서","textChars":9,"textLines":1,"bbox":[156,794,250,52]}
+{"kind":"textbox","id":"sh/3ydk3m9c","slide":7,"text":"① 진행자가 각 그룹 인원 확인  →  ② 같은 조합이 3명 이상인지 눈으로 확인  →  ③ ‘두 번째 선택도 괜찮은 사람?’ 모집  →  ④ 부족한 그룹으로 1–2명만 이동","textPreview":"① 진행자가 각 그룹 인원 확인  →  ② 같은 조합이 3명 이상인지 눈으로 확인  →  ③ ‘두 번째 선택도 괜찮은 사람?’ 모집  →  ④ 부족한 그룹으로 1–2명만 이동","textChars":97,"textLines":1,"bbox":[156,850,1378,104]}
+{"kind":"textbox","id":"sh/7qp8vyl8","slide":7,"text":"고등부 찬양팀 나눔마블  ·  07","textPreview":"고등부 찬양팀 나눔마블  ·  07","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/wharkg","slide":7,"text":""}
+{"kind":"slide","id":"sl/xe0vyr","slide":8,"title":"3 · 질문 체계","textShapes":52}
+{"kind":"textbox","id":"sh/0nm1cfml","slide":8,"text":"3 · 질문 체계","textPreview":"3 · 질문 체계","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/fmd03a50","slide":8,"text":"세 보드에 공통으로 들어가는 질문 · 1/2","textPreview":"세 보드에 공통으로 들어가는 질문 · 1/2","textChars":24,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/el4zap4f","slide":8,"text":"사람이 달라지면 답과 후속 대화도 달라지는 공통 질문입니다.","textPreview":"사람이 달라지면 답과 후속 대화도 달라지는 공통 질문입니다.","textChars":33,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/pcfi94n2","slide":8,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/ob61gzmh","slide":8,"bbox":[72,262,90,62]}
+{"kind":"textbox","id":"sh/nad07u5w","slide":8,"text":"번호","textPreview":"번호","textChars":2,"textLines":1,"bbox":[76,266,82,54]}
+{"kind":"shape","id":"sh/2p4jep4b","slide":8,"bbox":[162,262,660,62]}
+{"kind":"textbox","id":"sh/5gbix0ny","slide":8,"text":"질문","textPreview":"질문","textChars":2,"textLines":1,"bbox":[166,266,652,54]}
+{"kind":"shape","id":"sh/4f2h4vmd","slide":8,"bbox":[822,262,260,62]}
+{"kind":"textbox","id":"sh/axo36d0f","slide":8,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[826,266,252,54]}
+{"kind":"shape","id":"sh/byx4fyh0","slide":8,"bbox":[1082,262,105,62]}
+{"kind":"textbox","id":"sh/wz6l83i5","slide":8,"text":"이모지","textPreview":"이모지","textChars":3,"textLines":1,"bbox":[1086,266,97,54]}
+{"kind":"shape","id":"sh/x0fmh8zq","slide":8,"bbox":[1187,262,175,62]}
+{"kind":"textbox","id":"sh/y1o3ad0b","slide":8,"text":"칸 색상","textPreview":"칸 색상","textChars":4,"textLines":1,"bbox":[1191,266,167,54]}
+{"kind":"shape","id":"sh/j2h4jihw","slide":8,"bbox":[1362,262,210,62]}
+{"kind":"textbox","id":"sh/k3qlcnih","slide":8,"text":"연결","textPreview":"연결","textChars":2,"textLines":1,"bbox":[1366,266,202,54]}
+{"kind":"shape","id":"sh/l4zmlsz2","slide":8,"bbox":[72,324,90,108]}
+{"kind":"textbox","id":"sh/658nex0n","slide":8,"text":"C1","textPreview":"C1","textChars":2,"textLines":1,"bbox":[78,329,78,98]}
+{"kind":"shape","id":"sh/76h4nihs","slide":8,"bbox":[162,324,660,108]}
+{"kind":"textbox","id":"sh/3u1kv2x0","slide":8,"text":"요즘 자주 듣는 노래 한 곡?","textPreview":"요즘 자주 듣는 노래 한 곡?","textChars":16,"textLines":1,"bbox":[168,329,648,98]}
+{"kind":"shape","id":"sh/its32xwf","slide":8,"bbox":[822,324,260,108]}
+{"kind":"textbox","id":"sh/5wj2xsf6","slide":8,"text":"최근 관심사·음악","textPreview":"최근 관심사·음악","textChars":9,"textLines":1,"bbox":[828,329,248,98]}
+{"kind":"shape","id":"sh/4val4nel","slide":8,"bbox":[1082,324,105,108]}
+{"kind":"textbox","id":"sh/v6hkrix4","slide":8,"text":"🎧","textPreview":"🎧","textChars":2,"textLines":1,"bbox":[1088,329,93,98]}
+{"kind":"shape","id":"sh/u583ydwj","slide":8,"bbox":[1187,324,175,108]}
+{"kind":"textbox","id":"sh/h8z2tsfa","slide":8,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,329,163,98]}
+{"kind":"shape","id":"sh/g7ql0nep","slide":8,"bbox":[1362,324,210,108]}
+{"kind":"textbox","id":"sh/72hknixs","slide":8,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,329,198,98]}
+{"kind":"shape","id":"sh/6183udw7","slide":8,"bbox":[72,432,90,108]}
+{"kind":"textbox","id":"sh/c7mh4ju5","slide":8,"text":"C2","textPreview":"C2","textChars":2,"textLines":1,"bbox":[78,437,78,98]}
+{"kind":"shape","id":"sh/x8vix4vq","slide":8,"bbox":[162,432,660,108]}
+{"kind":"textbox","id":"sh/a54z29cz","slide":8,"text":"학교에서 제일 좋아하는 시간은?","textPreview":"학교에서 제일 좋아하는 시간은?","textChars":17,"textLines":1,"bbox":[168,437,648,98]}
+{"kind":"shape","id":"sh/b6d0vedk","slide":8,"bbox":[822,432,260,108]}
+{"kind":"textbox","id":"sh/kb618juh","slide":8,"text":"학교생활","textPreview":"학교생활","textChars":4,"textLines":1,"bbox":[828,437,248,98]}
+{"kind":"shape","id":"sh/lcfi1ov2","slide":8,"bbox":[1082,432,105,108]}
+{"kind":"textbox","id":"sh/y94z69cb","slide":8,"text":"🏫","textPreview":"🏫","textChars":2,"textLines":1,"bbox":[1088,437,93,98]}
+{"kind":"shape","id":"sh/zax0zedw","slide":8,"bbox":[1187,432,175,108]}
+{"kind":"textbox","id":"sh/0f2hwzux","slide":8,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,437,163,98]}
+{"kind":"shape","id":"sh/1gbipkvi","slide":8,"bbox":[1362,432,210,108]}
+{"kind":"textbox","id":"sh/twna5kv2","slide":8,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,437,198,98]}
+{"kind":"shape","id":"sh/8be9wfuh","slide":8,"bbox":[72,540,90,108]}
+{"kind":"textbox","id":"sh/7a5s3udw","slide":8,"text":"C3","textPreview":"C3","textChars":2,"textLines":1,"bbox":[78,545,78,98]}
+{"kind":"shape","id":"sh/69wrupcb","slide":8,"bbox":[162,540,660,108]}
+{"kind":"textbox","id":"sh/l8na1kvq","slide":8,"text":"요즘 푹 빠져 있는 것은?","textPreview":"요즘 푹 빠져 있는 것은?","textChars":14,"textLines":1,"bbox":[168,545,648,98]}
+{"kind":"shape","id":"sh/k7e9sfu5","slide":8,"bbox":[822,540,260,108]}
+{"kind":"textbox","id":"sh/j6lszadk","slide":8,"text":"최근 관심사","textPreview":"최근 관심사","textChars":6,"textLines":1,"bbox":[828,545,248,98]}
+{"kind":"shape","id":"sh/y5crq5cf","slide":8,"bbox":[1082,540,105,108]}
+{"kind":"textbox","id":"sh/x43qx0vu","slide":8,"text":"🔥","textPreview":"🔥","textChars":2,"textLines":1,"bbox":[1088,545,93,98]}
+{"kind":"shape","id":"sh/w3u9ovu9","slide":8,"bbox":[1187,540,175,108]}
+{"kind":"textbox","id":"sh/m9s7y1s7","slide":8,"text":"코랄\n#FF7B73","textPreview":"코랄 | #FF7B73","textChars":10,"textLines":2,"bbox":[1193,545,163,98]}
+{"kind":"shape","id":"sh/na1o76tc","slide":8,"bbox":[1362,540,210,108]}
+{"kind":"textbox","id":"sh/obap0bax","slide":8,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,545,198,98]}
+{"kind":"shape","id":"sh/9cj69gbi","slide":8,"bbox":[72,648,90,108]}
+{"kind":"textbox","id":"sh/el87u1sv","slide":8,"text":"C4","textPreview":"C4","textChars":2,"textLines":1,"bbox":[78,653,78,98]}
+{"kind":"shape","id":"sh/z6ho36tg","slide":8,"bbox":[162,648,660,108]}
+{"kind":"textbox","id":"sh/07apwba1","slide":8,"text":"내가 은근 잘하는 것 한 가지?","textPreview":"내가 은근 잘하는 것 한 가지?","textChars":17,"textLines":1,"bbox":[168,653,648,98]}
+{"kind":"shape","id":"sh/18j65wbm","slide":8,"bbox":[822,648,260,108]}
+{"kind":"textbox","id":"sh/qh8nqhcz","slide":8,"text":"강점","textPreview":"강점","textChars":2,"textLines":1,"bbox":[828,653,248,98]}
+{"kind":"shape","id":"sh/rihozmtk","slide":8,"bbox":[1082,648,105,108]}
+{"kind":"textbox","id":"sh/fmd4ri9c","slide":8,"text":"✨","textPreview":"✨","textChars":1,"textLines":1,"bbox":[1088,653,93,98]}
+{"kind":"shape","id":"sh/ul43ydsr","slide":8,"bbox":[1187,648,175,108]}
+{"kind":"textbox","id":"sh/hofmtsr2","slide":8,"text":"보라\n#8168C5","textPreview":"보라 | #8168C5","textChars":10,"textLines":2,"bbox":[1193,653,163,98]}
+{"kind":"shape","id":"sh/gnml0nqh","slide":8,"bbox":[1362,648,210,108]}
+{"kind":"textbox","id":"sh/3qx4v298","slide":8,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,653,198,98]}
+{"kind":"shape","id":"sh/2po32x8n","slide":8,"bbox":[72,756,90,108]}
+{"kind":"textbox","id":"sh/pcfmxsre","slide":8,"text":"C5","textPreview":"C5","textChars":2,"textLines":1,"bbox":[78,761,78,98]}
+{"kind":"shape","id":"sh/4r6l47qt","slide":8,"bbox":[162,756,660,108]}
+{"kind":"textbox","id":"sh/jutkzy94","slide":8,"text":"나만의 기분 전환 방법은?","textPreview":"나만의 기분 전환 방법은?","textChars":14,"textLines":1,"bbox":[168,761,648,98]}
+{"kind":"shape","id":"sh/itk3qtsj","slide":8,"bbox":[822,756,260,108]}
+{"kind":"textbox","id":"sh/ony9kfm5","slide":8,"text":"자기돌봄·일상","textPreview":"자기돌봄·일상","textChars":7,"textLines":1,"bbox":[828,761,248,98]}
+{"kind":"shape","id":"sh/po7adk3q","slide":8,"bbox":[1082,756,105,108]}
+{"kind":"textbox","id":"sh/2lgri54z","slide":8,"text":"🌿","textPreview":"🌿","textChars":2,"textLines":1,"bbox":[1088,761,93,98]}
+{"kind":"shape","id":"sh/nmpsbalk","slide":8,"bbox":[1187,756,175,108]}
+{"kind":"textbox","id":"sh/0je9gvmt","slide":8,"text":"블루\n#5C87E6","textPreview":"블루 | #5C87E6","textChars":10,"textLines":2,"bbox":[1193,761,163,98]}
+{"kind":"shape","id":"sh/1k7a903e","slide":8,"bbox":[1362,756,210,108]}
+{"kind":"textbox","id":"sh/ehwrel43","slide":8,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,761,198,98]}
+{"kind":"shape","id":"sh/fi5s7ql8","slide":8,"bbox":[72,864,90,108]}
+{"kind":"textbox","id":"sh/kfitcz2d","slide":8,"text":"C6","textPreview":"C6","textChars":2,"textLines":1,"bbox":[78,869,78,98]}
+{"kind":"shape","id":"sh/lgral43y","slide":8,"bbox":[162,864,660,108]}
+{"kind":"textbox","id":"sh/tsve10ze","slide":8,"text":"교회에서 가장 편한 공간은?","textPreview":"교회에서 가장 편한 공간은?","textChars":15,"textLines":1,"bbox":[168,869,648,98]}
+{"kind":"shape","id":"sh/srmx8vyt","slide":8,"bbox":[822,864,260,108]}
+{"kind":"textbox","id":"sh/r6dwzqh8","slide":8,"text":"교회·공동체","textPreview":"교회·공동체","textChars":6,"textLines":1,"bbox":[828,869,248,98]}
+{"kind":"shape","id":"sh/654v6lgn","slide":8,"bbox":[1082,864,105,108]}
+{"kind":"textbox","id":"sh/1wfe50za","slide":8,"text":"⛪","textPreview":"⛪","textChars":1,"textLines":1,"bbox":[1088,869,93,98]}
+{"kind":"shape","id":"sh/gv6xcvyp","slide":8,"bbox":[1187,864,175,108]}
+{"kind":"textbox","id":"sh/fudw3ahk","slide":8,"text":"라임\n#A9D66F","textPreview":"라임 | #A9D66F","textChars":10,"textLines":2,"bbox":[1193,869,163,98]}
+{"kind":"shape","id":"sh/et4fa5gz","slide":8,"bbox":[1362,864,210,108]}
+{"kind":"textbox","id":"sh/h0betgz6","slide":8,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,869,198,98]}
+{"kind":"shape","id":"sh/wz2d0byl","slide":8,"bbox":[72,972,90,108]}
+{"kind":"textbox","id":"sh/mtg3eds7","slide":8,"text":"C7","textPreview":"C7","textChars":2,"textLines":1,"bbox":[78,977,78,98]}
+{"kind":"shape","id":"sh/nupknits","slide":8,"bbox":[162,972,660,108]}
+{"kind":"textbox","id":"sh/8vylgnad","slide":8,"text":"이번 주 감사했던 작은 일?","textPreview":"이번 주 감사했던 작은 일?","textChars":15,"textLines":1,"bbox":[168,977,648,98]}
+{"kind":"shape","id":"sh/9w72psby","slide":8,"bbox":[822,972,260,108]}
+{"kind":"textbox","id":"sh/axg3ixs3","slide":8,"text":"감사","textPreview":"감사","textChars":2,"textLines":1,"bbox":[828,977,248,98]}
+{"kind":"shape","id":"sh/vypkr2to","slide":8,"bbox":[1082,972,105,108]}
+{"kind":"textbox","id":"sh/wzilk7a9","slide":8,"text":"🙏","textPreview":"🙏","textChars":2,"textLines":1,"bbox":[1088,977,93,98]}
+{"kind":"shape","id":"sh/x0r2tsbu","slide":8,"bbox":[1187,972,175,108]}
+{"kind":"textbox","id":"sh/q1wj6tsz","slide":8,"text":"민트\n#63C7A7","textPreview":"민트 | #63C7A7","textChars":10,"textLines":2,"bbox":[1193,977,163,98]}
+{"kind":"shape","id":"sh/r25kfytk","slide":8,"bbox":[1362,972,210,108]}
+{"kind":"textbox","id":"sh/s7mt0jm9","slide":8,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,977,198,98]}
+{"kind":"textbox","id":"sh/t8va9onu","slide":8,"text":"고등부 찬양팀 나눔마블  ·  08","textPreview":"고등부 찬양팀 나눔마블  ·  08","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/xe0vyr","slide":8,"text":""}
+{"kind":"slide","id":"sl/lhwmdw","slide":9,"title":"3 · 질문 체계","textShapes":46}
+{"kind":"textbox","id":"sh/t036loze","slide":9,"text":"3 · 질문 체계","textPreview":"3 · 질문 체계","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/6xs7q9gn","slide":9,"text":"세 보드에 공통으로 들어가는 질문 · 2/2","textPreview":"세 보드에 공통으로 들어가는 질문 · 2/2","textChars":24,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/ry1ojeh8","slide":9,"text":"공통 질문 13개는 세 게임판에 모두 들어가되 순서를 바꿉니다.","textPreview":"공통 질문 13개는 세 게임판에 모두 들어가되 순서를 바꿉니다.","textChars":35,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/g3upw3yp","slide":9,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/1436p8za","slide":9,"bbox":[72,262,90,62]}
+{"kind":"textbox","id":"sh/e1c7utgz","slide":9,"text":"번호","textPreview":"번호","textChars":2,"textLines":1,"bbox":[76,266,82,54]}
+{"kind":"shape","id":"sh/f2lonyhk","slide":9,"bbox":[162,262,660,62]}
+{"kind":"textbox","id":"sh/orep03y1","slide":9,"text":"질문","textPreview":"질문","textChars":2,"textLines":1,"bbox":[166,266,652,54]}
+{"kind":"shape","id":"sh/psnqt8zm","slide":9,"bbox":[822,262,260,62]}
+{"kind":"textbox","id":"sh/1wzqdcfe","slide":9,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[826,266,252,54]}
+{"kind":"shape","id":"sh/0vq947et","slide":9,"bbox":[1082,262,105,62]}
+{"kind":"textbox","id":"sh/fuh8b2x8","slide":9,"text":"이모지","textPreview":"이모지","textChars":3,"textLines":1,"bbox":[1086,266,97,54]}
+{"kind":"shape","id":"sh/et8r2xw3","slide":9,"bbox":[1187,262,175,62]}
+{"kind":"textbox","id":"sh/pkjqhwfq","slide":9,"text":"칸 색상","textPreview":"칸 색상","textChars":4,"textLines":1,"bbox":[1191,266,167,54]}
+{"kind":"shape","id":"sh/ojq98re5","slide":9,"bbox":[1362,262,210,62]}
+{"kind":"textbox","id":"sh/nyh8fmxk","slide":9,"text":"연결","textPreview":"연결","textChars":2,"textLines":1,"bbox":[1366,266,202,54]}
+{"kind":"shape","id":"sh/2x8r6hwz","slide":9,"bbox":[72,324,90,108]}
+{"kind":"textbox","id":"sh/5ofq5sf6","slide":9,"text":"C8","textPreview":"C8","textChars":2,"textLines":1,"bbox":[78,329,78,98]}
+{"kind":"shape","id":"sh/436pwnel","slide":9,"bbox":[162,324,660,108]}
+{"kind":"textbox","id":"sh/gjuh8rqt","slide":9,"text":"찬양팀에서 기대되는 순간은?","textPreview":"찬양팀에서 기대되는 순간은?","textChars":15,"textLines":1,"bbox":[168,329,648,98]}
+{"kind":"shape","id":"sh/hk3i1wre","slide":9,"bbox":[822,324,260,108]}
+{"kind":"textbox","id":"sh/uhsz6h8n","slide":9,"text":"앞으로의 기대","textPreview":"앞으로의 기대","textChars":7,"textLines":1,"bbox":[828,329,248,98]}
+{"kind":"shape","id":"sh/vi10zm98","slide":9,"bbox":[1082,324,105,108]}
+{"kind":"textbox","id":"sh/4nuhcrqp","slide":9,"text":"🌟","textPreview":"🌟","textChars":2,"textLines":1,"bbox":[1088,329,93,98]}
+{"kind":"shape","id":"sh/5o3i5wra","slide":9,"bbox":[1187,324,175,108]}
+{"kind":"textbox","id":"sh/ilcza18z","slide":9,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,329,163,98]}
+{"kind":"shape","id":"sh/3ml0369k","slide":9,"bbox":[1362,324,210,108]}
+{"kind":"textbox","id":"sh/sbehgbq1","slide":9,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,329,198,98]}
+{"kind":"shape","id":"sh/dcni9grm","slide":9,"bbox":[72,432,90,108]}
+{"kind":"textbox","id":"sh/n6pkzato","slide":9,"text":"C9","textPreview":"C9","textChars":2,"textLines":1,"bbox":[78,437,78,98]}
+{"kind":"shape","id":"sh/25g365s3","slide":9,"bbox":[162,432,660,108]}
+{"kind":"textbox","id":"sh/p8721kbu","slide":9,"text":"하루 동안 초능력을 쓴다면?","textPreview":"하루 동안 초능력을 쓴다면?","textChars":15,"textLines":1,"bbox":[168,437,648,98]}
+{"kind":"shape","id":"sh/o7yl8fa9","slide":9,"bbox":[822,432,260,108]}
+{"kind":"textbox","id":"sh/fipkvqts","slide":9,"text":"상상","textPreview":"상상","textChars":2,"textLines":1,"bbox":[828,437,248,98]}
+{"kind":"shape","id":"sh/ehwj25s7","slide":9,"bbox":[1082,432,105,108]}
+{"kind":"textbox","id":"sh/1472x0bi","slide":9,"text":"🦸","textPreview":"🦸","textChars":2,"textLines":1,"bbox":[1088,437,93,98]}
+{"kind":"shape","id":"sh/0jyl4vax","slide":9,"bbox":[1187,432,175,108]}
+{"kind":"textbox","id":"sh/ze9k7utw","slide":9,"text":"보라\n#8168C5","textPreview":"보라 | #8168C5","textChars":10,"textLines":2,"bbox":[1193,437,163,98]}
+{"kind":"shape","id":"sh/yd03epsb","slide":9,"bbox":[1362,432,210,108]}
+{"kind":"textbox","id":"sh/6lgn2tof","slide":9,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,437,198,98]}
+{"kind":"shape","id":"sh/7mpobyp0","slide":9,"bbox":[72,540,90,108]}
+{"kind":"textbox","id":"sh/8nyp4j6l","slide":9,"text":"C10","textPreview":"C10","textChars":3,"textLines":1,"bbox":[78,545,78,98]}
+{"kind":"shape","id":"sh/tor6do76","slide":9,"bbox":[162,540,660,108]}
+{"kind":"textbox","id":"sh/yhgny9oj","slide":9,"text":"힘날 때 먹고 싶은 음식은?","textPreview":"힘날 때 먹고 싶은 음식은?","textChars":15,"textLines":1,"bbox":[168,545,648,98]}
+{"kind":"shape","id":"sh/jipo7ep4","slide":9,"bbox":[822,540,260,108]}
+{"kind":"textbox","id":"sh/kjy50j6p","slide":9,"text":"취향","textPreview":"취향","textChars":2,"textLines":1,"bbox":[828,545,248,98]}
+{"kind":"shape","id":"sh/lk769o7a","slide":9,"bbox":[1082,540,105,108]}
+{"kind":"textbox","id":"sh/2d07adon","slide":9,"text":"🍜","textPreview":"🍜","textChars":2,"textLines":1,"bbox":[1088,545,93,98]}
+{"kind":"shape","id":"sh/3e9ojip8","slide":9,"bbox":[1187,540,175,108]}
+{"kind":"textbox","id":"sh/d8vq9cra","slide":9,"text":"코랄\n#FF7B73","textPreview":"코랄 | #FF7B73","textChars":10,"textLines":2,"bbox":[1193,545,163,98]}
+{"kind":"shape","id":"sh/c7m907q5","slide":9,"bbox":[1362,540,210,108]}
+{"kind":"textbox","id":"sh/r6t8729k","slide":9,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,545,198,98]}
+{"kind":"shape","id":"sh/qlkryx8z","slide":9,"bbox":[72,648,90,108]}
+{"kind":"textbox","id":"sh/pkbq5sre","slide":9,"text":"C11","textPreview":"C11","textChars":3,"textLines":1,"bbox":[78,653,78,98]}
+{"kind":"shape","id":"sh/4j29wnqt","slide":9,"bbox":[162,648,660,108]}
+{"kind":"textbox","id":"sh/3it83i98","slide":9,"text":"친구에게 기억되고 싶은 내 모습은?","textPreview":"친구에게 기억되고 싶은 내 모습은?","textChars":19,"textLines":1,"bbox":[168,653,648,98]}
+{"kind":"shape","id":"sh/2hkrux8n","slide":9,"bbox":[822,648,260,108]}
+{"kind":"textbox","id":"sh/9gfahwri","slide":9,"text":"관계·강점","textPreview":"관계·강점","textChars":5,"textLines":1,"bbox":[828,653,248,98]}
+{"kind":"shape","id":"sh/of698rqx","slide":9,"bbox":[1082,648,105,108]}
+{"kind":"textbox","id":"sh/8vel0z2l","slide":9,"text":"🌈","textPreview":"🌈","textChars":2,"textLines":1,"bbox":[1088,653,93,98]}
+{"kind":"shape","id":"sh/tw72t436","slide":9,"bbox":[1187,648,175,108]}
+{"kind":"textbox","id":"sh/6tw3ypkf","slide":9,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,653,163,98]}
+{"kind":"shape","id":"sh/7u5krul0","slide":9,"bbox":[1362,648,210,108]}
+{"kind":"textbox","id":"sh/kre1wf29","slide":9,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,653,198,98]}
+{"kind":"shape","id":"sh/lsn2pk3u","slide":9,"bbox":[72,756,90,108]}
+{"kind":"textbox","id":"sh/ypwju5kj","slide":9,"text":"C12","textPreview":"C12","textChars":3,"textLines":1,"bbox":[78,761,78,98]}
+{"kind":"shape","id":"sh/jq5knal4","slide":9,"bbox":[162,756,660,108]}
+{"kind":"textbox","id":"sh/w3u1sf2d","slide":9,"text":"최근 나를 웃게 한 일은?","textPreview":"최근 나를 웃게 한 일은?","textChars":14,"textLines":1,"bbox":[168,761,648,98]}
+{"kind":"shape","id":"sh/x432lk3y","slide":9,"bbox":[822,756,260,108]}
+{"kind":"textbox","id":"sh/zylkva5k","slide":9,"text":"일상","textPreview":"일상","textChars":2,"textLines":1,"bbox":[828,761,248,98]}
+{"kind":"shape","id":"sh/exs3254f","slide":9,"bbox":[1082,756,105,108]}
+{"kind":"textbox","id":"sh/103mx0nq","slide":9,"text":"😄","textPreview":"😄","textChars":2,"textLines":1,"bbox":[1088,761,93,98]}
+{"kind":"shape","id":"sh/0zul4fm5","slide":9,"bbox":[1187,756,175,108]}
+{"kind":"textbox","id":"sh/n2l4za5w","slide":9,"text":"라임\n#A9D66F","textPreview":"라임 | #A9D66F","textChars":10,"textLines":2,"bbox":[1193,761,163,98]}
+{"kind":"shape","id":"sh/m1c3654b","slide":9,"bbox":[1362,756,210,108]}
+{"kind":"textbox","id":"sh/9o3m1kn2","slide":9,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,761,198,98]}
+{"kind":"shape","id":"sh/onul8fmh","slide":9,"bbox":[72,864,90,108]}
+{"kind":"textbox","id":"sh/bq543u5s","slide":9,"text":"C13","textPreview":"C13","textChars":3,"textLines":1,"bbox":[78,869,78,98]}
+{"kind":"shape","id":"sh/apw3ap47","slide":9,"bbox":[162,864,660,108]}
+{"kind":"textbox","id":"sh/idc7y9kr","slide":9,"text":"지금 새로 배우고 싶은 것은?","textPreview":"지금 새로 배우고 싶은 것은?","textChars":16,"textLines":1,"bbox":[168,869,648,98]}
+{"kind":"shape","id":"sh/jelo7e1c","slide":9,"bbox":[822,864,260,108]}
+{"kind":"textbox","id":"sh/kfup0j2h","slide":9,"text":"성장·기대","textPreview":"성장·기대","textChars":5,"textLines":1,"bbox":[828,869,248,98]}
+{"kind":"shape","id":"sh/50369oj2","slide":9,"bbox":[1082,864,105,108]}
+{"kind":"textbox","id":"sh/61c72tkn","slide":9,"text":"🧩","textPreview":"🧩","textChars":2,"textLines":1,"bbox":[1088,869,93,98]}
+{"kind":"shape","id":"sh/72loby18","slide":9,"bbox":[1187,864,175,108]}
+{"kind":"textbox","id":"sh/s3ep432t","slide":9,"text":"핑크\n#E777AE","textPreview":"핑크 | #E777AE","textChars":10,"textLines":2,"bbox":[1193,869,163,98]}
+{"kind":"shape","id":"sh/t4nqdoje","slide":9,"bbox":[1362,864,210,108]}
+{"kind":"textbox","id":"sh/e5w76tkz","slide":9,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,869,198,98]}
+{"kind":"textbox","id":"sh/f658fy1k","slide":9,"text":"고등부 찬양팀 나눔마블  ·  09","textPreview":"고등부 찬양팀 나눔마블  ·  09","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/lhwmdw","slide":9,"text":""}
+{"kind":"slide","id":"sl/ni37yh","slide":10,"title":"3 · 질문 체계","textShapes":52}
+{"kind":"textbox","id":"sh/cvmhsf6d","slide":10,"text":"3 · 질문 체계","textPreview":"3 · 질문 체계","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/bud0za5s","slide":10,"text":"1라운드 고유 질문 · 1/2","textPreview":"1라운드 고유 질문 · 1/2","textChars":16,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/atkzq5on","slide":10,"text":"첫인사와 취향을 중심으로 부담 없이 웃고 답합니다.","textPreview":"첫인사와 취향을 중심으로 부담 없이 웃고 답합니다.","textChars":28,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/psbix0n2","slide":10,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/or2hov6h","slide":10,"bbox":[72,262,90,62]}
+{"kind":"textbox","id":"sh/n6t0vq5w","slide":10,"text":"번호","textPreview":"번호","textChars":2,"textLines":1,"bbox":[76,266,82,54]}
+{"kind":"shape","id":"sh/25kzm5ob","slide":10,"bbox":[162,262,660,62]}
+{"kind":"textbox","id":"sh/9ofit4n6","slide":10,"text":"질문","textPreview":"질문","textChars":2,"textLines":1,"bbox":[166,266,652,54]}
+{"kind":"shape","id":"sh/8n610z6l","slide":10,"bbox":[822,262,260,62]}
+{"kind":"textbox","id":"sh/e54321gj","slide":10,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[826,266,252,54]}
+{"kind":"shape","id":"sh/f6dkv6h4","slide":10,"bbox":[1082,262,105,62]}
+{"kind":"textbox","id":"sh/07ml4byp","slide":10,"text":"이모지","textPreview":"이모지","textChars":3,"textLines":1,"bbox":[1086,266,97,54]}
+{"kind":"shape","id":"sh/18v2xgza","slide":10,"bbox":[1187,262,175,62]}
+{"kind":"textbox","id":"sh/qhk3y1gn","slide":10,"text":"칸 색상","textPreview":"칸 색상","textChars":4,"textLines":1,"bbox":[1191,266,167,54]}
+{"kind":"shape","id":"sh/ridkr6h8","slide":10,"bbox":[1362,262,210,62]}
+{"kind":"textbox","id":"sh/sjml0byt","slide":10,"text":"연결","textPreview":"연결","textChars":2,"textLines":1,"bbox":[1366,266,202,54]}
+{"kind":"shape","id":"sh/d4v2twzy","slide":10,"bbox":[72,324,90,108]}
+{"kind":"textbox","id":"sh/ado3algr","slide":10,"text":"R1-1","textPreview":"R1-1","textChars":4,"textLines":1,"bbox":[78,329,78,98]}
+{"kind":"shape","id":"sh/bex43qxc","slide":10,"bbox":[162,324,660,108]}
+{"kind":"textbox","id":"sh/7i90vixo","slide":10,"text":"세 시간 자유라면 가장 먼저 할 일?","textPreview":"세 시간 자유라면 가장 먼저 할 일?","textChars":20,"textLines":1,"bbox":[168,329,648,98]}
+{"kind":"shape","id":"sh/6hgz2dw3","slide":10,"bbox":[822,324,260,108]}
+{"kind":"textbox","id":"sh/tkrixsfu","slide":10,"text":"그룹핑 연결","textPreview":"그룹핑 연결","textChars":6,"textLines":1,"bbox":[828,329,248,98]}
+{"kind":"shape","id":"sh/8jih4ne9","slide":10,"bbox":[1082,324,105,108]}
+{"kind":"textbox","id":"sh/vm90z2x0","slide":10,"text":"⏰","textPreview":"⏰","textChars":1,"textLines":1,"bbox":[1088,329,93,98]}
+{"kind":"shape","id":"sh/ul0z6xwf","slide":10,"bbox":[1187,324,175,108]}
+{"kind":"textbox","id":"sh/hori1cfq","slide":10,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,329,163,98]}
+{"kind":"shape","id":"sh/gni187el","slide":10,"bbox":[1362,324,210,108]}
+{"kind":"textbox","id":"sh/3qt032xw","slide":10,"text":"1차 선택과 연결","textPreview":"1차 선택과 연결","textChars":9,"textLines":1,"bbox":[1368,329,198,98]}
+{"kind":"shape","id":"sh/ip0jaxwb","slide":10,"bbox":[72,432,90,108]}
+{"kind":"textbox","id":"sh/0f2h07up","slide":10,"text":"R1-2","textPreview":"R1-2","textChars":4,"textLines":1,"bbox":[78,437,78,98]}
+{"kind":"shape","id":"sh/1gbitcba","slide":10,"bbox":[162,432,660,108]}
+{"kind":"textbox","id":"sh/edkzyhcj","slide":10,"text":"내 선택의 최고의 장점은?","textPreview":"내 선택의 최고의 장점은?","textChars":14,"textLines":1,"bbox":[168,437,648,98]}
+{"kind":"shape","id":"sh/fetgr2t4","slide":10,"bbox":[822,432,260,108]}
+{"kind":"textbox","id":"sh/sr2hw7ud","slide":10,"text":"그룹핑 연결","textPreview":"그룹핑 연결","textChars":6,"textLines":1,"bbox":[828,437,248,98]}
+{"kind":"shape","id":"sh/dcbypcby","slide":10,"bbox":[1082,432,105,108]}
+{"kind":"textbox","id":"sh/qp0zuxcn","slide":10,"text":"🏆","textPreview":"🏆","textChars":2,"textLines":1,"bbox":[1088,437,93,98]}
+{"kind":"shape","id":"sh/rqtgn2ts","slide":10,"bbox":[1187,432,175,108]}
+{"kind":"textbox","id":"sh/4nihsnuh","slide":10,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,437,163,98]}
+{"kind":"shape","id":"sh/5orylsb2","slide":10,"bbox":[1362,432,210,108]}
+{"kind":"textbox","id":"sh/9gnmd4ni","slide":10,"text":"1차 선택과 연결","textPreview":"1차 선택과 연결","textChars":9,"textLines":1,"bbox":[1368,437,198,98]}
+{"kind":"shape","id":"sh/8fe54z6x","slide":10,"bbox":[72,540,90,108]}
+{"kind":"textbox","id":"sh/7e54bu5c","slide":10,"text":"R1-3","textPreview":"R1-3","textChars":4,"textLines":1,"bbox":[78,545,78,98]}
+{"kind":"shape","id":"sh/mdwn2por","slide":10,"bbox":[162,540,660,108]}
+{"kind":"textbox","id":"sh/hk76h4ne","slide":10,"text":"편의점 최애 조합은?","textPreview":"편의점 최애 조합은?","textChars":11,"textLines":1,"bbox":[168,545,648,98]}
+{"kind":"shape","id":"sh/wje58z69","slide":10,"bbox":[822,540,260,108]}
+{"kind":"textbox","id":"sh/vi5ofu5o","slide":10,"text":"음식·취향","textPreview":"음식·취향","textChars":5,"textLines":1,"bbox":[828,545,248,98]}
+{"kind":"shape","id":"sh/uhwn69o3","slide":10,"bbox":[1082,540,105,108]}
+{"kind":"textbox","id":"sh/xo3m5kna","slide":10,"text":"🏪","textPreview":"🏪","textChars":2,"textLines":1,"bbox":[1088,545,93,98]}
+{"kind":"shape","id":"sh/cnu5wf6p","slide":10,"bbox":[1187,540,175,108]}
+{"kind":"textbox","id":"sh/2t836l4n","slide":10,"text":"코랄\n#FF7B73","textPreview":"코랄 | #FF7B73","textChars":10,"textLines":2,"bbox":[1193,545,163,98]}
+{"kind":"shape","id":"sh/3u1kzql8","slide":10,"bbox":[1362,540,210,108]}
+{"kind":"textbox","id":"sh/oval8bmt","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,545,198,98]}
+{"kind":"shape","id":"sh/pwj21g3e","slide":10,"bbox":[72,648,90,108]}
+{"kind":"textbox","id":"sh/qhs3al4j","slide":10,"text":"R1-4","textPreview":"R1-4","textChars":4,"textLines":1,"bbox":[78,653,78,98]}
+{"kind":"shape","id":"sh/bi1k3ql4","slide":10,"bbox":[162,648,660,108]}
+{"kind":"textbox","id":"sh/cjalcvmp","slide":10,"text":"아침형과 밤형 중 나는? 왜?","textPreview":"아침형과 밤형 중 나는? 왜?","textChars":16,"textLines":1,"bbox":[168,653,648,98]}
+{"kind":"shape","id":"sh/xkj2503a","slide":10,"bbox":[822,648,260,108]}
+{"kind":"textbox","id":"sh/61ojy14f","slide":10,"text":"생활·취향","textPreview":"생활·취향","textChars":5,"textLines":1,"bbox":[828,653,248,98]}
+{"kind":"shape","id":"sh/rmhkrml0","slide":10,"bbox":[1082,648,105,108]}
+{"kind":"textbox","id":"sh/v6d0z21s","slide":10,"text":"🌙","textPreview":"🌙","textChars":2,"textLines":1,"bbox":[1088,653,93,98]}
+{"kind":"shape","id":"sh/u54z6xk7","slide":10,"bbox":[1187,648,175,108]}
+{"kind":"textbox","id":"sh/hsvi1sjy","slide":10,"text":"보라\n#8168C5","textPreview":"보라 | #8168C5","textChars":10,"textLines":2,"bbox":[1193,653,163,98]}
+{"kind":"shape","id":"sh/w7mh8n2d","slide":10,"bbox":[1362,648,210,108]}
+{"kind":"textbox","id":"sh/72tgvi1g","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,653,198,98]}
+{"kind":"shape","id":"sh/m1kz2dkb","slide":10,"bbox":[72,756,90,108]}
+{"kind":"textbox","id":"sh/94vyxsjm","slide":10,"text":"R1-5","textPreview":"R1-5","textChars":4,"textLines":1,"bbox":[78,761,78,98]}
+{"kind":"shape","id":"sh/83mh4n21","slide":10,"bbox":[162,756,660,108]}
+{"kind":"textbox","id":"sh/ryx07m10","slide":10,"text":"하루만 살고 싶은 계절은?","textPreview":"하루만 살고 싶은 계절은?","textChars":14,"textLines":1,"bbox":[168,761,648,98]}
+{"kind":"shape","id":"sh/6xozehkf","slide":10,"bbox":[822,756,260,108]}
+{"kind":"textbox","id":"sh/o3yx8jix","slide":10,"text":"취향","textPreview":"취향","textChars":2,"textLines":1,"bbox":[828,761,248,98]}
+{"kind":"shape","id":"sh/p4re14zi","slide":10,"bbox":[1082,756,105,108]}
+{"kind":"textbox","id":"sh/2hgv690r","slide":10,"text":"🌤️","textPreview":"🌤️","textChars":3,"textLines":1,"bbox":[1088,761,93,98]}
+{"kind":"shape","id":"sh/n2pwze1c","slide":10,"bbox":[1187,756,175,108]}
+{"kind":"textbox","id":"sh/c7ixcjit","slide":10,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,761,163,98]}
+{"kind":"shape","id":"sh/x8re5oze","slide":10,"bbox":[1362,756,210,108]}
+{"kind":"textbox","id":"sh/a50fa903","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,761,198,98]}
+{"kind":"shape","id":"sh/b69w3eh8","slide":10,"bbox":[72,864,90,108]}
+{"kind":"textbox","id":"sh/kb2xg3i5","slide":10,"text":"R1-6","textPreview":"R1-6","textChars":4,"textLines":1,"bbox":[78,869,78,98]}
+{"kind":"shape","id":"sh/lcbe9ozq","slide":10,"bbox":[162,864,660,108]}
+{"kind":"textbox","id":"sh/9wzaxs7i","slide":10,"text":"나를 동물로 표현한다면?","textPreview":"나를 동물로 표현한다면?","textChars":13,"textLines":1,"bbox":[168,869,648,98]}
+{"kind":"shape","id":"sh/8vq9on6x","slide":10,"bbox":[822,864,260,108]}
+{"kind":"textbox","id":"sh/nuhsvipc","slide":10,"text":"상상·자기소개","textPreview":"상상·자기소개","textChars":7,"textLines":1,"bbox":[828,869,248,98]}
+{"kind":"shape","id":"sh/mt8rmdor","slide":10,"bbox":[1082,864,105,108]}
+{"kind":"textbox","id":"sh/lsfqt876","slide":10,"text":"🐾","textPreview":"🐾","textChars":2,"textLines":1,"bbox":[1088,869,93,98]}
+{"kind":"shape","id":"sh/0r69k36l","slide":10,"bbox":[1187,864,175,108]}
+{"kind":"textbox","id":"sh/z6x8ryp0","slide":10,"text":"라임\n#A9D66F","textPreview":"라임 | #A9D66F","textChars":10,"textLines":2,"bbox":[1193,869,163,98]}
+{"kind":"shape","id":"sh/y5oridov","slide":10,"bbox":[1362,864,210,108]}
+{"kind":"textbox","id":"sh/d4fqp87a","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,869,198,98]}
+{"kind":"shape","id":"sh/c369g36p","slide":10,"bbox":[72,972,90,108]}
+{"kind":"textbox","id":"sh/29k7q94n","slide":10,"text":"R1-7","textPreview":"R1-7","textChars":4,"textLines":1,"bbox":[78,977,78,98]}
+{"kind":"shape","id":"sh/3adoje5s","slide":10,"bbox":[162,972,660,108]}
+{"kind":"textbox","id":"sh/obmpszmd","slide":10,"text":"최근 가장 많이 쓴 이모지는?","textPreview":"최근 가장 많이 쓴 이모지는?","textChars":16,"textLines":1,"bbox":[168,977,648,98]}
+{"kind":"shape","id":"sh/pcv6l4ny","slide":10,"bbox":[822,972,260,108]}
+{"kind":"textbox","id":"sh/e5knmp4b","slide":10,"text":"일상·재미","textPreview":"일상·재미","textChars":5,"textLines":1,"bbox":[828,977,248,98]}
+{"kind":"shape","id":"sh/f6tofu5w","slide":10,"bbox":[1082,972,105,108]}
+{"kind":"textbox","id":"sh/g72pozmh","slide":10,"text":"😂","textPreview":"😂","textChars":2,"textLines":1,"bbox":[1088,977,93,98]}
+{"kind":"shape","id":"sh/18b6h4n2","slide":10,"bbox":[1187,972,175,108]}
+{"kind":"textbox","id":"sh/6h0nip4f","slide":10,"text":"핑크\n#E777AE","textPreview":"핑크 | #E777AE","textChars":10,"textLines":2,"bbox":[1193,977,163,98]}
+{"kind":"shape","id":"sh/r29obu5k","slide":10,"bbox":[1362,972,210,108]}
+{"kind":"textbox","id":"sh/472xkz65","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,977,198,98]}
+{"kind":"textbox","id":"sh/58betk7q","slide":10,"text":"고등부 찬양팀 나눔마블  ·  10","textPreview":"고등부 찬양팀 나눔마블  ·  10","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/ni37yh","slide":10,"text":""}
+{"kind":"slide","id":"sl/1ak54i","slide":11,"title":"3 · 질문 체계","textShapes":52}
+{"kind":"textbox","id":"sh/p8netoje","slide":11,"text":"3 · 질문 체계","textPreview":"3 · 질문 체계","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/25cfy9kn","slide":11,"text":"1라운드 고유 질문 · 2/2","textPreview":"1라운드 고유 질문 · 2/2","textChars":16,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/36lwre18","slide":11,"text":"그룹핑 연결 질문 2개를 포함한 고유 질문 14개입니다.","textPreview":"그룹핑 연결 질문 2개를 포함한 고유 질문 14개입니다.","textChars":31,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/cbex432p","slide":11,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/dcnyxoja","slide":11,"bbox":[72,262,90,62]}
+{"kind":"textbox","id":"sh/q9wf2tkj","slide":11,"text":"번호","textPreview":"번호","textChars":2,"textLines":1,"bbox":[76,266,82,54]}
+{"kind":"shape","id":"sh/ra5wvy14","slide":11,"bbox":[162,262,660,62]}
+{"kind":"textbox","id":"sh/sfaxsz2l","slide":11,"text":"질문","textPreview":"질문","textChars":2,"textLines":1,"bbox":[166,266,652,54]}
+{"kind":"shape","id":"sh/tgjel4j6","slide":11,"bbox":[822,262,260,62]}
+{"kind":"textbox","id":"sh/xozapofi","slide":11,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[826,266,252,54]}
+{"kind":"shape","id":"sh/w3q9wjyx","slide":11,"bbox":[1082,262,105,62]}
+{"kind":"textbox","id":"sh/v2hsnexc","slide":11,"text":"이모지","textPreview":"이모지","textChars":3,"textLines":1,"bbox":[1086,266,97,54]}
+{"kind":"shape","id":"sh/a18ru9gr","slide":11,"bbox":[1187,262,175,62]}
+{"kind":"textbox","id":"sh/5sjatofe","slide":11,"text":"칸 색상","textPreview":"칸 색상","textChars":4,"textLines":1,"bbox":[1191,266,167,54]}
+{"kind":"shape","id":"sh/kra903y9","slide":11,"bbox":[1362,262,210,62]}
+{"kind":"textbox","id":"sh/jqhsryxo","slide":11,"text":"연결","textPreview":"연결","textChars":2,"textLines":1,"bbox":[1366,266,202,54]}
+{"kind":"shape","id":"sh/ip8rytg3","slide":11,"bbox":[72,324,90,108]}
+{"kind":"textbox","id":"sh/twjax8fq","slide":11,"text":"R1-8","textPreview":"R1-8","textChars":4,"textLines":1,"bbox":[78,329,78,98]}
+{"kind":"shape","id":"sh/sva943y5","slide":11,"bbox":[162,324,660,108]}
+{"kind":"textbox","id":"sh/cb2lgbqd","slide":11,"text":"여행 갈 때 꼭 챙기는 것은?","textPreview":"여행 갈 때 꼭 챙기는 것은?","textChars":16,"textLines":1,"bbox":[168,329,648,98]}
+{"kind":"shape","id":"sh/dcb2pgry","slide":11,"bbox":[822,324,260,108]}
+{"kind":"textbox","id":"sh/q9k3e18n","slide":11,"text":"취향","textPreview":"취향","textChars":2,"textLines":1,"bbox":[828,329,248,98]}
+{"kind":"shape","id":"sh/batkn698","slide":11,"bbox":[1082,324,105,108]}
+{"kind":"textbox","id":"sh/0f2lkbqp","slide":11,"text":"🎒","textPreview":"🎒","textChars":2,"textLines":1,"bbox":[1088,329,93,98]}
+{"kind":"shape","id":"sh/lgvmtgra","slide":11,"bbox":[1187,324,175,108]}
+{"kind":"textbox","id":"sh/ydk3il8j","slide":11,"text":"민트\n#63C7A7","textPreview":"민트 | #63C7A7","textChars":10,"textLines":2,"bbox":[1193,329,163,98]}
+{"kind":"shape","id":"sh/zetkr694","slide":11,"bbox":[1362,324,210,108]}
+{"kind":"textbox","id":"sh/gjil8ral","slide":11,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,329,198,98]}
+{"kind":"shape","id":"sh/1kr2hwrq","slide":11,"bbox":[72,432,90,108]}
+{"kind":"textbox","id":"sh/jyxonut8","slide":11,"text":"R1-9","textPreview":"R1-9","textChars":4,"textLines":1,"bbox":[78,437,78,98]}
+{"kind":"shape","id":"sh/ixoneps3","slide":11,"bbox":[162,432,660,108]}
+{"kind":"textbox","id":"sh/50z6p4be","slide":11,"text":"급식에 꼭 나왔으면 하는 메뉴?","textPreview":"급식에 꼭 나왔으면 하는 메뉴?","textChars":17,"textLines":1,"bbox":[168,437,648,98]}
+{"kind":"shape","id":"sh/kzq5gzat","slide":11,"bbox":[822,432,260,108]}
+{"kind":"textbox","id":"sh/vaxojatc","slide":11,"text":"학교·음식","textPreview":"학교·음식","textChars":5,"textLines":1,"bbox":[828,437,248,98]}
+{"kind":"shape","id":"sh/a9onapsr","slide":11,"bbox":[1082,432,105,108]}
+{"kind":"textbox","id":"sh/xwf6lkbi","slide":11,"text":"🍛","textPreview":"🍛","textChars":2,"textLines":1,"bbox":[1088,437,93,98]}
+{"kind":"shape","id":"sh/wb65cfax","slide":11,"bbox":[1187,432,175,108]}
+{"kind":"textbox","id":"sh/n6dofatg","slide":11,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,437,163,98]}
+{"kind":"shape","id":"sh/m54n65cv","slide":11,"bbox":[1362,432,210,108]}
+{"kind":"textbox","id":"sh/2dorad8f","slide":11,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,437,198,98]}
+{"kind":"shape","id":"sh/3ehsjyp0","slide":11,"bbox":[72,540,90,108]}
+{"kind":"textbox","id":"sh/ofq9c3ql","slide":11,"text":"R1-10","textPreview":"R1-10","textChars":5,"textLines":1,"bbox":[78,545,78,98]}
+{"kind":"shape","id":"sh/pgzal87q","slide":11,"bbox":[162,540,660,108]}
+{"kind":"textbox","id":"sh/e9or6t83","slide":11,"text":"노래방 첫 곡으로 고를 노래?","textPreview":"노래방 첫 곡으로 고를 노래?","textChars":16,"textLines":1,"bbox":[168,545,648,98]}
+{"kind":"shape","id":"sh/faxsfypo","slide":11,"bbox":[822,540,260,108]}
+{"kind":"textbox","id":"sh/gb6983q9","slide":11,"text":"음악·취향","textPreview":"음악·취향","textChars":5,"textLines":1,"bbox":[828,545,248,98]}
+{"kind":"shape","id":"sh/1cfah87u","slide":11,"bbox":[1082,540,105,108]}
+{"kind":"textbox","id":"sh/6l4r2t87","slide":11,"text":"🎤","textPreview":"🎤","textChars":2,"textLines":1,"bbox":[1088,545,93,98]}
+{"kind":"shape","id":"sh/rmx8beps","slide":11,"bbox":[1187,540,175,108]}
+{"kind":"textbox","id":"sh/903uhwra","slide":11,"text":"블루\n#5C87E6","textPreview":"블루 | #5C87E6","textChars":10,"textLines":2,"bbox":[1193,545,163,98]}
+{"kind":"shape","id":"sh/8zudorap","slide":11,"bbox":[1362,540,210,108]}
+{"kind":"textbox","id":"sh/7ylcfm94","slide":11,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,545,198,98]}
+{"kind":"shape","id":"sh/mdcvmhsj","slide":11,"bbox":[72,648,90,108]}
+{"kind":"textbox","id":"sh/lcjudcry","slide":11,"text":"R1-11","textPreview":"R1-11","textChars":5,"textLines":1,"bbox":[78,653,78,98]}
+{"kind":"shape","id":"sh/kbadk7at","slide":11,"bbox":[162,648,660,108]}
+{"kind":"textbox","id":"sh/za1cb298","slide":11,"text":"교실에서 좋아하는 자리는? 왜?","textPreview":"교실에서 좋아하는 자리는? 왜?","textChars":17,"textLines":1,"bbox":[168,653,648,98]}
+{"kind":"shape","id":"sh/y9sbihsn","slide":11,"bbox":[822,648,260,108]}
+{"kind":"textbox","id":"sh/x8ju9cr2","slide":11,"text":"학교·취향","textPreview":"학교·취향","textChars":5,"textLines":1,"bbox":[828,653,248,98]}
+{"kind":"shape","id":"sh/c7atg7ah","slide":11,"bbox":[1082,648,105,108]}
+{"kind":"textbox","id":"sh/o3elcrmp","slide":11,"text":"🪟","textPreview":"🪟","textChars":2,"textLines":1,"bbox":[1088,653,93,98]}
+{"kind":"shape","id":"sh/p47mlw3a","slide":11,"bbox":[1187,648,175,108]}
+{"kind":"textbox","id":"sh/21w3a14j","slide":11,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,653,163,98]}
+{"kind":"shape","id":"sh/n254j6l4","slide":11,"bbox":[1362,648,210,108]}
+{"kind":"textbox","id":"sh/0zel8rmd","slide":11,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,653,198,98]}
+{"kind":"shape","id":"sh/10nmhw3y","slide":11,"bbox":[72,756,90,108]}
+{"kind":"textbox","id":"sh/exw36h4n","slide":11,"text":"R1-12","textPreview":"R1-12","textChars":5,"textLines":1,"bbox":[78,761,78,98]}
+{"kind":"shape","id":"sh/fy54fmls","slide":11,"bbox":[162,756,660,108]}
+{"kind":"textbox","id":"sh/kvilkvmx","slide":11,"text":"투명인간이 되면 해볼 일?","textPreview":"투명인간이 되면 해볼 일?","textChars":14,"textLines":1,"bbox":[168,761,648,98]}
+{"kind":"shape","id":"sh/lwrmtg32","slide":11,"bbox":[822,756,260,108]}
+{"kind":"textbox","id":"sh/vqtoju5k","slide":11,"text":"상상·재미","textPreview":"상상·재미","textChars":5,"textLines":1,"bbox":[828,761,248,98]}
+{"kind":"shape","id":"sh/upk7apoz","slide":11,"bbox":[1082,756,105,108]}
+{"kind":"textbox","id":"sh/hsb6lkna","slide":11,"text":"👻","textPreview":"👻","textChars":2,"textLines":1,"bbox":[1088,761,93,98]}
+{"kind":"shape","id":"sh/wr2pcf65","slide":11,"bbox":[1187,756,175,108]}
+{"kind":"textbox","id":"sh/jutonu5g","slide":11,"text":"보라\n#8168C5","textPreview":"보라 | #8168C5","textChars":10,"textLines":2,"bbox":[1193,761,163,98]}
+{"kind":"shape","id":"sh/itk7epov","slide":11,"bbox":[1362,756,210,108]}
+{"kind":"textbox","id":"sh/5gv6p4nm","slide":11,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,761,198,98]}
+{"kind":"shape","id":"sh/4fmpgz61","slide":11,"bbox":[72,864,90,108]}
+{"kind":"textbox","id":"sh/zy9oba5c","slide":11,"text":"R1-13","textPreview":"R1-13","textChars":5,"textLines":1,"bbox":[78,869,78,98]}
+{"kind":"shape","id":"sh/yx0n25or","slide":11,"bbox":[162,864,660,108]}
+{"kind":"textbox","id":"sh/m9wfm9sr","slide":11,"text":"내가 만드는 휴일의 이름은?","textPreview":"내가 만드는 휴일의 이름은?","textChars":15,"textLines":1,"bbox":[168,869,648,98]}
+{"kind":"shape","id":"sh/na5wfetc","slide":11,"bbox":[822,864,260,108]}
+{"kind":"textbox","id":"sh/obyxojax","slide":11,"text":"상상·창의","textPreview":"상상·창의","textChars":5,"textLines":1,"bbox":[828,869,248,98]}
+{"kind":"shape","id":"sh/9c7ehobi","slide":11,"bbox":[1082,864,105,108]}
+{"kind":"textbox","id":"sh/adgfqtsn","slide":11,"text":"📅","textPreview":"📅","textChars":2,"textLines":1,"bbox":[1088,869,93,98]}
+{"kind":"shape","id":"sh/bepwjet8","slide":11,"bbox":[1187,864,175,108]}
+{"kind":"textbox","id":"sh/wfyxsjat","slide":11,"text":"코랄\n#FF7B73","textPreview":"코랄 | #FF7B73","textChars":10,"textLines":2,"bbox":[1193,869,163,98]}
+{"kind":"shape","id":"sh/x07elobe","slide":11,"bbox":[1362,864,210,108]}
+{"kind":"textbox","id":"sh/qhcvepsj","slide":11,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,869,198,98]}
+{"kind":"shape","id":"sh/rilw7ut4","slide":11,"bbox":[72,972,90,108]}
+{"kind":"textbox","id":"sh/twbidsvm","slide":11,"text":"R1-14","textPreview":"R1-14","textChars":5,"textLines":1,"bbox":[78,977,78,98]}
+{"kind":"shape","id":"sh/8v2hknu1","slide":11,"bbox":[162,972,660,108]}
+{"kind":"textbox","id":"sh/7utgbidg","slide":11,"text":"단체 사진에서 자주 서는 위치?","textPreview":"단체 사진에서 자주 서는 위치?","textChars":17,"textLines":1,"bbox":[168,977,648,98]}
+{"kind":"shape","id":"sh/690zixcv","slide":11,"bbox":[822,972,260,108]}
+{"kind":"textbox","id":"sh/h0bihcvi","slide":11,"text":"일상·취향","textPreview":"일상·취향","textChars":5,"textLines":1,"bbox":[828,977,248,98]}
+{"kind":"shape","id":"sh/gz2ho7ud","slide":11,"bbox":[1082,972,105,108]}
+{"kind":"textbox","id":"sh/vyt0f2ds","slide":11,"text":"📸","textPreview":"📸","textChars":2,"textLines":1,"bbox":[1088,977,93,98]}
+{"kind":"shape","id":"sh/uxkzmxc7","slide":11,"bbox":[1187,972,175,108]}
+{"kind":"textbox","id":"sh/x4ry58ve","slide":11,"text":"라임\n#A9D66F","textPreview":"라임 | #A9D66F","textChars":10,"textLines":2,"bbox":[1193,977,163,98]}
+{"kind":"shape","id":"sh/w3ihc3ut","slide":11,"bbox":[1362,972,210,108]}
+{"kind":"textbox","id":"sh/5w7y94r2","slide":11,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,977,198,98]}
+{"kind":"textbox","id":"sh/4vyx0jqh","slide":11,"text":"고등부 찬양팀 나눔마블  ·  11","textPreview":"고등부 찬양팀 나눔마블  ·  11","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/1ak54i","slide":11,"text":""}
+{"kind":"slide","id":"sl/akk39i","slide":12,"title":"3 · 질문 체계","textShapes":52}
+{"kind":"textbox","id":"sh/qtofq1cv","slide":12,"text":"3 · 질문 체계","textPreview":"3 · 질문 체계","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/dwfy1gvm","slide":12,"text":"2라운드 고유 질문 · 1/2","textPreview":"2라운드 고유 질문 · 1/2","textChars":16,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/sv6xsbu1","slide":12,"text":"음악·찬양·협력과 관계를 중심으로 함께하는 방식을 발견합니다.","textPreview":"음악·찬양·협력과 관계를 중심으로 함께하는 방식을 발견합니다.","textChars":34,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/3qdgvmd4","slide":12,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/ip4fmhcz","slide":12,"bbox":[72,262,90,62]}
+{"kind":"textbox","id":"sh/5sfyxwva","slide":12,"text":"번호","textPreview":"번호","textChars":2,"textLines":1,"bbox":[76,266,82,54]}
+{"kind":"shape","id":"sh/4rmxorup","slide":12,"bbox":[162,262,660,62]}
+{"kind":"textbox","id":"sh/nmhg7qto","slide":12,"text":"질문","textPreview":"질문","textChars":2,"textLines":1,"bbox":[166,266,652,54]}
+{"kind":"shape","id":"sh/ml8zylc3","slide":12,"bbox":[822,262,260,62]}
+{"kind":"textbox","id":"sh/o7y54f29","slide":12,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[826,266,252,54]}
+{"kind":"shape","id":"sh/9876dkje","slide":12,"bbox":[1082,262,105,62]}
+{"kind":"textbox","id":"sh/m5gn25k3","slide":12,"text":"이모지","textPreview":"이모지","textChars":3,"textLines":1,"bbox":[1086,266,97,54]}
+{"kind":"shape","id":"sh/n6poba1o","slide":12,"bbox":[1187,262,175,62]}
+{"kind":"textbox","id":"sh/03y50v2x","slide":12,"text":"칸 색상","textPreview":"칸 색상","textChars":4,"textLines":1,"bbox":[1191,266,167,54]}
+{"kind":"shape","id":"sh/147690ji","slide":12,"bbox":[1362,262,210,62]}
+{"kind":"textbox","id":"sh/ehwnylkr","slide":12,"text":"연결","textPreview":"연결","textChars":2,"textLines":1,"bbox":[1366,266,202,54]}
+{"kind":"shape","id":"sh/zi5o7q1c","slide":12,"bbox":[72,324,90,108]}
+{"kind":"textbox","id":"sh/cfe5wv21","slide":12,"text":"R2-1","textPreview":"R2-1","textChars":4,"textLines":1,"bbox":[78,329,78,98]}
+{"kind":"shape","id":"sh/dgn650jm","slide":12,"bbox":[162,324,660,108]}
+{"kind":"textbox","id":"sh/twfm9cba","slide":12,"text":"우리 선택 역할의 강점은?","textPreview":"우리 선택 역할의 강점은?","textChars":14,"textLines":1,"bbox":[168,329,648,98]}
+{"kind":"shape","id":"sh/sb6l07up","slide":12,"bbox":[822,324,260,108]}
+{"kind":"textbox","id":"sh/rax472t4","slide":12,"text":"그룹핑 연결","textPreview":"그룹핑 연결","textChars":6,"textLines":1,"bbox":[828,329,248,98]}
+{"kind":"shape","id":"sh/69o3yhcj","slide":12,"bbox":[1082,324,105,108]}
+{"kind":"textbox","id":"sh/58fm5cby","slide":12,"text":"💪","textPreview":"💪","textChars":2,"textLines":1,"bbox":[1088,329,93,98]}
+{"kind":"shape","id":"sh/47mlw7ut","slide":12,"bbox":[1187,324,175,108]}
+{"kind":"textbox","id":"sh/j6d432d8","slide":12,"text":"라임\n#A9D66F","textPreview":"라임 | #A9D66F","textChars":10,"textLines":2,"bbox":[1193,329,163,98]}
+{"kind":"shape","id":"sh/i543uxcn","slide":12,"bbox":[1362,324,210,108]}
+{"kind":"textbox","id":"sh/p4zmhwbi","slide":12,"text":"2차 선택과 연결","textPreview":"2차 선택과 연결","textChars":9,"textLines":1,"bbox":[1368,329,198,98]}
+{"kind":"shape","id":"sh/o3q58rux","slide":12,"bbox":[72,432,90,108]}
+{"kind":"textbox","id":"sh/m9kj2tsf","slide":12,"text":"R2-2","textPreview":"R2-2","textChars":4,"textLines":1,"bbox":[78,437,78,98]}
+{"kind":"shape","id":"sh/nat0by90","slide":12,"bbox":[162,432,660,108]}
+{"kind":"textbox","id":"sh/8b2143al","slide":12,"text":"다른 역할과 만나면 생길 시너지는?","textPreview":"다른 역할과 만나면 생길 시너지는?","textChars":19,"textLines":1,"bbox":[168,437,648,98]}
+{"kind":"shape","id":"sh/9cbid8rq","slide":12,"bbox":[822,432,260,108]}
+{"kind":"textbox","id":"sh/yl0jyts3","slide":12,"text":"그룹핑 연결","textPreview":"그룹핑 연결","textChars":6,"textLines":1,"bbox":[828,437,248,98]}
+{"kind":"shape","id":"sh/z6907yto","slide":12,"bbox":[1082,432,105,108]}
+{"kind":"textbox","id":"sh/07i10ja9","slide":12,"text":"⚡","textPreview":"⚡","textChars":1,"textLines":1,"bbox":[1088,437,93,98]}
+{"kind":"shape","id":"sh/l8ri9obu","slide":12,"bbox":[1187,432,175,108]}
+{"kind":"textbox","id":"sh/ih4jadsn","slide":12,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,437,163,98]}
+{"kind":"shape","id":"sh/j2dkji98","slide":12,"bbox":[1362,432,210,108]}
+{"kind":"textbox","id":"sh/3utgfad8","slide":12,"text":"2차 선택과 연결","textPreview":"2차 선택과 연결","textChars":9,"textLines":1,"bbox":[1368,437,198,98]}
+{"kind":"shape","id":"sh/290f6pw3","slide":12,"bbox":[72,540,90,108]}
+{"kind":"textbox","id":"sh/pwbyhkve","slide":12,"text":"R2-3","textPreview":"R2-3","textChars":4,"textLines":1,"bbox":[78,545,78,98]}
+{"kind":"shape","id":"sh/4v2x8fet","slide":12,"bbox":[162,540,660,108]}
+{"kind":"textbox","id":"sh/f69wbadc","slide":12,"text":"가장 좋아하는 악기 소리는?","textPreview":"가장 좋아하는 악기 소리는?","textChars":15,"textLines":1,"bbox":[168,545,648,98]}
+{"kind":"shape","id":"sh/u50f25wr","slide":12,"bbox":[822,540,260,108]}
+{"kind":"textbox","id":"sh/h8redkvi","slide":12,"text":"음악·취향","textPreview":"음악·취향","textChars":5,"textLines":1,"bbox":[828,545,248,98]}
+{"kind":"shape","id":"sh/g7ix4fex","slide":12,"bbox":[1082,540,105,108]}
+{"kind":"textbox","id":"sh/z2dg7edg","slide":12,"text":"🎸","textPreview":"🎸","textChars":2,"textLines":1,"bbox":[1088,545,93,98]}
+{"kind":"shape","id":"sh/e1kfe9wv","slide":12,"bbox":[1187,540,175,108]}
+{"kind":"textbox","id":"sh/wvuls7qh","slide":12,"text":"블루\n#5C87E6","textPreview":"블루 | #5C87E6","textChars":10,"textLines":2,"bbox":[1193,545,163,98]}
+{"kind":"shape","id":"sh/xw3mlc72","slide":12,"bbox":[1362,540,210,108]}
+{"kind":"textbox","id":"sh/atc3qx8b","slide":12,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,545,198,98]}
+{"kind":"shape","id":"sh/bul4j2pw","slide":12,"bbox":[72,648,90,108]}
+{"kind":"textbox","id":"sh/kzelw7qd","slide":12,"text":"R2-4","textPreview":"R2-4","textChars":4,"textLines":1,"bbox":[78,653,78,98]}
+{"kind":"shape","id":"sh/l0nmpc7y","slide":12,"bbox":[162,648,660,108]}
+{"kind":"textbox","id":"sh/yxc3uh87","slide":12,"text":"요즘 가장 가보고 싶은 곳은?","textPreview":"요즘 가장 가보고 싶은 곳은?","textChars":16,"textLines":1,"bbox":[168,653,648,98]}
+{"kind":"shape","id":"sh/jy54nmps","slide":12,"bbox":[822,648,260,108]}
+{"kind":"textbox","id":"sh/83el0rqp","slide":12,"text":"여행·취향","textPreview":"여행·취향","textChars":5,"textLines":1,"bbox":[828,653,248,98]}
+{"kind":"shape","id":"sh/t4nmtw7u","slide":12,"bbox":[1082,648,105,108]}
+{"kind":"textbox","id":"sh/hk3mdwze","slide":12,"text":"🗺️","textPreview":"🗺️","textChars":3,"textLines":1,"bbox":[1088,653,93,98]}
+{"kind":"shape","id":"sh/gjal4rit","slide":12,"bbox":[1187,648,175,108]}
+{"kind":"textbox","id":"sh/fi1kbmh8","slide":12,"text":"핑크\n#E777AE","textPreview":"핑크 | #E777AE","textChars":10,"textLines":2,"bbox":[1193,653,163,98]}
+{"kind":"shape","id":"sh/uhs32h0n","slide":12,"bbox":[1362,648,210,108]}
+{"kind":"textbox","id":"sh/po3mhwza","slide":12,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,653,198,98]}
+{"kind":"shape","id":"sh/4nul8rip","slide":12,"bbox":[72,756,90,108]}
+{"kind":"textbox","id":"sh/3ml4fmh4","slide":12,"text":"R2-5","textPreview":"R2-5","textChars":4,"textLines":1,"bbox":[78,761,78,98]}
+{"kind":"shape","id":"sh/2lc36h0j","slide":12,"bbox":[162,756,660,108]}
+{"kind":"textbox","id":"sh/5sz25cz6","slide":12,"text":"팀이 지칠 때 분위기를 살리는 방법은?","textPreview":"팀이 지칠 때 분위기를 살리는 방법은?","textChars":21,"textLines":1,"bbox":[168,761,648,98]}
+{"kind":"shape","id":"sh/krqlw7il","slide":12,"bbox":[822,756,260,108]}
+{"kind":"textbox","id":"sh/axoj6dg3","slide":12,"text":"협력·배려","textPreview":"협력·배려","textChars":5,"textLines":1,"bbox":[828,761,248,98]}
+{"kind":"shape","id":"sh/byx0fyxo","slide":12,"bbox":[1082,756,105,108]}
+{"kind":"textbox","id":"sh/wj6183y9","slide":12,"text":"🔋","textPreview":"🔋","textChars":2,"textLines":1,"bbox":[1088,761,93,98]}
+{"kind":"shape","id":"sh/xkfih8fu","slide":12,"bbox":[1187,756,175,108]}
+{"kind":"textbox","id":"sh/il8jadgf","slide":12,"text":"코랄\n#FF7B73","textPreview":"코랄 | #FF7B73","textChars":10,"textLines":2,"bbox":[1193,761,163,98]}
+{"kind":"shape","id":"sh/jmh0jix0","slide":12,"bbox":[1362,756,210,108]}
+{"kind":"textbox","id":"sh/knq1cnyl","slide":12,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,761,198,98]}
+{"kind":"shape","id":"sh/5ozilsf6","slide":12,"bbox":[72,864,90,108]}
+{"kind":"textbox","id":"sh/ep4zytgb","slide":12,"text":"R2-6","textPreview":"R2-6","textChars":4,"textLines":1,"bbox":[78,869,78,98]}
+{"kind":"shape","id":"sh/zqd07exg","slide":12,"bbox":[162,864,660,108]}
+{"kind":"textbox","id":"sh/3yls3etw","slide":12,"text":"좋은 찬양팀원이 될 수 있도록 내가 할 수 있는 것 한 가지?","textPreview":"좋은 찬양팀원이 될 수 있도록 내가 할 수 있는 것 한 가지?","textChars":34,"textLines":1,"bbox":[168,869,648,98]}
+{"kind":"shape","id":"sh/idcba9sb","slide":12,"bbox":[822,864,260,108]}
+{"kind":"textbox","id":"sh/503a5or2","slide":12,"text":"태도·실천","textPreview":"태도·실천","textChars":5,"textLines":1,"bbox":[828,869,248,98]}
+{"kind":"shape","id":"sh/4zutcjah","slide":12,"bbox":[1082,864,105,108]}
+{"kind":"textbox","id":"sh/r2ls7y98","slide":12,"text":"🙋","textPreview":"🙋","textChars":2,"textLines":1,"bbox":[1088,869,93,98]}
+{"kind":"shape","id":"sh/q1cbetsn","slide":12,"bbox":[1187,864,175,108]}
+{"kind":"textbox","id":"sh/d43a9ory","slide":12,"text":"민트\n#63C7A7","textPreview":"민트 | #63C7A7","textChars":10,"textLines":2,"bbox":[1193,869,163,98]}
+{"kind":"shape","id":"sh/s3utgjat","slide":12,"bbox":[1362,864,210,108]}
+{"kind":"textbox","id":"sh/761svuto","slide":12,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,869,198,98]}
+{"kind":"shape","id":"sh/m58r2psj","slide":12,"bbox":[72,972,90,108]}
+{"kind":"textbox","id":"sh/cb6pcvq1","slide":12,"text":"R2-7","textPreview":"R2-7","textChars":4,"textLines":1,"bbox":[78,977,78,98]}
+{"kind":"shape","id":"sh/xcfq50rm","slide":12,"bbox":[162,972,660,108]}
+{"kind":"textbox","id":"sh/a9o7al8b","slide":12,"text":"우리 팀만의 구호를 만든다면?","textPreview":"우리 팀만의 구호를 만든다면?","textChars":16,"textLines":1,"bbox":[168,977,648,98]}
+{"kind":"shape","id":"sh/bax83q9g","slide":12,"bbox":[822,972,260,108]}
+{"kind":"textbox","id":"sh/on6p8bq5","slide":12,"text":"재미·팀워크","textPreview":"재미·팀워크","textChars":6,"textLines":1,"bbox":[828,977,248,98]}
+{"kind":"shape","id":"sh/pofq1grq","slide":12,"bbox":[1082,972,105,108]}
+{"kind":"textbox","id":"sh/2l476l8z","slide":12,"text":"📣","textPreview":"📣","textChars":2,"textLines":1,"bbox":[1088,977,93,98]}
+{"kind":"shape","id":"sh/nmdozq9k","slide":12,"bbox":[1187,972,175,108]}
+{"kind":"textbox","id":"sh/8jqpkfq9","slide":12,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,977,163,98]}
+{"kind":"shape","id":"sh/94zqdk7u","slide":12,"bbox":[1362,972,210,108]}
+{"kind":"textbox","id":"sh/idcr6xwf","slide":12,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,977,198,98]}
+{"kind":"textbox","id":"sh/3el8fidk","slide":12,"text":"고등부 찬양팀 나눔마블  ·  12","textPreview":"고등부 찬양팀 나눔마블  ·  12","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/akk39i","slide":12,"text":""}
+{"kind":"slide","id":"sl/f4m776","slide":13,"title":"3 · 질문 체계","textShapes":52}
+{"kind":"textbox","id":"sh/vq5k761s","slide":13,"text":"3 · 질문 체계","textPreview":"3 · 질문 체계","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/grel0b2d","slide":13,"text":"2라운드 고유 질문 · 2/2","textPreview":"2라운드 고유 질문 · 2/2","textChars":16,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/hs729gji","slide":13,"text":"경험이 없는 신입생도 ‘해보고 싶은 것’으로 답할 수 있습니다.","textPreview":"경험이 없는 신입생도 ‘해보고 싶은 것’으로 답할 수 있습니다.","textChars":35,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/itg32lk3","slide":13,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/3up4bq1o","slide":13,"bbox":[72,262,90,62]}
+{"kind":"textbox","id":"sh/4vyl4v29","slide":13,"text":"번호","textPreview":"번호","textChars":2,"textLines":1,"bbox":[76,266,82,54]}
+{"kind":"shape","id":"sh/5w7md0ju","slide":13,"bbox":[162,262,660,62]}
+{"kind":"textbox","id":"sh/yxc3q1kz","slide":13,"text":"질문","textPreview":"질문","textChars":2,"textLines":1,"bbox":[166,266,652,54]}
+{"kind":"shape","id":"sh/zylkzm1k","slide":13,"bbox":[822,262,260,62]}
+{"kind":"textbox","id":"sh/z6dgbe9c","slide":13,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[826,266,252,54]}
+{"kind":"shape","id":"sh/y54zi9sr","slide":13,"bbox":[1082,262,105,62]}
+{"kind":"textbox","id":"sh/lsvyd4r2","slide":13,"text":"이모지","textPreview":"이모지","textChars":3,"textLines":1,"bbox":[1086,266,97,54]}
+{"kind":"shape","id":"sh/krmhkjah","slide":13,"bbox":[1187,262,175,62]}
+{"kind":"textbox","id":"sh/b2tg7u90","slide":13,"text":"칸 색상","textPreview":"칸 색상","textChars":4,"textLines":1,"bbox":[1191,266,167,54]}
+{"kind":"shape","id":"sh/a1kzepsf","slide":13,"bbox":[1362,262,210,62]}
+{"kind":"textbox","id":"sh/x4by94r6","slide":13,"text":"연결","textPreview":"연결","textChars":2,"textLines":1,"bbox":[1366,266,202,54]}
+{"kind":"shape","id":"sh/c32hgzal","slide":13,"bbox":[72,324,90,108]}
+{"kind":"textbox","id":"sh/nytg3u94","slide":13,"text":"R2-8","textPreview":"R2-8","textChars":4,"textLines":1,"bbox":[78,329,78,98]}
+{"kind":"shape","id":"sh/2xkzapsj","slide":13,"bbox":[162,324,660,108]}
+{"kind":"textbox","id":"sh/q90zmpcb","slide":13,"text":"처음 만난 사람과 친해지는 나만의 방법은?","textPreview":"처음 만난 사람과 친해지는 나만의 방법은?","textChars":23,"textLines":1,"bbox":[168,329,648,98]}
+{"kind":"shape","id":"sh/ru90fudw","slide":13,"bbox":[822,324,260,108]}
+{"kind":"textbox","id":"sh/svihofuh","slide":13,"text":"관계·친교","textPreview":"관계·친교","textChars":5,"textLines":1,"bbox":[828,329,248,98]}
+{"kind":"shape","id":"sh/dwrihkv2","slide":13,"bbox":[1082,324,105,108]}
+{"kind":"textbox","id":"sh/ex0zqpcn","slide":13,"text":"🤝","textPreview":"🤝","textChars":2,"textLines":1,"bbox":[1088,329,93,98]}
+{"kind":"shape","id":"sh/fyt0juts","slide":13,"bbox":[1187,324,175,108]}
+{"kind":"textbox","id":"sh/0z2hszud","slide":13,"text":"보라\n#8168C5","textPreview":"보라 | #8168C5","textChars":10,"textLines":2,"bbox":[1193,329,163,98]}
+{"kind":"shape","id":"sh/10bil4by","slide":13,"bbox":[1362,324,210,108]}
+{"kind":"textbox","id":"sh/21kju9cj","slide":13,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,329,198,98]}
+{"kind":"shape","id":"sh/n2t0net4","slide":13,"bbox":[72,432,90,108]}
+{"kind":"textbox","id":"sh/xwv2d8f6","slide":13,"text":"R2-9","textPreview":"R2-9","textChars":4,"textLines":1,"bbox":[78,437,78,98]}
+{"kind":"shape","id":"sh/cvmlk3el","slide":13,"bbox":[162,432,660,108]}
+{"kind":"textbox","id":"sh/budkbyx0","slide":13,"text":"친구에게 추천할 찬양 한 곡?","textPreview":"친구에게 추천할 찬양 한 곡?","textChars":16,"textLines":1,"bbox":[168,437,648,98]}
+{"kind":"shape","id":"sh/at43itwv","slide":13,"bbox":[822,432,260,108]}
+{"kind":"textbox","id":"sh/lkf2h8vi","slide":13,"text":"찬양·추천","textPreview":"찬양·추천","textChars":5,"textLines":1,"bbox":[828,437,248,98]}
+{"kind":"shape","id":"sh/kz6lo3ex","slide":13,"bbox":[1082,432,105,108]}
+{"kind":"textbox","id":"sh/jyxkfydc","slide":13,"text":"🎵","textPreview":"🎵","textChars":2,"textLines":1,"bbox":[1088,437,93,98]}
+{"kind":"shape","id":"sh/yxo3mdwr","slide":13,"bbox":[1187,432,175,108]}
+{"kind":"textbox","id":"sh/tozmlsve","slide":13,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,437,163,98]}
+{"kind":"shape","id":"sh/8n6lsnet","slide":13,"bbox":[1362,432,210,108]}
+{"kind":"textbox","id":"sh/4vux0b2d","slide":13,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,437,198,98]}
+{"kind":"shape","id":"sh/pw3e9gjy","slide":13,"bbox":[72,540,90,108]}
+{"kind":"textbox","id":"sh/2tcfylk7","slide":13,"text":"R2-10","textPreview":"R2-10","textChars":5,"textLines":1,"bbox":[78,545,78,98]}
+{"kind":"shape","id":"sh/3ulw761s","slide":13,"bbox":[162,540,660,108]}
+{"kind":"textbox","id":"sh/graxwb21","slide":13,"text":"좋아하는 노래의 킬링 포인트?","textPreview":"좋아하는 노래의 킬링 포인트?","textChars":16,"textLines":1,"bbox":[168,545,648,98]}
+{"kind":"shape","id":"sh/hsje5g3m","slide":13,"bbox":[822,540,260,108]}
+{"kind":"textbox","id":"sh/upsfu1kb","slide":13,"text":"음악·감상","textPreview":"음악·감상","textChars":5,"textLines":1,"bbox":[828,545,248,98]}
+{"kind":"shape","id":"sh/fq1w36lw","slide":13,"bbox":[1082,540,105,108]}
+{"kind":"textbox","id":"sh/0nex8v2l","slide":13,"text":"💥","textPreview":"💥","textChars":2,"textLines":1,"bbox":[1088,545,93,98]}
+{"kind":"shape","id":"sh/1onyh0j6","slide":13,"bbox":[1187,540,175,108]}
+{"kind":"textbox","id":"sh/bip07ul8","slide":13,"text":"코랄\n#FF7B73","textPreview":"코랄 | #FF7B73","textChars":10,"textLines":2,"bbox":[1193,545,163,98]}
+{"kind":"shape","id":"sh/ahgzep4n","slide":13,"bbox":[1362,540,210,108]}
+{"kind":"textbox","id":"sh/xkri943e","slide":13,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,545,198,98]}
+{"kind":"shape","id":"sh/wjyhgzmt","slide":13,"bbox":[72,648,90,108]}
+{"kind":"textbox","id":"sh/jm90bel4","slide":13,"text":"R2-11","textPreview":"R2-11","textChars":5,"textLines":1,"bbox":[78,653,78,98]}
+{"kind":"shape","id":"sh/yl0zi94z","slide":13,"bbox":[162,648,660,108]}
+{"kind":"textbox","id":"sh/5orido3a","slide":13,"text":"찬양팀에서 새롭게 도전해 보고 싶은 것은?","textPreview":"찬양팀에서 새롭게 도전해 보고 싶은 것은?","textChars":23,"textLines":1,"bbox":[168,653,648,98]}
+{"kind":"shape","id":"sh/knihkjmp","slide":13,"bbox":[822,648,260,108]}
+{"kind":"textbox","id":"sh/zq5gza50","slide":13,"text":"성장·도전","textPreview":"성장·도전","textChars":5,"textLines":1,"bbox":[828,653,248,98]}
+{"kind":"shape","id":"sh/epwz654f","slide":13,"bbox":[1082,648,105,108]}
+{"kind":"textbox","id":"sh/2543edo3","slide":13,"text":"🚩","textPreview":"🚩","textChars":2,"textLines":1,"bbox":[1088,653,93,98]}
+{"kind":"shape","id":"sh/36dk7i5o","slide":13,"bbox":[1187,648,175,108]}
+{"kind":"textbox","id":"sh/47mlgn69","slide":13,"text":"라임\n#A9D66F","textPreview":"라임 | #A9D66F","textChars":10,"textLines":2,"bbox":[1193,653,163,98]}
+{"kind":"shape","id":"sh/p8v29snu","slide":13,"bbox":[1362,648,210,108]}
+{"kind":"textbox","id":"sh/uhk3ado7","slide":13,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,653,198,98]}
+{"kind":"shape","id":"sh/fitk3i5c","slide":13,"bbox":[72,756,90,108]}
+{"kind":"textbox","id":"sh/gjmlcn6x","slide":13,"text":"R2-12","textPreview":"R2-12","textChars":5,"textLines":1,"bbox":[78,761,78,98]}
+{"kind":"shape","id":"sh/h4v25sni","slide":13,"bbox":[162,756,660,108]}
+{"kind":"textbox","id":"sh/6dkj6tov","slide":13,"text":"찬양팀에서 서로 꼭 챙겨주면 좋은 것은?","textPreview":"찬양팀에서 서로 꼭 챙겨주면 좋은 것은?","textChars":22,"textLines":1,"bbox":[168,761,648,98]}
+{"kind":"shape","id":"sh/7etkzy5g","slide":13,"bbox":[822,756,260,108]}
+{"kind":"textbox","id":"sh/98z65w7y","slide":13,"text":"협력·배려","textPreview":"협력·배려","textChars":5,"textLines":1,"bbox":[828,761,248,98]}
+{"kind":"shape","id":"sh/o7q5cbqd","slide":13,"bbox":[1082,756,105,108]}
+{"kind":"textbox","id":"sh/n6ho36ps","slide":13,"text":"🧡","textPreview":"🧡","textChars":2,"textLines":1,"bbox":[1088,761,93,98]}
+{"kind":"shape","id":"sh/m58na187","slide":13,"bbox":[1187,756,175,108]}
+{"kind":"textbox","id":"sh/14z61w72","slide":13,"text":"블루\n#5C87E6","textPreview":"블루 | #5C87E6","textChars":10,"textLines":2,"bbox":[1193,761,163,98]}
+{"kind":"shape","id":"sh/03q58rqh","slide":13,"bbox":[1362,756,210,108]}
+{"kind":"textbox","id":"sh/z2hozmpw","slide":13,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,761,198,98]}
+{"kind":"shape","id":"sh/e1on6h8b","slide":13,"bbox":[72,864,90,108]}
+{"kind":"textbox","id":"sh/d0fmxc7q","slide":13,"text":"R2-13","textPreview":"R2-13","textChars":5,"textLines":1,"bbox":[78,869,78,98]}
+{"kind":"shape","id":"sh/cz654rq5","slide":13,"bbox":[162,864,660,108]}
+{"kind":"textbox","id":"sh/4fitgn2d","slide":13,"text":"긴장할 때 도움이 되는 행동은?","textPreview":"긴장할 때 도움이 되는 행동은?","textChars":17,"textLines":1,"bbox":[168,869,648,98]}
+{"kind":"shape","id":"sh/pgrapsjy","slide":13,"bbox":[822,864,260,108]}
+{"kind":"textbox","id":"sh/2d0bexkn","slide":13,"text":"자기이해","textPreview":"자기이해","textChars":4,"textLines":1,"bbox":[828,869,248,98]}
+{"kind":"shape","id":"sh/3e9sni1s","slide":13,"bbox":[1082,864,105,108]}
+{"kind":"textbox","id":"sh/cjitk72p","slide":13,"text":"🌬️","textPreview":"🌬️","textChars":3,"textLines":1,"bbox":[1088,869,93,98]}
+{"kind":"shape","id":"sh/dkratcja","slide":13,"bbox":[1187,864,175,108]}
+{"kind":"textbox","id":"sh/qh0bixkj","slide":13,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,869,163,98]}
+{"kind":"shape","id":"sh/ri9sr214","slide":13,"bbox":[1362,864,210,108]}
+{"kind":"textbox","id":"sh/072to72l","slide":13,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,869,198,98]}
+{"kind":"shape","id":"sh/l8baxcj6","slide":13,"bbox":[72,972,90,108]}
+{"kind":"textbox","id":"sh/v2dwn6l8","slide":13,"text":"R2-14","textPreview":"R2-14","textChars":5,"textLines":1,"bbox":[78,977,78,98]}
+{"kind":"shape","id":"sh/a14vu143","slide":13,"bbox":[162,972,660,108]}
+{"kind":"textbox","id":"sh/x4fepg3e","slide":13,"text":"모임 끝나고 함께 하고 싶은 것은?","textPreview":"모임 끝나고 함께 하고 싶은 것은?","textChars":19,"textLines":1,"bbox":[168,977,648,98]}
+{"kind":"shape","id":"sh/w3mdwbmt","slide":13,"bbox":[822,972,260,108]}
+{"kind":"textbox","id":"sh/nydcj6lc","slide":13,"text":"관계·친교","textPreview":"관계·친교","textChars":5,"textLines":1,"bbox":[828,977,248,98]}
+{"kind":"shape","id":"sh/md4vq14r","slide":13,"bbox":[1082,972,105,108]}
+{"kind":"textbox","id":"sh/90velg3i","slide":13,"text":"🍕","textPreview":"🍕","textChars":2,"textLines":1,"bbox":[1088,977,93,98]}
+{"kind":"shape","id":"sh/8zmdsbmx","slide":13,"bbox":[1187,972,175,108]}
+{"kind":"textbox","id":"sh/7uxwvqlg","slide":13,"text":"핑크\n#E777AE","textPreview":"핑크 | #E777AE","textChars":10,"textLines":2,"bbox":[1193,977,163,98]}
+{"kind":"shape","id":"sh/69ov2l4v","slide":13,"bbox":[1362,972,210,108]}
+{"kind":"textbox","id":"sh/nudofex8","slide":13,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,977,198,98]}
+{"kind":"textbox","id":"sh/mt4n69wn","slide":13,"text":"고등부 찬양팀 나눔마블  ·  13","textPreview":"고등부 찬양팀 나눔마블  ·  13","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/f4m776","slide":13,"text":""}
+{"kind":"slide","id":"sl/ao17b9","slide":14,"title":"3 · 질문 체계","textShapes":52}
+{"kind":"textbox","id":"sh/18rydwvy","slide":14,"text":"3 · 질문 체계","textPreview":"3 · 질문 체계","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/e50fihw7","slide":14,"text":"3라운드 고유 질문 · 1/2","textPreview":"3라운드 고유 질문 · 1/2","textChars":16,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/f69gbmds","slide":14,"text":"가치·성장·감사로 한 단계 깊어지되 무거운 고백은 요구하지 않습니다.","textPreview":"가치·성장·감사로 한 단계 깊어지되 무거운 고백은 요구하지 않습니다.","textChars":38,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/ov2xobe9","slide":14,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/pwbyhwvu","slide":14,"bbox":[72,262,90,62]}
+{"kind":"textbox","id":"sh/2t0fm1wj","slide":14,"text":"번호","textPreview":"번호","textChars":2,"textLines":1,"bbox":[76,266,82,54]}
+{"kind":"shape","id":"sh/nutgf6do","slide":14,"bbox":[162,262,660,62]}
+{"kind":"textbox","id":"sh/cz2xsbel","slide":14,"text":"질문","textPreview":"질문","textChars":2,"textLines":1,"bbox":[166,266,652,54]}
+{"kind":"shape","id":"sh/x0bylgv6","slide":14,"bbox":[822,262,260,62]}
+{"kind":"textbox","id":"sh/dsfe9gb2","slide":14,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[826,266,252,54]}
+{"kind":"shape","id":"sh/cr6x0bux","slide":14,"bbox":[1082,262,105,62]}
+{"kind":"textbox","id":"sh/rqxw76tc","slide":14,"text":"이모지","textPreview":"이모지","textChars":3,"textLines":1,"bbox":[1086,266,97,54]}
+{"kind":"shape","id":"sh/qpofylcr","slide":14,"bbox":[1187,262,175,62]}
+{"kind":"textbox","id":"sh/1gzed0be","slide":14,"text":"칸 색상","textPreview":"칸 색상","textChars":4,"textLines":1,"bbox":[1191,266,167,54]}
+{"kind":"shape","id":"sh/0vqx4vut","slide":14,"bbox":[1362,262,210,62]}
+{"kind":"textbox","id":"sh/zuhwbqt8","slide":14,"text":"연결","textPreview":"연결","textChars":2,"textLines":1,"bbox":[1366,266,202,54]}
+{"kind":"shape","id":"sh/et8f2lcn","slide":14,"bbox":[72,324,90,108]}
+{"kind":"textbox","id":"sh/hkve1wba","slide":14,"text":"R3-1","textPreview":"R3-1","textChars":4,"textLines":1,"bbox":[78,329,78,98]}
+{"kind":"shape","id":"sh/gzmdsrup","slide":14,"bbox":[162,324,660,108]}
+{"kind":"textbox","id":"sh/sfa54v6h","slide":14,"text":"내가 고른 응원을 언제 듣고 싶나?","textPreview":"내가 고른 응원을 언제 듣고 싶나?","textChars":19,"textLines":1,"bbox":[168,329,648,98]}
+{"kind":"shape","id":"sh/tgj6x0n2","slide":14,"bbox":[822,324,260,108]}
+{"kind":"textbox","id":"sh/6dsn2lor","slide":14,"text":"그룹핑 연결","textPreview":"그룹핑 연결","textChars":6,"textLines":1,"bbox":[828,329,248,98]}
+{"kind":"shape","id":"sh/7e1ovq5w","slide":14,"bbox":[1082,324,105,108]}
+{"kind":"textbox","id":"sh/gja58f6t","slide":14,"text":"📣","textPreview":"📣","textChars":2,"textLines":1,"bbox":[1088,329,93,98]}
+{"kind":"shape","id":"sh/hk3610ne","slide":14,"bbox":[1187,324,175,108]}
+{"kind":"textbox","id":"sh/uhsn65on","slide":14,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,329,163,98]}
+{"kind":"shape","id":"sh/fi1oza58","slide":14,"bbox":[1362,324,210,108]}
+{"kind":"textbox","id":"sh/47upcf6p","slide":14,"text":"3차 선택과 연결","textPreview":"3차 선택과 연결","textChars":9,"textLines":1,"bbox":[1368,329,198,98]}
+{"kind":"shape","id":"sh/p8365kna","slide":14,"bbox":[72,432,90,108]}
+{"kind":"textbox","id":"sh/z258bepc","slide":14,"text":"R3-2","textPreview":"R3-2","textChars":4,"textLines":1,"bbox":[78,437,78,98]}
+{"kind":"shape","id":"sh/e1wr298r","slide":14,"bbox":[162,432,660,108]}
+{"kind":"textbox","id":"sh/147qdo7i","slide":14,"text":"나도 다른 사람에게 건네고 싶은 응원은?","textPreview":"나도 다른 사람에게 건네고 싶은 응원은?","textChars":22,"textLines":1,"bbox":[168,437,648,98]}
+{"kind":"shape","id":"sh/03e94jqx","slide":14,"bbox":[822,432,260,108]}
+{"kind":"textbox","id":"sh/re587epg","slide":14,"text":"그룹핑 연결","textPreview":"그룹핑 연결","textChars":6,"textLines":1,"bbox":[828,437,248,98]}
+{"kind":"shape","id":"sh/qdwry98v","slide":14,"bbox":[1082,432,105,108]}
+{"kind":"textbox","id":"sh/dgnq947m","slide":14,"text":"💬","textPreview":"💬","textChars":2,"textLines":1,"bbox":[1088,437,93,98]}
+{"kind":"shape","id":"sh/cfe90jq1","slide":14,"bbox":[1187,432,175,108]}
+{"kind":"textbox","id":"sh/baps3ypk","slide":14,"text":"핑크\n#E777AE","textPreview":"핑크 | #E777AE","textChars":10,"textLines":2,"bbox":[1193,437,163,98]}
+{"kind":"shape","id":"sh/a9grat8z","slide":14,"bbox":[1362,432,210,108]}
+{"kind":"textbox","id":"sh/ihwvyx4j","slide":14,"text":"3차 선택과 연결","textPreview":"3차 선택과 연결","textChars":9,"textLines":1,"bbox":[1368,437,198,98]}
+{"kind":"shape","id":"sh/jipc72l4","slide":14,"bbox":[72,540,90,108]}
+{"kind":"textbox","id":"sh/4jyd07m9","slide":14,"text":"R3-3","textPreview":"R3-3","textChars":4,"textLines":1,"bbox":[78,545,78,98]}
+{"kind":"shape","id":"sh/5k7u9s3u","slide":14,"bbox":[162,540,660,108]}
+{"kind":"textbox","id":"sh/adwbud47","slide":14,"text":"올해 한 뼘 성장하고 싶은 부분?","textPreview":"올해 한 뼘 성장하고 싶은 부분?","textChars":18,"textLines":1,"bbox":[168,545,648,98]}
+{"kind":"shape","id":"sh/ve5c3i5s","slide":14,"bbox":[822,540,260,108]}
+{"kind":"textbox","id":"sh/wfetwnmd","slide":14,"text":"성장","textPreview":"성장","textChars":2,"textLines":1,"bbox":[828,545,248,98]}
+{"kind":"shape","id":"sh/hgnu5sny","slide":14,"bbox":[1082,540,105,108]}
+{"kind":"textbox","id":"sh/e9gv6h4r","slide":14,"text":"🌱","textPreview":"🌱","textChars":2,"textLines":1,"bbox":[1088,545,93,98]}
+{"kind":"shape","id":"sh/fa9cfmlw","slide":14,"bbox":[1187,540,175,108]}
+{"kind":"textbox","id":"sh/p4by5gne","slide":14,"text":"라임\n#A9D66F","textPreview":"라임 | #A9D66F","textChars":10,"textLines":2,"bbox":[1193,545,163,98]}
+{"kind":"shape","id":"sh/o32xwb6t","slide":14,"bbox":[1362,540,210,108]}
+{"kind":"textbox","id":"sh/3itw3658","slide":14,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,545,198,98]}
+{"kind":"shape","id":"sh/2hkfu1on","slide":14,"bbox":[72,648,90,108]}
+{"kind":"textbox","id":"sh/1gre1wn2","slide":14,"text":"R3-4","textPreview":"R3-4","textChars":4,"textLines":1,"bbox":[78,653,78,98]}
+{"kind":"shape","id":"sh/gfixsr6h","slide":14,"bbox":[162,648,660,108]}
+{"kind":"textbox","id":"sh/fe9wz6pc","slide":14,"text":"팀에서 지키고 싶은 약속 하나?","textPreview":"팀에서 지키고 싶은 약속 하나?","textChars":17,"textLines":1,"bbox":[168,653,648,98]}
+{"kind":"shape","id":"sh/ed0fq1or","slide":14,"bbox":[822,648,260,108]}
+{"kind":"textbox","id":"sh/lcvyd0nm","slide":14,"text":"가치·약속","textPreview":"가치·약속","textChars":5,"textLines":1,"bbox":[828,653,248,98]}
+{"kind":"shape","id":"sh/0bmx4v61","slide":14,"bbox":[1082,648,105,108]}
+{"kind":"textbox","id":"sh/4re9w3i9","slide":14,"text":"🤙","textPreview":"🤙","textChars":2,"textLines":1,"bbox":[1088,653,93,98]}
+{"kind":"shape","id":"sh/5snqp8zu","slide":14,"bbox":[1187,648,175,108]}
+{"kind":"textbox","id":"sh/ipcrut03","slide":14,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,653,163,98]}
+{"kind":"shape","id":"sh/jq58nyho","slide":14,"bbox":[1362,648,210,108]}
+{"kind":"textbox","id":"sh/wnu9sjid","slide":14,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,653,198,98]}
+{"kind":"shape","id":"sh/xo3qlozy","slide":14,"bbox":[72,756,90,108]}
+{"kind":"textbox","id":"sh/alc7qt07","slide":14,"text":"R3-5","textPreview":"R3-5","textChars":4,"textLines":1,"bbox":[78,761,78,98]}
+{"kind":"shape","id":"sh/vml8jehs","slide":14,"bbox":[162,756,660,108]}
+{"kind":"textbox","id":"sh/8zupoji1","slide":14,"text":"실수한 친구에게 건넬 말은?","textPreview":"실수한 친구에게 건넬 말은?","textChars":15,"textLines":1,"bbox":[168,761,648,98]}
+{"kind":"shape","id":"sh/903qhozm","slide":14,"bbox":[822,756,260,108]}
+{"kind":"textbox","id":"sh/bu1s7elo","slide":14,"text":"관계·배려","textPreview":"관계·배려","textChars":5,"textLines":1,"bbox":[828,761,248,98]}
+{"kind":"shape","id":"sh/qtsry9k3","slide":14,"bbox":[1082,756,105,108]}
+{"kind":"textbox","id":"sh/dwja9o3e","slide":14,"text":"🫶","textPreview":"🫶","textChars":2,"textLines":1,"bbox":[1088,761,93,98]}
+{"kind":"shape","id":"sh/cva90j29","slide":14,"bbox":[1187,756,175,108]}
+{"kind":"textbox","id":"sh/zy1sbelk","slide":14,"text":"코랄\n#FF7B73","textPreview":"코랄 | #FF7B73","textChars":10,"textLines":2,"bbox":[1193,761,163,98]}
+{"kind":"shape","id":"sh/yxsr29kz","slide":14,"bbox":[1362,756,210,108]}
+{"kind":"textbox","id":"sh/lk3adojq","slide":14,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,761,198,98]}
+{"kind":"shape","id":"sh/0ju94j25","slide":14,"bbox":[72,864,90,108]}
+{"kind":"textbox","id":"sh/nmlsfy1w","slide":14,"text":"R3-6","textPreview":"R3-6","textChars":4,"textLines":1,"bbox":[78,869,78,98]}
+{"kind":"shape","id":"sh/mlcr6tkb","slide":14,"bbox":[162,864,660,108]}
+{"kind":"textbox","id":"sh/u9svudgf","slide":14,"text":"최근 용기 냈던 작은 순간?","textPreview":"최근 용기 냈던 작은 순간?","textChars":15,"textLines":1,"bbox":[168,869,648,98]}
+{"kind":"shape","id":"sh/va1c3ih0","slide":14,"bbox":[822,864,260,108]}
+{"kind":"textbox","id":"sh/gbadwnyl","slide":14,"text":"성장·경험","textPreview":"성장·경험","textChars":5,"textLines":1,"bbox":[828,869,248,98]}
+{"kind":"shape","id":"sh/hwje5sz6","slide":14,"bbox":[1082,864,105,108]}
+{"kind":"textbox","id":"sh/ixcvyxgb","slide":14,"text":"🦁","textPreview":"🦁","textChars":2,"textLines":1,"bbox":[1088,869,93,98]}
+{"kind":"shape","id":"sh/3ylw72hw","slide":14,"bbox":[1187,864,175,108]}
+{"kind":"textbox","id":"sh/4zud07yh","slide":14,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,869,163,98]}
+{"kind":"shape","id":"sh/503e9cz2","slide":14,"bbox":[1362,864,210,108]}
+{"kind":"textbox","id":"sh/q1cv2hgn","slide":14,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,869,198,98]}
+{"kind":"shape","id":"sh/r2lwb2h8","slide":14,"bbox":[72,972,90,108]}
+{"kind":"textbox","id":"sh/1wny1gja","slide":14,"text":"R3-7","textPreview":"R3-7","textChars":4,"textLines":1,"bbox":[78,977,78,98]}
+{"kind":"shape","id":"sh/0vexsbip","slide":14,"bbox":[162,972,660,108]}
+{"kind":"textbox","id":"sh/fu5gz614","slide":14,"text":"함께라서 가능할 것 같은 일?","textPreview":"함께라서 가능할 것 같은 일?","textChars":16,"textLines":1,"bbox":[168,977,648,98]}
+{"kind":"shape","id":"sh/etwfq10j","slide":14,"bbox":[822,972,260,108]}
+{"kind":"textbox","id":"sh/p07y5gjm","slide":14,"text":"공동체·기대","textPreview":"공동체·기대","textChars":6,"textLines":1,"bbox":[828,977,248,98]}
+{"kind":"shape","id":"sh/ozyhwbi1","slide":14,"bbox":[1082,972,105,108]}
+{"kind":"textbox","id":"sh/nypg361g","slide":14,"text":"🚀","textPreview":"🚀","textChars":2,"textLines":1,"bbox":[1088,977,93,98]}
+{"kind":"shape","id":"sh/2xgfu10v","slide":14,"bbox":[1187,972,175,108]}
+{"kind":"textbox","id":"sh/xory90ji","slide":14,"text":"보라\n#8168C5","textPreview":"보라 | #8168C5","textChars":10,"textLines":2,"bbox":[1193,977,163,98]}
+{"kind":"shape","id":"sh/cnyh0vix","slide":14,"bbox":[1362,972,210,108]}
+{"kind":"textbox","id":"sh/lknapgv2","slide":14,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,977,198,98]}
+{"kind":"textbox","id":"sh/0je9gbeh","slide":14,"text":"고등부 찬양팀 나눔마블  ·  14","textPreview":"고등부 찬양팀 나눔마블  ·  14","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/ao17b9","slide":14,"text":""}
+{"kind":"slide","id":"sl/3d9nfa","slide":15,"title":"3 · 질문 체계","textShapes":52}
+{"kind":"textbox","id":"sh/dw3qpgvi","slide":15,"text":"3 · 질문 체계","textPreview":"3 · 질문 체계","textChars":9,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/q9s7ulcr","slide":15,"text":"3라운드 고유 질문 · 2/2","textPreview":"3라운드 고유 질문 · 2/2","textChars":16,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/rul8nqdc","slide":15,"text":"마지막에는 서로의 좋은 점과 기억하고 싶은 장면으로 마무리합니다.","textPreview":"마지막에는 서로의 좋은 점과 기억하고 싶은 장면으로 마무리합니다.","textChars":36,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/0zup0vut","slide":15,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/103qt0ve","slide":15,"bbox":[72,262,90,62]}
+{"kind":"textbox","id":"sh/exc7ylcn","slide":15,"text":"번호","textPreview":"번호","textChars":2,"textLines":1,"bbox":[76,266,82,54]}
+{"kind":"shape","id":"sh/zyl8rqd8","slide":15,"bbox":[162,262,660,62]}
+{"kind":"textbox","id":"sh/o3ep4fu5","slide":15,"text":"질문","textPreview":"질문","textChars":2,"textLines":1,"bbox":[166,266,652,54]}
+{"kind":"shape","id":"sh/94nqx0va","slide":15,"bbox":[822,262,260,62]}
+{"kind":"textbox","id":"sh/d07qxw3a","slide":15,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[826,266,252,54]}
+{"kind":"shape","id":"sh/czyp4r2p","slide":15,"bbox":[1082,262,105,62]}
+{"kind":"textbox","id":"sh/byp8v6l4","slide":15,"text":"이모지","textPreview":"이모지","textChars":3,"textLines":1,"bbox":[1086,266,97,54]}
+{"kind":"shape","id":"sh/qdg721kj","slide":15,"bbox":[1187,262,175,62]}
+{"kind":"textbox","id":"sh/l4rq1gj6","slide":15,"text":"칸 색상","textPreview":"칸 색상","textChars":4,"textLines":1,"bbox":[1191,266,167,54]}
+{"kind":"shape","id":"sh/03i98b2l","slide":15,"bbox":[1362,262,210,62]}
+{"kind":"textbox","id":"sh/z2p8z6lg","slide":15,"text":"연결","textPreview":"연결","textChars":2,"textLines":1,"bbox":[1366,266,202,54]}
+{"kind":"shape","id":"sh/y1gr61kv","slide":15,"bbox":[72,324,90,108]}
+{"kind":"textbox","id":"sh/18nqpc32","slide":15,"text":"R3-8","textPreview":"R3-8","textChars":4,"textLines":1,"bbox":[78,329,78,98]}
+{"kind":"shape","id":"sh/g7epw72h","slide":15,"bbox":[162,324,660,108]}
+{"kind":"textbox","id":"sh/s32hsbep","slide":15,"text":"고마움을 표현하는 나만의 방법?","textPreview":"고마움을 표현하는 나만의 방법?","textChars":17,"textLines":1,"bbox":[168,329,648,98]}
+{"kind":"shape","id":"sh/tobi1gfa","slide":15,"bbox":[822,324,260,108]}
+{"kind":"textbox","id":"sh/610zq1wj","slide":15,"text":"감사·관계","textPreview":"감사·관계","textChars":5,"textLines":1,"bbox":[828,329,248,98]}
+{"kind":"shape","id":"sh/r2tgz6x4","slide":15,"bbox":[1082,324,105,108]}
+{"kind":"textbox","id":"sh/gr2hwvel","slide":15,"text":"💐","textPreview":"💐","textChars":2,"textLines":1,"bbox":[1088,329,93,98]}
+{"kind":"shape","id":"sh/1sbi50f6","slide":15,"bbox":[1187,324,175,108]}
+{"kind":"textbox","id":"sh/epkzulwf","slide":15,"text":"민트\n#63C7A7","textPreview":"민트 | #63C7A7","textChars":10,"textLines":2,"bbox":[1193,329,163,98]}
+{"kind":"shape","id":"sh/fqt03qx0","slide":15,"bbox":[1362,324,210,108]}
+{"kind":"textbox","id":"sh/ovmh0vex","slide":15,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,329,198,98]}
+{"kind":"shape","id":"sh/pwvi90f2","slide":15,"bbox":[72,432,90,108]}
+{"kind":"textbox","id":"sh/zqxkzuhk","slide":15,"text":"R3-9","textPreview":"R3-9","textChars":4,"textLines":1,"bbox":[78,437,78,98]}
+{"kind":"shape","id":"sh/ypojqpgz","slide":15,"bbox":[162,432,660,108]}
+{"kind":"textbox","id":"sh/lsf214za","slide":15,"text":"힘들 때 나를 다시 움직이는 것?","textPreview":"힘들 때 나를 다시 움직이는 것?","textChars":18,"textLines":1,"bbox":[168,437,648,98]}
+{"kind":"shape","id":"sh/kr6lszy5","slide":15,"bbox":[822,432,260,108]}
+{"kind":"textbox","id":"sh/bmxkvuh8","slide":15,"text":"자기이해","textPreview":"자기이해","textChars":4,"textLines":1,"bbox":[828,437,248,98]}
+{"kind":"shape","id":"sh/ql4jmpgn","slide":15,"bbox":[1082,432,105,108]}
+{"kind":"textbox","id":"sh/dof2xkze","slide":15,"text":"🔋","textPreview":"🔋","textChars":2,"textLines":1,"bbox":[1088,437,93,98]}
+{"kind":"shape","id":"sh/cn61ozyt","slide":15,"bbox":[1187,432,175,108]}
+{"kind":"textbox","id":"sh/vihk7ehs","slide":15,"text":"하늘\n#55C2E6","textPreview":"하늘 | #55C2E6","textChars":10,"textLines":2,"bbox":[1193,437,163,98]}
+{"kind":"shape","id":"sh/uh83y9g7","slide":15,"bbox":[1362,432,210,108]}
+{"kind":"textbox","id":"sh/i5onmdcb","slide":15,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,437,198,98]}
+{"kind":"shape","id":"sh/36xovidw","slide":15,"bbox":[72,540,90,108]}
+{"kind":"textbox","id":"sh/4rq5onuh","slide":15,"text":"R3-10","textPreview":"R3-10","textChars":5,"textLines":1,"bbox":[78,545,78,98]}
+{"kind":"shape","id":"sh/5sz6xsv2","slide":15,"bbox":[162,540,660,108]}
+{"kind":"textbox","id":"sh/u1onitcf","slide":15,"text":"이번 학기 꼭 남기고 싶은 추억?","textPreview":"이번 학기 꼭 남기고 싶은 추억?","textChars":18,"textLines":1,"bbox":[168,545,648,98]}
+{"kind":"shape","id":"sh/v2xoryd0","slide":15,"bbox":[822,540,260,108]}
+{"kind":"textbox","id":"sh/g365k3u5","slide":15,"text":"기대","textPreview":"기대","textChars":2,"textLines":1,"bbox":[828,545,248,98]}
+{"kind":"shape","id":"sh/h4f6t8vq","slide":15,"bbox":[1082,540,105,108]}
+{"kind":"textbox","id":"sh/ex87uxcj","slide":15,"text":"📷","textPreview":"📷","textChars":2,"textLines":1,"bbox":[1088,545,93,98]}
+{"kind":"shape","id":"sh/fyho32d4","slide":15,"bbox":[1187,540,175,108]}
+{"kind":"textbox","id":"sh/ps3qtwf6","slide":15,"text":"블루\n#5C87E6","textPreview":"블루 | #5C87E6","textChars":10,"textLines":2,"bbox":[1193,545,163,98]}
+{"kind":"shape","id":"sh/oru90rel","slide":15,"bbox":[1362,540,210,108]}
+{"kind":"textbox","id":"sh/nq18rmx0","slide":15,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,545,198,98]}
+{"kind":"shape","id":"sh/2psryhwv","slide":15,"bbox":[72,648,90,108]}
+{"kind":"textbox","id":"sh/1ojqpcfa","slide":15,"text":"R3-11","textPreview":"R3-11","textChars":5,"textLines":1,"bbox":[78,653,78,98]}
+{"kind":"shape","id":"sh/0na9wrep","slide":15,"bbox":[162,648,660,108]}
+{"kind":"textbox","id":"sh/fm18nmx4","slide":15,"text":"내가 팀에 보태고 싶은 분위기?","textPreview":"내가 팀에 보태고 싶은 분위기?","textChars":17,"textLines":1,"bbox":[168,653,648,98]}
+{"kind":"shape","id":"sh/elsruhwj","slide":15,"bbox":[822,648,260,108]}
+{"kind":"textbox","id":"sh/lkna1gfe","slide":15,"text":"공동체·기여","textPreview":"공동체·기여","textChars":6,"textLines":1,"bbox":[828,653,248,98]}
+{"kind":"shape","id":"sh/kje98bet","slide":15,"bbox":[1082,648,105,108]}
+{"kind":"textbox","id":"sh/4z61kjqh","slide":15,"text":"🎨","textPreview":"🎨","textChars":2,"textLines":1,"bbox":[1088,653,93,98]}
+{"kind":"shape","id":"sh/50f2to7m","slide":15,"bbox":[1187,648,175,108]}
+{"kind":"textbox","id":"sh/id4ji98b","slide":15,"text":"핑크\n#E777AE","textPreview":"핑크 | #E777AE","textChars":10,"textLines":2,"bbox":[1193,653,163,98]}
+{"kind":"shape","id":"sh/3edkre9w","slide":15,"bbox":[1362,648,210,108]}
+{"kind":"textbox","id":"sh/gbm1gzq5","slide":15,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,653,198,98]}
+{"kind":"shape","id":"sh/hcv2p4rq","slide":15,"bbox":[72,756,90,108]}
+{"kind":"textbox","id":"sh/u94je98z","slide":15,"text":"R3-12","textPreview":"R3-12","textChars":5,"textLines":1,"bbox":[78,761,78,98]}
+{"kind":"shape","id":"sh/vadkne9k","slide":15,"bbox":[162,756,660,108]}
+{"kind":"textbox","id":"sh/8721czq9","slide":15,"text":"한 달 뒤 나에게 해줄 한마디?","textPreview":"한 달 뒤 나에게 해줄 한마디?","textChars":17,"textLines":1,"bbox":[168,761,648,98]}
+{"kind":"shape","id":"sh/t8v2l4ru","slide":15,"bbox":[822,756,260,108]}
+{"kind":"textbox","id":"sh/b2tkvutg","slide":15,"text":"격려·성장","textPreview":"격려·성장","textChars":5,"textLines":1,"bbox":[828,761,248,98]}
+{"kind":"shape","id":"sh/a1k3mpsv","slide":15,"bbox":[1082,756,105,108]}
+{"kind":"textbox","id":"sh/x4b2x4bm","slide":15,"text":"🗓️","textPreview":"🗓️","textChars":3,"textLines":1,"bbox":[1088,761,93,98]}
+{"kind":"shape","id":"sh/c32loza1","slide":15,"bbox":[1187,756,175,108]}
+{"kind":"textbox","id":"sh/j6t4zuts","slide":15,"text":"라임\n#A9D66F","textPreview":"라임 | #A9D66F","textChars":10,"textLines":2,"bbox":[1193,761,163,98]}
+{"kind":"shape","id":"sh/y5k3q9s7","slide":15,"bbox":[1362,756,210,108]}
+{"kind":"textbox","id":"sh/l8vm14bi","slide":15,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,761,198,98]}
+{"kind":"shape","id":"sh/k72lszax","slide":15,"bbox":[72,864,90,108]}
+{"kind":"textbox","id":"sh/7ad43eto","slide":15,"text":"R3-13","textPreview":"R3-13","textChars":5,"textLines":1,"bbox":[78,869,78,98]}
+{"kind":"shape","id":"sh/6943u9s3","slide":15,"bbox":[162,864,660,108]}
+{"kind":"textbox","id":"sh/uhk7id87","slide":15,"text":"오늘 발견한 누군가의 좋은 점?","textPreview":"오늘 발견한 누군가의 좋은 점?","textChars":17,"textLines":1,"bbox":[168,869,648,98]}
+{"kind":"shape","id":"sh/fitoryps","slide":15,"bbox":[822,864,260,108]}
+{"kind":"textbox","id":"sh/gj2pk3qd","slide":15,"text":"관계·격려","textPreview":"관계·격려","textChars":5,"textLines":1,"bbox":[828,869,248,98]}
+{"kind":"shape","id":"sh/hkb6t87y","slide":15,"bbox":[1082,864,105,108]}
+{"kind":"textbox","id":"sh/2lk7md8j","slide":15,"text":"🔎","textPreview":"🔎","textChars":2,"textLines":1,"bbox":[1088,869,93,98]}
+{"kind":"shape","id":"sh/3mtovip4","slide":15,"bbox":[1187,864,175,108]}
+{"kind":"textbox","id":"sh/4nmponqp","slide":15,"text":"앰버\n#F7C95C","textPreview":"앰버 | #F7C95C","textChars":10,"textLines":2,"bbox":[1193,869,163,98]}
+{"kind":"shape","id":"sh/pov6xs7a","slide":15,"bbox":[1362,864,210,108]}
+{"kind":"textbox","id":"sh/qp47qxof","slide":15,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,869,198,98]}
+{"kind":"shape","id":"sh/rad8zip0","slide":15,"bbox":[72,972,90,108]}
+{"kind":"textbox","id":"sh/14fapwri","slide":15,"text":"R3-14","textPreview":"R3-14","textChars":5,"textLines":1,"bbox":[78,977,78,98]}
+{"kind":"shape","id":"sh/0369wrax","slide":15,"bbox":[162,972,660,108]}
+{"kind":"textbox","id":"sh/zixsnm9c","slide":15,"text":"다음 모임에서 함께 해보고 싶은 것은?","textPreview":"다음 모임에서 함께 해보고 싶은 것은?","textChars":21,"textLines":1,"bbox":[168,977,648,98]}
+{"kind":"shape","id":"sh/ehoruhsr","slide":15,"bbox":[822,972,260,108]}
+{"kind":"textbox","id":"sh/98zatwre","slide":15,"text":"기대·참여","textPreview":"기대·참여","textChars":5,"textLines":1,"bbox":[828,977,248,98]}
+{"kind":"shape","id":"sh/o7q90rqt","slide":15,"bbox":[1082,972,105,108]}
+{"kind":"textbox","id":"sh/n6hsrm98","slide":15,"text":"🙌","textPreview":"🙌","textChars":2,"textLines":1,"bbox":[1088,977,93,98]}
+{"kind":"shape","id":"sh/m5ory1sn","slide":15,"bbox":[1187,972,175,108]}
+{"kind":"textbox","id":"sh/xczaxgra","slide":15,"text":"보라\n#8168C5","textPreview":"보라 | #8168C5","textChars":10,"textLines":2,"bbox":[1193,977,163,98]}
+{"kind":"shape","id":"sh/wbq94bq5","slide":15,"bbox":[1362,972,210,108]}
+{"kind":"textbox","id":"sh/503exsb2","slide":15,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1368,977,198,98]}
+{"kind":"textbox","id":"sh/4zux4nah","slide":15,"text":"고등부 찬양팀 나눔마블  ·  15","textPreview":"고등부 찬양팀 나눔마블  ·  15","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/3d9nfa","slide":15,"text":""}
+{"kind":"slide","id":"sl/w7y7i2","slide":16,"title":"7 · 질문 품질 검수","textShapes":26}
+{"kind":"textbox","id":"sh/1czqp4be","slide":16,"text":"7 · 질문 품질 검수","textPreview":"7 · 질문 품질 검수","textChars":12,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/e987upc3","slide":16,"text":"55개 질문은 가볍게 시작해 응원과 성장으로 자연스럽게 깊어집니다","textPreview":"55개 질문은 가볍게 시작해 응원과 성장으로 자연스럽게 깊어집니다","textChars":36,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/fah8nut8","slide":16,"text":"민감한 개인정보·신앙 수준·가정환경을 묻지 않고, 신입생도 답할 수 있게 최종 문구를 다듬었습니다.","textPreview":"민감한 개인정보·신앙 수준·가정환경을 묻지 않고, 신입생도 답할 수 있게 최종 문구를 다듬었습니다.","textChars":55,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/ofqp0zu5","slide":16,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/pgzqt4bq","slide":16,"bbox":[92,284,1496,82]}
+{"kind":"textbox","id":"sh/2d87y9cz","slide":16,"text":"자연스러운 표현","textPreview":"자연스러운 표현","textChars":8,"textLines":1,"bbox":[124,296,300,58]}
+{"kind":"textbox","id":"sh/neh8rutk","slide":16,"text":"고등학생이 바로 이해할 짧은 구어체","textPreview":"고등학생이 바로 이해할 짧은 구어체","textChars":19,"textLines":1,"bbox":[440,296,910,58]}
+{"kind":"shape","id":"sh/4j6poful","slide":16,"bbox":[1390,302,150,46]}
+{"kind":"textbox","id":"sh/5kf6hkb6","slide":16,"text":"통과","textPreview":"통과","textChars":2,"textLines":1,"bbox":[1390,302,150,46]}
+{"kind":"shape","id":"sh/14jm5kvi","slide":16,"bbox":[92,389,1496,82]}
+{"kind":"textbox","id":"sh/g3alwfex","slide":16,"text":"심리적 안전","textPreview":"심리적 안전","textChars":6,"textLines":1,"bbox":[124,401,300,58]}
+{"kind":"textbox","id":"sh/f2143adc","slide":16,"text":"패스 1회 허용, 평가·비교·상처 질문 제외","textPreview":"패스 1회 허용, 평가·비교·상처 질문 제외","textChars":24,"textLines":1,"bbox":[440,401,910,58]}
+{"kind":"shape","id":"sh/ehs3u5wr","slide":16,"bbox":[1390,407,150,46]}
+{"kind":"textbox","id":"sh/p8jm94ve","slide":16,"text":"통과","textPreview":"통과","textChars":2,"textLines":1,"bbox":[1390,407,150,46]}
+{"kind":"shape","id":"sh/o7a50zet","slide":16,"bbox":[92,494,1496,82]}
+{"kind":"textbox","id":"sh/36147udo","slide":16,"text":"중복 최소화","textPreview":"중복 최소화","textChars":6,"textLines":1,"bbox":[124,506,300,58]}
+{"kind":"textbox","id":"sh/25s3ypw3","slide":16,"text":"공통은 반복 가치, 고유는 라운드 목적에 분리","textPreview":"공통은 반복 가치, 고유는 라운드 목적에 분리","textChars":25,"textLines":1,"bbox":[440,506,910,58]}
+{"kind":"shape","id":"sh/dc3md4vq","slide":16,"bbox":[1390,512,150,46]}
+{"kind":"textbox","id":"sh/cbu54ze5","slide":16,"text":"통과","textPreview":"통과","textChars":2,"textLines":1,"bbox":[1390,512,150,46]}
+{"kind":"shape","id":"sh/wrmxw7qd","slide":16,"bbox":[92,599,1496,82]}
+{"kind":"textbox","id":"sh/xsvypc7y","slide":16,"text":"신입생 접근성","textPreview":"신입생 접근성","textChars":7,"textLines":1,"bbox":[124,611,300,58]}
+{"kind":"textbox","id":"sh/apkfux8n","slide":16,"text":"찬양팀 경험을 전제로 한 질문을 배제","textPreview":"찬양팀 경험을 전제로 한 질문을 배제","textChars":20,"textLines":1,"bbox":[440,611,910,58]}
+{"kind":"shape","id":"sh/vqdgn2ps","slide":16,"bbox":[1390,617,150,46]}
+{"kind":"textbox","id":"sh/4fmx07qp","slide":16,"text":"통과","textPreview":"통과","textChars":2,"textLines":1,"bbox":[1390,617,150,46]}
+{"kind":"shape","id":"sh/5gvytc7a","slide":16,"bbox":[92,704,1496,82]}
+{"kind":"textbox","id":"sh/it4fyh8j","slide":16,"text":"주제 균형","textPreview":"주제 균형","textChars":5,"textLines":1,"bbox":[124,716,300,58]}
+{"kind":"textbox","id":"sh/judgrmp4","slide":16,"text":"재미·일상·음악·관계·감사·성장 분산","textPreview":"재미·일상·음악·관계·감사·성장 분산","textChars":20,"textLines":1,"bbox":[440,716,910,58]}
+{"kind":"shape","id":"sh/0z2xonq5","slide":16,"bbox":[1390,722,150,46]}
+{"kind":"textbox","id":"sh/lkbehs7q","slide":16,"text":"통과","textPreview":"통과","textChars":2,"textLines":1,"bbox":[1390,722,150,46]}
+{"kind":"shape","id":"sh/3eh0nq98","slide":16,"bbox":[92,809,1496,82]}
+{"kind":"textbox","id":"sh/2d8julsn","slide":16,"text":"시간 적합성","textPreview":"시간 적합성","textChars":6,"textLines":1,"bbox":[124,821,300,58]}
+{"kind":"textbox","id":"sh/pgzip0re","slide":16,"text":"대부분 10–20초 답변, 긴 설명 불필요","textPreview":"대부분 10–20초 답변, 긴 설명 불필요","textChars":23,"textLines":1,"bbox":[440,821,910,58]}
+{"kind":"shape","id":"sh/ofq1wvqt","slide":16,"bbox":[1390,827,150,46]}
+{"kind":"textbox","id":"sh/fah0z69c","slide":16,"text":"통과","textPreview":"통과","textChars":2,"textLines":1,"bbox":[1390,827,150,46]}
+{"kind":"shape","id":"sh/e98zqlsr","slide":16,"bbox":[92,914,1496,82]}
+{"kind":"textbox","id":"sh/1czilgri","slide":16,"text":"이탈 대응","textPreview":"이탈 대응","textChars":5,"textLines":1,"bbox":[124,926,300,58]}
+{"kind":"textbox","id":"sh/gbqhsbax","slide":16,"text":"모든 질문이 독립형이라 중간 합류 가능","textPreview":"모든 질문이 독립형이라 중간 합류 가능","textChars":21,"textLines":1,"bbox":[440,926,910,58]}
+{"kind":"shape","id":"sh/rmx0v690","slide":16,"bbox":[1390,932,150,46]}
+{"kind":"textbox","id":"sh/6lozm1sv","slide":16,"text":"통과","textPreview":"통과","textChars":2,"textLines":1,"bbox":[1390,932,150,46]}
+{"kind":"textbox","id":"sh/mt83q9of","slide":16,"text":"최종 수정 반영: 추상적인 표현을 줄이고, 그룹핑 연결 질문은 각 라운드 초반과 중후반에 한 개씩 배치했습니다.","textPreview":"최종 수정 반영: 추상적인 표현을 줄이고, 그룹핑 연결 질문은 각 라운드 초반과 중후반에 한 개씩 배치했습니다.","textChars":62,"textLines":1,"bbox":[130,1045,1420,48]}
+{"kind":"textbox","id":"sh/7uh4ze50","slide":16,"text":"고등부 찬양팀 나눔마블  ·  16","textPreview":"고등부 찬양팀 나눔마블  ·  16","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/w7y7i2","slide":16,"text":""}
+{"kind":"slide","id":"sl/55lqzx","slide":17,"title":"1","textShapes":92}
+{"kind":"shape","id":"sh/za18ri1o","slide":17,"name":"board-1-cell-1","bbox":[5,5,200,170]}
+{"kind":"textbox","id":"sh/kbapkni9","slide":17,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[13,10,38,30]}
+{"kind":"textbox","id":"sh/lcjqtsju","slide":17,"text":"➡️","textPreview":"➡️","textChars":2,"textLines":1,"bbox":[70,11,70,48]}
+{"kind":"textbox","id":"sh/mds7mx0f","slide":17,"text":"출발","textPreview":"출발","textChars":2,"textLines":1,"bbox":[18,59,174,108]}
+{"kind":"shape","id":"sh/7el8v2hk","slide":17,"name":"board-1-cell-2","bbox":[215,5,200,170]}
+{"kind":"textbox","id":"sh/8fupo7i5","slide":17,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[223,10,38,30]}
+{"kind":"textbox","id":"sh/9g3qxczq","slide":17,"text":"⏰","textPreview":"⏰","textChars":1,"textLines":1,"bbox":[280,11,70,48]}
+{"kind":"textbox","id":"sh/2h87at0v","slide":17,"text":"세 시간 자유라면 가장 먼저 할 일?","textPreview":"세 시간 자유라면 가장 먼저 할 일?","textChars":20,"textLines":1,"bbox":[228,59,174,108]}
+{"kind":"shape","id":"sh/nihojy1g","slide":17,"name":"board-1-cell-3","bbox":[425,5,200,170]}
+{"kind":"textbox","id":"sh/ralkz2xo","slide":17,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[433,10,38,30]}
+{"kind":"textbox","id":"sh/69cjqxw3","slide":17,"text":"⛪","textPreview":"⛪","textChars":1,"textLines":1,"bbox":[490,11,70,48]}
+{"kind":"textbox","id":"sh/tc321cfu","slide":17,"text":"교회에서 가장 편한 공간은?","textPreview":"교회에서 가장 편한 공간은?","textChars":15,"textLines":1,"bbox":[438,59,174,108]}
+{"kind":"shape","id":"sh/sbu1s7e9","slide":17,"name":"board-1-cell-4","bbox":[635,5,200,170]}
+{"kind":"textbox","id":"sh/j610v2xs","slide":17,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[643,10,38,30]}
+{"kind":"textbox","id":"sh/i5sjmxw7","slide":17,"text":"🏪","textPreview":"🏪","textChars":2,"textLines":1,"bbox":[700,11,70,48]}
+{"kind":"textbox","id":"sh/58jixsfy","slide":17,"text":"편의점 최애 조합은?","textPreview":"편의점 최애 조합은?","textChars":11,"textLines":1,"bbox":[648,59,174,108]}
+{"kind":"shape","id":"sh/47a1o7ed","slide":17,"name":"board-1-cell-5","bbox":[845,5,200,170]}
+{"kind":"textbox","id":"sh/v210rixg","slide":17,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[853,10,38,30]}
+{"kind":"textbox","id":"sh/u18jidwb","slide":17,"text":"🎧","textPreview":"🎧","textChars":2,"textLines":1,"bbox":[910,11,70,48]}
+{"kind":"textbox","id":"sh/yd8jud03","slide":17,"text":"요즘 자주 듣는 노래 한 곡?","textPreview":"요즘 자주 듣는 노래 한 곡?","textChars":16,"textLines":1,"bbox":[858,59,174,108]}
+{"kind":"shape","id":"sh/zehk3iho","slide":17,"name":"board-1-cell-6","bbox":[1055,5,200,170]}
+{"kind":"textbox","id":"sh/kzq1wni9","slide":17,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1063,10,38,30]}
+{"kind":"textbox","id":"sh/l0z25sze","slide":17,"text":"🐾","textPreview":"🐾","textChars":2,"textLines":1,"bbox":[1120,11,70,48]}
+{"kind":"textbox","id":"sh/m183yxgz","slide":17,"text":"나를 동물로 표현한다면?","textPreview":"나를 동물로 표현한다면?","textChars":13,"textLines":1,"bbox":[1068,59,174,108]}
+{"kind":"shape","id":"sh/721k72hk","slide":17,"name":"board-1-cell-7","bbox":[1265,5,200,170]}
+{"kind":"textbox","id":"sh/83al0ny5","slide":17,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1273,10,38,30]}
+{"kind":"textbox","id":"sh/94j29szq","slide":17,"text":"😄","textPreview":"😄","textChars":2,"textLines":1,"bbox":[1330,11,70,48]}
+{"kind":"textbox","id":"sh/u5s32xgb","slide":17,"text":"최근 나를 웃게 한 일은?","textPreview":"최근 나를 웃게 한 일은?","textChars":14,"textLines":1,"bbox":[1278,59,174,108]}
+{"kind":"shape","id":"sh/v61kb2hw","slide":17,"name":"board-1-cell-8","bbox":[1475,5,200,170]}
+{"kind":"textbox","id":"sh/503m1wjy","slide":17,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1483,10,38,30]}
+{"kind":"textbox","id":"sh/4zu58rid","slide":17,"text":"🍛","textPreview":"🍛","textChars":2,"textLines":1,"bbox":[1540,11,70,48]}
+{"kind":"textbox","id":"sh/jyl4zm1s","slide":17,"text":"급식에 꼭 나왔으면 하는 메뉴?","textPreview":"급식에 꼭 나왔으면 하는 메뉴?","textChars":17,"textLines":1,"bbox":[1488,59,174,108]}
+{"kind":"shape","id":"sh/ixcn61k7","slide":17,"name":"board-1-cell-9","bbox":[1475,185,200,128]}
+{"kind":"textbox","id":"sh/t4n65gju","slide":17,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1483,190,38,30]}
+{"kind":"textbox","id":"sh/s3e5cbi9","slide":17,"text":"✨","textPreview":"✨","textChars":1,"textLines":1,"bbox":[1522,191,106,42]}
+{"kind":"textbox","id":"sh/r2543614","slide":17,"text":"내가 은근 잘하는 것 한 가지?","textPreview":"내가 은근 잘하는 것 한 가지?","textChars":17,"textLines":1,"bbox":[1488,231,174,77]}
+{"kind":"shape","id":"sh/61wna10j","slide":17,"name":"board-1-cell-10","bbox":[1475,323,200,128]}
+{"kind":"textbox","id":"sh/1sn69gj6","slide":17,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1483,328,38,30]}
+{"kind":"textbox","id":"sh/gre5gbil","slide":17,"text":"🪟","textPreview":"🪟","textChars":2,"textLines":1,"bbox":[1522,329,106,42]}
+{"kind":"textbox","id":"sh/cnip8f2t","slide":17,"text":"교실에서 좋아하는 자리는? 왜?","textPreview":"교실에서 좋아하는 자리는? 왜?","textChars":17,"textLines":1,"bbox":[1488,369,174,77]}
+{"kind":"shape","id":"sh/dorq1k3e","slide":17,"name":"board-1-cell-11","bbox":[1475,461,200,128]}
+{"kind":"textbox","id":"sh/ql076pkn","slide":17,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1483,466,38,30]}
+{"kind":"textbox","id":"sh/bm98zal8","slide":17,"text":"🌟","textPreview":"🌟","textChars":2,"textLines":1,"bbox":[1522,467,106,42]}
+{"kind":"textbox","id":"sh/ojyp4f2h","slide":17,"text":"찬양팀에서 기대되는 순간은?","textPreview":"찬양팀에서 기대되는 순간은?","textChars":15,"textLines":1,"bbox":[1488,507,174,77]}
+{"kind":"shape","id":"sh/pkrqxk32","slide":17,"name":"board-1-cell-12","bbox":[1475,599,200,128]}
+{"kind":"textbox","id":"sh/2xg725kr","slide":17,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1483,604,38,30]}
+{"kind":"textbox","id":"sh/3yp8valc","slide":17,"text":"🏆","textPreview":"🏆","textChars":2,"textLines":1,"bbox":[1522,605,106,42]}
+{"kind":"textbox","id":"sh/8f29gz21","slide":17,"text":"내 선택의 최고의 장점은?","textPreview":"내 선택의 최고의 장점은?","textChars":14,"textLines":1,"bbox":[1488,645,174,77]}
+{"kind":"shape","id":"sh/9gbq943m","slide":17,"name":"board-1-cell-13","bbox":[1475,737,200,128]}
+{"kind":"textbox","id":"sh/jadszy5o","slide":17,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1483,742,38,30]}
+{"kind":"textbox","id":"sh/i94b6t43","slide":17,"text":"🍜","textPreview":"🍜","textChars":2,"textLines":1,"bbox":[1522,743,106,42]}
+{"kind":"textbox","id":"sh/5cfa18nu","slide":17,"text":"힘날 때 먹고 싶은 음식은?","textPreview":"힘날 때 먹고 싶은 음식은?","textChars":15,"textLines":1,"bbox":[1488,783,174,77]}
+{"kind":"shape","id":"sh/4b6t83m9","slide":17,"name":"board-1-cell-14","bbox":[1475,875,200,128]}
+{"kind":"textbox","id":"sh/rexs3i5k","slide":17,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1483,880,38,30]}
+{"kind":"textbox","id":"sh/6dobad4z","slide":17,"text":"📸","textPreview":"📸","textChars":2,"textLines":1,"bbox":[1522,881,106,42]}
+{"kind":"textbox","id":"sh/tgfu5snq","slide":17,"text":"단체 사진에서 자주 서는 위치?","textPreview":"단체 사진에서 자주 서는 위치?","textChars":17,"textLines":1,"bbox":[1488,921,174,77]}
+{"kind":"shape","id":"sh/sf6tcnm5","slide":17,"name":"board-1-cell-15","bbox":[1475,1013,200,170]}
+{"kind":"textbox","id":"sh/7itsre5g","slide":17,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1483,1018,38,30]}
+{"kind":"textbox","id":"sh/mhkby94v","slide":17,"text":"🔥","textPreview":"🔥","textChars":2,"textLines":1,"bbox":[1540,1019,70,48]}
+{"kind":"textbox","id":"sh/apcnmlsv","slide":17,"text":"요즘 푹 빠져 있는 것은?","textPreview":"요즘 푹 빠져 있는 것은?","textChars":14,"textLines":1,"bbox":[1488,1067,174,108]}
+{"kind":"shape","id":"sh/bal4vqtg","slide":17,"name":"board-1-cell-16","bbox":[1265,1013,200,170]}
+{"kind":"textbox","id":"sh/cbu5oval","slide":17,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1273,1018,38,30]}
+{"kind":"textbox","id":"sh/xc3mx0b6","slide":17,"text":"🌤️","textPreview":"🌤️","textChars":3,"textLines":1,"bbox":[1330,1019,70,48]}
+{"kind":"textbox","id":"sh/2lsni1sj","slide":17,"text":"하루만 살고 싶은 계절은?","textPreview":"하루만 살고 싶은 계절은?","textChars":14,"textLines":1,"bbox":[1278,1067,174,108]}
+{"kind":"shape","id":"sh/nm14r6t4","slide":17,"name":"board-1-cell-17","bbox":[1055,1013,200,170]}
+{"kind":"textbox","id":"sh/ona5kbap","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1063,1018,38,30]}
+{"kind":"textbox","id":"sh/po3mtgba","slide":17,"text":"🙏","textPreview":"🙏","textChars":2,"textLines":1,"bbox":[1120,1019,70,48]}
+{"kind":"textbox","id":"sh/ehsne1sn","slide":17,"text":"이번 주 감사했던 작은 일?","textPreview":"이번 주 감사했던 작은 일?","textChars":15,"textLines":1,"bbox":[1068,1067,174,108]}
+{"kind":"shape","id":"sh/fi14n6t8","slide":17,"name":"board-1-cell-18","bbox":[845,1013,200,170]}
+{"kind":"textbox","id":"sh/hc7qt4vq","slide":17,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[853,1018,38,30]}
+{"kind":"textbox","id":"sh/gbypkzu5","slide":17,"text":"😂","textPreview":"😂","textChars":2,"textLines":1,"bbox":[910,1019,70,48]}
+{"kind":"textbox","id":"sh/vap8rudk","slide":17,"text":"최근 가장 많이 쓴 이모지는?","textPreview":"최근 가장 많이 쓴 이모지는?","textChars":16,"textLines":1,"bbox":[858,1067,174,108]}
+{"kind":"shape","id":"sh/u9g7ipcz","slide":17,"name":"board-1-cell-19","bbox":[635,1013,200,170]}
+{"kind":"textbox","id":"sh/t87qpkve","slide":17,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[643,1018,38,30]}
+{"kind":"textbox","id":"sh/87ypgzut","slide":17,"text":"🏫","textPreview":"🏫","textChars":2,"textLines":1,"bbox":[700,1019,70,48]}
+{"kind":"textbox","id":"sh/7658nudo","slide":17,"text":"학교에서 제일 좋아하는 시간은?","textPreview":"학교에서 제일 좋아하는 시간은?","textChars":17,"textLines":1,"bbox":[648,1067,174,108]}
+{"kind":"shape","id":"sh/65w7upc3","slide":17,"name":"board-1-cell-20","bbox":[425,1013,200,170]}
+{"kind":"textbox","id":"sh/l4nqlkvi","slide":17,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[433,1018,38,30]}
+{"kind":"textbox","id":"sh/k3epsfux","slide":17,"text":"🎤","textPreview":"🎤","textChars":2,"textLines":1,"bbox":[490,1019,70,48]}
+{"kind":"textbox","id":"sh/wjqd4v65","slide":17,"text":"노래방 첫 곡으로 고를 노래?","textPreview":"노래방 첫 곡으로 고를 노래?","textChars":16,"textLines":1,"bbox":[438,1067,174,108]}
+{"kind":"shape","id":"sh/xkzud07q","slide":17,"name":"board-1-cell-21","bbox":[215,1013,200,170]}
+{"kind":"textbox","id":"sh/ahov2loz","slide":17,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[223,1018,38,30]}
+{"kind":"textbox","id":"sh/bihcbqpk","slide":17,"text":"🧩","textPreview":"🧩","textChars":2,"textLines":1,"bbox":[280,1019,70,48]}
+{"kind":"textbox","id":"sh/knqd8v6h","slide":17,"text":"지금 새로 배우고 싶은 것은?","textPreview":"지금 새로 배우고 싶은 것은?","textChars":16,"textLines":1,"bbox":[228,1067,174,108]}
+{"kind":"shape","id":"sh/lozuh07m","slide":17,"name":"board-1-cell-22","bbox":[5,1013,200,170]}
+{"kind":"textbox","id":"sh/yl8v65ob","slide":17,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[13,1018,38,30]}
+{"kind":"textbox","id":"sh/jmhcfqpw","slide":17,"text":"👻","textPreview":"👻","textChars":2,"textLines":1,"bbox":[70,1019,70,48]}
+{"kind":"textbox","id":"sh/8badcf6d","slide":17,"text":"투명인간이 되면 해볼 일?","textPreview":"투명인간이 되면 해볼 일?","textChars":14,"textLines":1,"bbox":[18,1067,174,108]}
+{"kind":"shape","id":"sh/tcjelk7y","slide":17,"name":"board-1-cell-23","bbox":[5,875,200,128]}
+{"kind":"textbox","id":"sh/36lgbe90","slide":17,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[13,880,38,30]}
+{"kind":"textbox","id":"sh/i5cf298f","slide":17,"text":"🌿","textPreview":"🌿","textChars":2,"textLines":1,"bbox":[52,881,106,42]}
+{"kind":"textbox","id":"sh/58nydor6","slide":17,"text":"나만의 기분 전환 방법은?","textPreview":"나만의 기분 전환 방법은?","textChars":14,"textLines":1,"bbox":[18,921,174,77]}
+{"kind":"shape","id":"sh/47ux4jql","slide":17,"name":"board-1-cell-24","bbox":[5,737,200,128]}
+{"kind":"textbox","id":"sh/vilg7u94","slide":17,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[13,742,38,30]}
+{"kind":"textbox","id":"sh/uhcfyp8j","slide":17,"text":"🌙","textPreview":"🌙","textChars":2,"textLines":1,"bbox":[52,743,106,42]}
+{"kind":"textbox","id":"sh/h43y94ru","slide":17,"text":"아침형과 밤형 중 나는? 왜?","textPreview":"아침형과 밤형 중 나는? 왜?","textChars":16,"textLines":1,"bbox":[18,783,174,77]}
+{"kind":"shape","id":"sh/gjux0zqp","slide":17,"name":"board-1-cell-25","bbox":[5,599,200,128]}
+{"kind":"textbox","id":"sh/ze5gjy98","slide":17,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[13,604,38,30]}
+{"kind":"textbox","id":"sh/edwfat8n","slide":17,"text":"🌈","textPreview":"🌈","textChars":2,"textLines":1,"bbox":[52,605,106,42]}
+{"kind":"textbox","id":"sh/fqtsv2tk","slide":17,"text":"친구에게 기억되고 싶은 내 모습은?","textPreview":"친구에게 기억되고 싶은 내 모습은?","textChars":19,"textLines":1,"bbox":[18,645,174,77]}
+{"kind":"shape","id":"sh/up0b2xsz","slide":17,"name":"board-1-cell-26","bbox":[5,461,200,128]}
+{"kind":"textbox","id":"sh/hsbaxcba","slide":17,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[13,466,38,30]}
+{"kind":"textbox","id":"sh/gr2t47a5","slide":17,"text":"📅","textPreview":"📅","textChars":2,"textLines":1,"bbox":[52,467,106,42]}
+{"kind":"textbox","id":"sh/3utszmtg","slide":17,"text":"내가 만드는 휴일의 이름은?","textPreview":"내가 만드는 휴일의 이름은?","textChars":15,"textLines":1,"bbox":[18,507,174,77]}
+{"kind":"shape","id":"sh/2tkb6hsv","slide":17,"name":"board-1-cell-27","bbox":[5,323,200,128]}
+{"kind":"textbox","id":"sh/pwba1wbm","slide":17,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[13,328,38,30]}
+{"kind":"textbox","id":"sh/4v2t8ra1","slide":17,"text":"🦸","textPreview":"🦸","textChars":2,"textLines":1,"bbox":[52,329,106,42]}
+{"kind":"textbox","id":"sh/jy9snitc","slide":17,"text":"하루 동안 초능력을 쓴다면?","textPreview":"하루 동안 초능력을 쓴다면?","textChars":15,"textLines":1,"bbox":[18,369,174,77]}
+{"kind":"shape","id":"sh/ixgrudsr","slide":17,"name":"board-1-cell-28","bbox":[5,185,200,128]}
+{"kind":"textbox","id":"sh/83ep4jqp","slide":17,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[13,190,38,30]}
+{"kind":"textbox","id":"sh/94nqxora","slide":17,"text":"🎒","textPreview":"🎒","textChars":2,"textLines":1,"bbox":[52,191,106,42]}
+{"kind":"textbox","id":"sh/m1w72t8j","slide":17,"text":"여행 갈 때 꼭 챙기는 것은?","textPreview":"여행 갈 때 꼭 챙기는 것은?","textChars":16,"textLines":1,"bbox":[18,231,174,77]}
+{"kind":"textbox","id":"sh/n258ve94","slide":17,"text":"고등부 찬양팀","textPreview":"고등부 찬양팀","textChars":7,"textLines":1,"bbox":[340,316,1000,60]}
+{"kind":"textbox","id":"sh/0zep0jqd","slide":17,"text":"나눔마블","textPreview":"나눔마블","textChars":4,"textLines":1,"bbox":[330,370,1020,130]}
+{"kind":"shape","id":"sh/10nqtory","slide":17,"bbox":[462,520,756,72]}
+{"kind":"textbox","id":"sh/exc7y98n","slide":17,"text":"ROUND 1 · 취향으로 가볍게","textPreview":"ROUND 1 · 취향으로 가볍게","textChars":18,"textLines":1,"bbox":[480,528,720,56]}
+{"kind":"textbox","id":"sh/zyl8re9s","slide":17,"text":"3시간 자유: 콘텐츠 · 음식 · 활동 · 충전","textPreview":"3시간 자유: 콘텐츠 · 음식 · 활동 · 충전","textChars":26,"textLines":1,"bbox":[380,620,920,48]}
+{"kind":"textbox","id":"sh/kvy9c3qx","slide":17,"text":"굴린 사람 10–20초 답하기  →  아직 덜 말한 친구 한 명 지목","textPreview":"굴린 사람 10–20초 답하기  →  아직 덜 말한 친구 한 명 지목","textChars":38,"textLines":1,"bbox":[350,700,980,48]}
+{"kind":"textbox","id":"sh/5w7q58r2","slide":17,"text":"답하기 어려우면 한 번 패스 가능  ·  면접 호출 시 바로 다녀오기","textPreview":"답하기 어려우면 한 번 패스 가능  ·  면접 호출 시 바로 다녀오기","textChars":38,"textLines":1,"bbox":[350,758,980,42]}
+{"kind":"textbox","id":"sh/ts3qp8jm","slide":17,"text":"🎲","textPreview":"🎲","textChars":2,"textLines":1,"bbox":[730,834,220,108]}
+{"kind":"textbox","id":"sh/srupw3i1","slide":17,"text":"게임판 1  ·  1–28칸","textPreview":"게임판 1  ·  1–28칸","textChars":15,"textLines":1,"bbox":[600,954,480,34]}
+{"kind":"notes","id":"nt/55lqzx","slide":17,"text":""}
+{"kind":"slide","id":"sl/qt92h3","slide":18,"title":"1","textShapes":92}
+{"kind":"shape","id":"sh/ju18zixs","slide":18,"name":"board-2-cell-1","bbox":[5,5,200,170]}
+{"kind":"textbox","id":"sh/4va98ned","slide":18,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[13,10,38,30]}
+{"kind":"textbox","id":"sh/5w3q1sfy","slide":18,"text":"➡️","textPreview":"➡️","textChars":2,"textLines":1,"bbox":[70,11,70,48]}
+{"kind":"textbox","id":"sh/6hcraxwj","slide":18,"text":"출발","textPreview":"출발","textChars":2,"textLines":1,"bbox":[18,59,174,108]}
+{"kind":"shape","id":"sh/ril832x4","slide":18,"name":"board-2-cell-2","bbox":[215,5,200,170]}
+{"kind":"textbox","id":"sh/sju9c7e9","slide":18,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[223,10,38,30]}
+{"kind":"textbox","id":"sh/tk3q5sfu","slide":18,"text":"😄","textPreview":"😄","textChars":2,"textLines":1,"bbox":[280,11,70,48]}
+{"kind":"textbox","id":"sh/elcrexwf","slide":18,"text":"최근 나를 웃게 한 일은?","textPreview":"최근 나를 웃게 한 일은?","textChars":14,"textLines":1,"bbox":[228,59,174,108]}
+{"kind":"shape","id":"sh/fml872x0","slide":18,"name":"board-2-cell-3","bbox":[425,5,200,170]}
+{"kind":"textbox","id":"sh/v29sn2t8","slide":18,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[433,10,38,30]}
+{"kind":"textbox","id":"sh/u1gruhcn","slide":18,"text":"💪","textPreview":"💪","textChars":2,"textLines":1,"bbox":[490,11,70,48]}
+{"kind":"textbox","id":"sh/h4rapcbe","slide":18,"text":"우리 선택 역할의 강점은?","textPreview":"우리 선택 역할의 강점은?","textChars":14,"textLines":1,"bbox":[438,59,174,108]}
+{"kind":"shape","id":"sh/w3i9w7ut","slide":18,"name":"board-2-cell-4","bbox":[635,5,200,170]}
+{"kind":"textbox","id":"sh/7epsj2dc","slide":18,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[643,10,38,30]}
+{"kind":"textbox","id":"sh/mdgrqxcr","slide":18,"text":"🌿","textPreview":"🌿","textChars":2,"textLines":1,"bbox":[700,11,70,48]}
+{"kind":"textbox","id":"sh/9g7alcvi","slide":18,"text":"나만의 기분 전환 방법은?","textPreview":"나만의 기분 전환 방법은?","textChars":14,"textLines":1,"bbox":[648,59,174,108]}
+{"kind":"shape","id":"sh/8fy9s7ux","slide":18,"name":"board-2-cell-5","bbox":[845,5,200,170]}
+{"kind":"textbox","id":"sh/ratsvmtg","slide":18,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[853,10,38,30]}
+{"kind":"textbox","id":"sh/69kb21cv","slide":18,"text":"🎸","textPreview":"🎸","textChars":2,"textLines":1,"bbox":[910,11,70,48]}
+{"kind":"textbox","id":"sh/mho3ap0f","slide":18,"text":"가장 좋아하는 악기 소리는?","textPreview":"가장 좋아하는 악기 소리는?","textChars":15,"textLines":1,"bbox":[858,59,174,108]}
+{"kind":"shape","id":"sh/n2x4juh0","slide":18,"name":"board-2-cell-6","bbox":[1055,5,200,170]}
+{"kind":"textbox","id":"sh/o36lczil","slide":18,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1063,10,38,30]}
+{"kind":"textbox","id":"sh/94fml4z6","slide":18,"text":"🏫","textPreview":"🏫","textChars":2,"textLines":1,"bbox":[1120,11,70,48]}
+{"kind":"textbox","id":"sh/a5o3e90b","slide":18,"text":"학교에서 제일 좋아하는 시간은?","textPreview":"학교에서 제일 좋아하는 시간은?","textChars":17,"textLines":1,"bbox":[1068,59,174,108]}
+{"kind":"shape","id":"sh/b6h4nuhw","slide":18,"name":"board-2-cell-7","bbox":[1265,5,200,170]}
+{"kind":"textbox","id":"sh/w7qlgzih","slide":18,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1273,10,38,30]}
+{"kind":"textbox","id":"sh/x8zmp4z2","slide":18,"text":"🙋","textPreview":"🙋","textChars":2,"textLines":1,"bbox":[1330,11,70,48]}
+{"kind":"textbox","id":"sh/q9432507","slide":18,"text":"좋은 찬양팀원이 될 수 있도록 내가 할 수 있는 것 한 가지?","textPreview":"좋은 찬양팀원이 될 수 있도록 내가 할 수 있는 것 한 가지?","textChars":34,"textLines":1,"bbox":[1278,59,174,108]}
+{"kind":"shape","id":"sh/rad4ba1s","slide":18,"name":"board-2-cell-8","bbox":[1475,5,200,170]}
+{"kind":"textbox","id":"sh/t4j6h8ja","slide":18,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1483,10,38,30]}
+{"kind":"textbox","id":"sh/83apo32p","slide":18,"text":"🦸","textPreview":"🦸","textChars":2,"textLines":1,"bbox":[1540,11,70,48]}
+{"kind":"textbox","id":"sh/721ofy14","slide":18,"text":"하루 동안 초능력을 쓴다면?","textPreview":"하루 동안 초능력을 쓴다면?","textChars":15,"textLines":1,"bbox":[1488,59,174,108]}
+{"kind":"shape","id":"sh/61s7mtkj","slide":18,"name":"board-2-cell-9","bbox":[1475,185,200,128]}
+{"kind":"textbox","id":"sh/hs36lsjm","slide":18,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1483,190,38,30]}
+{"kind":"textbox","id":"sh/g7upsn21","slide":18,"text":"🎵","textPreview":"🎵","textChars":2,"textLines":1,"bbox":[1522,191,106,42]}
+{"kind":"textbox","id":"sh/v6loji1g","slide":18,"text":"친구에게 추천할 찬양 한 곡?","textPreview":"친구에게 추천할 찬양 한 곡?","textChars":16,"textLines":1,"bbox":[1488,231,174,77]}
+{"kind":"shape","id":"sh/u5c7qdkv","slide":18,"name":"board-2-cell-10","bbox":[1475,323,200,128]}
+{"kind":"textbox","id":"sh/xwz69oj2","slide":18,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1483,328,38,30]}
+{"kind":"textbox","id":"sh/wbq5gj2h","slide":18,"text":"🙏","textPreview":"🙏","textChars":2,"textLines":1,"bbox":[1522,329,106,42]}
+{"kind":"textbox","id":"sh/0ry9orm5","slide":18,"text":"이번 주 감사했던 작은 일?","textPreview":"이번 주 감사했던 작은 일?","textChars":15,"textLines":1,"bbox":[1488,369,174,77]}
+{"kind":"shape","id":"sh/1s7ahw3q","slide":18,"name":"board-2-cell-11","bbox":[1475,461,200,128]}
+{"kind":"textbox","id":"sh/epgrmh4z","slide":18,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1483,466,38,30]}
+{"kind":"textbox","id":"sh/zqpsfmlk","slide":18,"text":"🚩","textPreview":"🚩","textChars":2,"textLines":1,"bbox":[1522,467,106,42]}
+{"kind":"textbox","id":"sh/sne9krm9","slide":18,"text":"찬양팀에서 새롭게 도전해 보고 싶은 것은?","textPreview":"찬양팀에서 새롭게 도전해 보고 싶은 것은?","textChars":23,"textLines":1,"bbox":[1488,507,174,77]}
+{"kind":"shape","id":"sh/do7adw3u","slide":18,"name":"board-2-cell-12","bbox":[1475,599,200,128]}
+{"kind":"textbox","id":"sh/qlwrih43","slide":18,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1483,604,38,30]}
+{"kind":"textbox","id":"sh/rm5sbmlo","slide":18,"text":"🎧","textPreview":"🎧","textChars":2,"textLines":1,"bbox":[1522,605,106,42]}
+{"kind":"textbox","id":"sh/4ze9g7mx","slide":18,"text":"요즘 자주 듣는 노래 한 곡?","textPreview":"요즘 자주 듣는 노래 한 곡?","textChars":16,"textLines":1,"bbox":[1488,645,174,77]}
+{"kind":"shape","id":"sh/50na9c3i","slide":18,"name":"board-2-cell-13","bbox":[1475,737,200,128]}
+{"kind":"textbox","id":"sh/7ulsj2pk","slide":18,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1483,742,38,30]}
+{"kind":"textbox","id":"sh/6tcbqxoz","slide":18,"text":"⚡","textPreview":"⚡","textChars":1,"textLines":1,"bbox":[1522,743,106,42]}
+{"kind":"textbox","id":"sh/tw3alc7a","slide":18,"text":"다른 역할과 만나면 생길 시너지는?","textPreview":"다른 역할과 만나면 생길 시너지는?","textChars":19,"textLines":1,"bbox":[1488,783,174,77]}
+{"kind":"shape","id":"sh/8vuts76p","slide":18,"name":"board-2-cell-14","bbox":[1475,875,200,128]}
+{"kind":"textbox","id":"sh/vy5snmpg","slide":18,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1483,880,38,30]}
+{"kind":"textbox","id":"sh/uxwbuhov","slide":18,"text":"✨","textPreview":"✨","textChars":1,"textLines":1,"bbox":[1522,881,106,42]}
+{"kind":"textbox","id":"sh/hknapc7m","slide":18,"text":"내가 은근 잘하는 것 한 가지?","textPreview":"내가 은근 잘하는 것 한 가지?","textChars":17,"textLines":1,"bbox":[1488,921,174,77]}
+{"kind":"shape","id":"sh/gzetw761","slide":18,"name":"board-2-cell-15","bbox":[1475,1013,200,170]}
+{"kind":"textbox","id":"sh/3m5srmpc","slide":18,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1483,1018,38,30]}
+{"kind":"textbox","id":"sh/ilwbyho7","slide":18,"text":"🍕","textPreview":"🍕","textChars":2,"textLines":1,"bbox":[1540,1019,70,48]}
+{"kind":"textbox","id":"sh/eh0vql8f","slide":18,"text":"모임 끝나고 함께 하고 싶은 것은?","textPreview":"모임 끝나고 함께 하고 싶은 것은?","textChars":19,"textLines":1,"bbox":[1488,1067,174,108]}
+{"kind":"shape","id":"sh/zi9wzq9k","slide":18,"name":"board-2-cell-16","bbox":[1265,1013,200,170]}
+{"kind":"textbox","id":"sh/0jidsvq5","slide":18,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1273,1018,38,30]}
+{"kind":"textbox","id":"sh/1kre10rq","slide":18,"text":"🍜","textPreview":"🍜","textChars":2,"textLines":1,"bbox":[1330,1019,70,48]}
+{"kind":"textbox","id":"sh/qtgvml83","slide":18,"text":"힘날 때 먹고 싶은 음식은?","textPreview":"힘날 때 먹고 싶은 음식은?","textChars":15,"textLines":1,"bbox":[1278,1067,174,108]}
+{"kind":"shape","id":"sh/repwvq9o","slide":18,"name":"board-2-cell-17","bbox":[1055,1013,200,170]}
+{"kind":"textbox","id":"sh/cfydobq9","slide":18,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1063,1018,38,30]}
+{"kind":"textbox","id":"sh/dgrexgru","slide":18,"text":"🔋","textPreview":"🔋","textChars":2,"textLines":1,"bbox":[1120,1019,70,48]}
+{"kind":"textbox","id":"sh/a9kvy58n","slide":18,"text":"팀이 지칠 때 분위기를 살리는 방법은?","textPreview":"팀이 지칠 때 분위기를 살리는 방법은?","textChars":21,"textLines":1,"bbox":[1068,1067,174,108]}
+{"kind":"shape","id":"sh/batw7a9s","slide":18,"name":"board-2-cell-18","bbox":[845,1013,200,170]}
+{"kind":"textbox","id":"sh/5gfqd8f6","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[853,1018,38,30]}
+{"kind":"textbox","id":"sh/kf6pk3e1","slide":18,"text":"🧩","textPreview":"🧩","textChars":2,"textLines":1,"bbox":[910,1019,70,48]}
+{"kind":"textbox","id":"sh/jux8byxg","slide":18,"text":"지금 새로 배우고 싶은 것은?","textPreview":"지금 새로 배우고 싶은 것은?","textChars":16,"textLines":1,"bbox":[858,1067,174,108]}
+{"kind":"shape","id":"sh/ito7itwv","slide":18,"name":"board-2-cell-19","bbox":[635,1013,200,170]}
+{"kind":"textbox","id":"sh/xsv69ofa","slide":18,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[643,1018,38,30]}
+{"kind":"textbox","id":"sh/wrmpgjep","slide":18,"text":"🤝","textPreview":"🤝","textChars":2,"textLines":1,"bbox":[700,1019,70,48]}
+{"kind":"textbox","id":"sh/vqdo7ex4","slide":18,"text":"처음 만난 사람과 친해지는 나만의 방법은?","textPreview":"처음 만난 사람과 친해지는 나만의 방법은?","textChars":23,"textLines":1,"bbox":[648,1067,174,108]}
+{"kind":"shape","id":"sh/ap47etwj","slide":18,"name":"board-2-cell-20","bbox":[425,1013,200,170]}
+{"kind":"textbox","id":"sh/hozqlsve","slide":18,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[433,1018,38,30]}
+{"kind":"textbox","id":"sh/gnqpsnet","slide":18,"text":"⛪","textPreview":"⛪","textChars":1,"textLines":1,"bbox":[490,1019,70,48]}
+{"kind":"textbox","id":"sh/cjutkry1","slide":18,"text":"교회에서 가장 편한 공간은?","textPreview":"교회에서 가장 편한 공간은?","textChars":15,"textLines":1,"bbox":[438,1067,174,108]}
+{"kind":"shape","id":"sh/d43adwzm","slide":18,"name":"board-2-cell-21","bbox":[215,1013,200,170]}
+{"kind":"textbox","id":"sh/qhsbihgb","slide":18,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[223,1018,38,30]}
+{"kind":"textbox","id":"sh/bi1sbmhw","slide":18,"text":"💥","textPreview":"💥","textChars":2,"textLines":1,"bbox":[280,1019,70,48]}
+{"kind":"textbox","id":"sh/07utoryd","slide":18,"text":"좋아하는 노래의 킬링 포인트?","textPreview":"좋아하는 노래의 킬링 포인트?","textChars":16,"textLines":1,"bbox":[228,1067,174,108]}
+{"kind":"shape","id":"sh/l83ahwfy","slide":18,"name":"board-2-cell-22","bbox":[5,1013,200,170]}
+{"kind":"textbox","id":"sh/y5cbm1g7","slide":18,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[13,1018,38,30]}
+{"kind":"textbox","id":"sh/z6lsfmxs","slide":18,"text":"🔥","textPreview":"🔥","textChars":2,"textLines":1,"bbox":[70,1019,70,48]}
+{"kind":"textbox","id":"sh/gbq9c7y9","slide":18,"text":"요즘 푹 빠져 있는 것은?","textPreview":"요즘 푹 빠져 있는 것은?","textChars":14,"textLines":1,"bbox":[18,1067,174,108]}
+{"kind":"shape","id":"sh/hcja5cze","slide":18,"name":"board-2-cell-23","bbox":[5,875,200,128]}
+{"kind":"textbox","id":"sh/j6pwbahw","slide":18,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[13,880,38,30]}
+{"kind":"textbox","id":"sh/i5gvi50r","slide":18,"text":"🧡","textPreview":"🧡","textChars":2,"textLines":1,"bbox":[52,881,106,42]}
+{"kind":"textbox","id":"sh/587edkz2","slide":18,"text":"찬양팀에서 서로 꼭 챙겨주면 좋은 것은?","textPreview":"찬양팀에서 서로 꼭 챙겨주면 좋은 것은?","textChars":22,"textLines":1,"bbox":[18,921,174,77]}
+{"kind":"shape","id":"sh/k7ydkfih","slide":18,"name":"board-2-cell-24","bbox":[5,737,200,128]}
+{"kind":"textbox","id":"sh/v25c7q10","slide":18,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[13,742,38,30]}
+{"kind":"textbox","id":"sh/a1wvel0f","slide":18,"text":"🌈","textPreview":"🌈","textChars":2,"textLines":1,"bbox":[52,743,106,42]}
+{"kind":"textbox","id":"sh/x47e90z6","slide":18,"text":"친구에게 기억되고 싶은 내 모습은?","textPreview":"친구에게 기억되고 싶은 내 모습은?","textChars":19,"textLines":1,"bbox":[18,783,174,77]}
+{"kind":"shape","id":"sh/w3ydgvil","slide":18,"name":"board-2-cell-25","bbox":[5,599,200,128]}
+{"kind":"textbox","id":"sh/ny5c3q14","slide":18,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[13,604,38,30]}
+{"kind":"textbox","id":"sh/mdwval0j","slide":18,"text":"🗺️","textPreview":"🗺️","textChars":3,"textLines":1,"bbox":[52,605,106,42]}
+{"kind":"textbox","id":"sh/bqxkv25g","slide":18,"text":"요즘 가장 가보고 싶은 곳은?","textPreview":"요즘 가장 가보고 싶은 곳은?","textChars":16,"textLines":1,"bbox":[18,645,174,77]}
+{"kind":"shape","id":"sh/apoj2x4v","slide":18,"name":"board-2-cell-26","bbox":[5,461,200,128]}
+{"kind":"textbox","id":"sh/xsf2xcnm","slide":18,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[13,466,38,30]}
+{"kind":"textbox","id":"sh/cr6147m1","slide":18,"text":"🌟","textPreview":"🌟","textChars":2,"textLines":1,"bbox":[52,467,106,42]}
+{"kind":"textbox","id":"sh/zuxkz25c","slide":18,"text":"찬양팀에서 기대되는 순간은?","textPreview":"찬양팀에서 기대되는 순간은?","textChars":15,"textLines":1,"bbox":[18,507,174,77]}
+{"kind":"shape","id":"sh/ytoj6x4r","slide":18,"name":"board-2-cell-27","bbox":[5,323,200,128]}
+{"kind":"textbox","id":"sh/lgz21cni","slide":18,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[13,328,38,30]}
+{"kind":"textbox","id":"sh/kf6187mx","slide":18,"text":"🌬️","textPreview":"🌬️","textChars":3,"textLines":1,"bbox":[52,329,106,42]}
+{"kind":"textbox","id":"sh/7ihk3m5o","slide":18,"text":"긴장할 때 도움이 되는 행동은?","textPreview":"긴장할 때 도움이 되는 행동은?","textChars":17,"textLines":1,"bbox":[18,369,174,77]}
+{"kind":"shape","id":"sh/mh8jah43","slide":18,"name":"board-2-cell-28","bbox":[5,185,200,128]}
+{"kind":"textbox","id":"sh/4nq10r21","slide":18,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[13,190,38,30]}
+{"kind":"textbox","id":"sh/5ojitwjm","slide":18,"text":"📣","textPreview":"📣","textChars":2,"textLines":1,"bbox":[52,191,106,42]}
+{"kind":"textbox","id":"sh/il8jyhkb","slide":18,"text":"우리 팀만의 구호를 만든다면?","textPreview":"우리 팀만의 구호를 만든다면?","textChars":16,"textLines":1,"bbox":[18,231,174,77]}
+{"kind":"textbox","id":"sh/jmh0rm1g","slide":18,"text":"고등부 찬양팀","textPreview":"고등부 찬양팀","textChars":7,"textLines":1,"bbox":[340,316,1000,60]}
+{"kind":"textbox","id":"sh/wjqhw725","slide":18,"text":"나눔마블","textPreview":"나눔마블","textChars":4,"textLines":1,"bbox":[330,370,1020,130]}
+{"kind":"shape","id":"sh/hkzipcjq","slide":18,"bbox":[462,520,756,72]}
+{"kind":"textbox","id":"sh/uh8zuhkz","slide":18,"text":"ROUND 2 · 음악으로 함께","textPreview":"ROUND 2 · 음악으로 함께","textChars":17,"textLines":1,"bbox":[480,528,720,56]}
+{"kind":"textbox","id":"sh/vih0n21k","slide":18,"text":"한 곡의 역할: 분위기 · 리듬 · 화음 · 흐름","textPreview":"한 곡의 역할: 분위기 · 리듬 · 화음 · 흐름","textChars":27,"textLines":1,"bbox":[380,620,920,48]}
+{"kind":"textbox","id":"sh/8v6hs72t","slide":18,"text":"굴린 사람 10–20초 답하기  →  아직 덜 말한 친구 한 명 지목","textPreview":"굴린 사람 10–20초 답하기  →  아직 덜 말한 친구 한 명 지목","textChars":38,"textLines":1,"bbox":[350,700,980,48]}
+{"kind":"textbox","id":"sh/9gzilcje","slide":18,"text":"답하기 어려우면 한 번 패스 가능  ·  면접 호출 시 바로 다녀오기","textPreview":"답하기 어려우면 한 번 패스 가능  ·  면접 호출 시 바로 다녀오기","textChars":38,"textLines":1,"bbox":[350,758,980,42]}
+{"kind":"textbox","id":"sh/9crypovi","slide":18,"text":"🎲","textPreview":"🎲","textChars":2,"textLines":1,"bbox":[730,834,220,108]}
+{"kind":"textbox","id":"sh/obyxw3ux","slide":18,"text":"게임판 2  ·  1–28칸","textPreview":"게임판 2  ·  1–28칸","textChars":15,"textLines":1,"bbox":[600,954,480,34]}
+{"kind":"notes","id":"nt/qt92h3","slide":18,"text":""}
+{"kind":"slide","id":"sl/xsl64d","slide":19,"title":"1","textShapes":92}
+{"kind":"shape","id":"sh/fyp0nq9s","slide":19,"name":"board-3-cell-1","bbox":[5,5,200,170]}
+{"kind":"textbox","id":"sh/gzy1wvqx","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[13,10,38,30]}
+{"kind":"textbox","id":"sh/h07ip0ri","slide":19,"text":"➡️","textPreview":"➡️","textChars":2,"textLines":1,"bbox":[70,11,70,48]}
+{"kind":"textbox","id":"sh/69wjql8v","slide":19,"text":"출발","textPreview":"출발","textChars":2,"textLines":1,"bbox":[18,59,174,108]}
+{"kind":"shape","id":"sh/7a50jq9g","slide":19,"name":"board-3-cell-2","bbox":[215,5,200,170]}
+{"kind":"textbox","id":"sh/sbe1svq1","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[223,10,38,30]}
+{"kind":"textbox","id":"sh/tcnilgrm","slide":19,"text":"📣","textPreview":"📣","textChars":2,"textLines":1,"bbox":[280,11,70,48]}
+{"kind":"textbox","id":"sh/i5czm18z","slide":19,"text":"내가 고른 응원을 언제 듣고 싶나?","textPreview":"내가 고른 응원을 언제 듣고 싶나?","textChars":19,"textLines":1,"bbox":[228,59,174,108]}
+{"kind":"shape","id":"sh/j6l0f69k","slide":19,"name":"board-3-cell-3","bbox":[425,5,200,170]}
+{"kind":"textbox","id":"sh/7epsvidk","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[433,10,38,30]}
+{"kind":"textbox","id":"sh/6dgrmdwf","slide":19,"text":"🔥","textPreview":"🔥","textChars":2,"textLines":1,"bbox":[490,11,70,48]}
+{"kind":"textbox","id":"sh/tg7ax8vq","slide":19,"text":"요즘 푹 빠져 있는 것은?","textPreview":"요즘 푹 빠져 있는 것은?","textChars":14,"textLines":1,"bbox":[438,59,174,108]}
+{"kind":"shape","id":"sh/8fy9one5","slide":19,"name":"board-3-cell-4","bbox":[635,5,200,170]}
+{"kind":"textbox","id":"sh/vipszidw","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[643,10,38,30]}
+{"kind":"textbox","id":"sh/uhgrqdwb","slide":19,"text":"🤙","textPreview":"🤙","textChars":2,"textLines":1,"bbox":[700,11,70,48]}
+{"kind":"textbox","id":"sh/hkra1sv2","slide":19,"text":"팀에서 지키고 싶은 약속 하나?","textPreview":"팀에서 지키고 싶은 약속 하나?","textChars":17,"textLines":1,"bbox":[648,59,174,108]}
+{"kind":"shape","id":"sh/gji9sneh","slide":19,"name":"board-3-cell-5","bbox":[845,5,200,170]}
+{"kind":"textbox","id":"sh/bm58nyds","slide":19,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[853,10,38,30]}
+{"kind":"textbox","id":"sh/alwretw7","slide":19,"text":"🙏","textPreview":"🙏","textChars":2,"textLines":1,"bbox":[910,11,70,48]}
+{"kind":"textbox","id":"sh/ed43ilkr","slide":19,"text":"이번 주 감사했던 작은 일?","textPreview":"이번 주 감사했던 작은 일?","textChars":15,"textLines":1,"bbox":[858,59,174,108]}
+{"kind":"shape","id":"sh/zed4bq1c","slide":19,"name":"board-3-cell-6","bbox":[1055,5,200,170]}
+{"kind":"textbox","id":"sh/0fmlkv2x","slide":19,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1063,10,38,30]}
+{"kind":"textbox","id":"sh/lgfmd0ji","slide":19,"text":"🦁","textPreview":"🦁","textChars":2,"textLines":1,"bbox":[1120,11,70,48]}
+{"kind":"textbox","id":"sh/qp43elkv","slide":19,"text":"최근 용기 냈던 작은 순간?","textPreview":"최근 용기 냈던 작은 순간?","textChars":15,"textLines":1,"bbox":[1068,59,174,108]}
+{"kind":"shape","id":"sh/rqd47q1g","slide":19,"name":"board-3-cell-7","bbox":[1265,5,200,170]}
+{"kind":"textbox","id":"sh/crmlgv21","slide":19,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1273,10,38,30]}
+{"kind":"textbox","id":"sh/dcvm9gj6","slide":19,"text":"🎧","textPreview":"🎧","textChars":2,"textLines":1,"bbox":[1330,11,70,48]}
+{"kind":"textbox","id":"sh/2lk3a1kj","slide":19,"text":"요즘 자주 듣는 노래 한 곡?","textPreview":"요즘 자주 듣는 노래 한 곡?","textChars":16,"textLines":1,"bbox":[1278,59,174,108]}
+{"kind":"shape","id":"sh/3mtk3614","slide":19,"name":"board-3-cell-8","bbox":[1475,5,200,170]}
+{"kind":"textbox","id":"sh/5gj6943m","slide":19,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1483,10,38,30]}
+{"kind":"textbox","id":"sh/kfapgzm1","slide":19,"text":"💐","textPreview":"💐","textChars":2,"textLines":1,"bbox":[1540,11,70,48]}
+{"kind":"textbox","id":"sh/jeho7elw","slide":19,"text":"고마움을 표현하는 나만의 방법?","textPreview":"고마움을 표현하는 나만의 방법?","textChars":17,"textLines":1,"bbox":[1488,59,174,108]}
+{"kind":"shape","id":"sh/id87e94b","slide":19,"name":"board-3-cell-9","bbox":[1475,185,200,128]}
+{"kind":"textbox","id":"sh/xcz6543q","slide":19,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1483,190,38,30]}
+{"kind":"textbox","id":"sh/wbq5czm5","slide":19,"text":"🌈","textPreview":"🌈","textChars":2,"textLines":1,"bbox":[1522,191,106,42]}
+{"kind":"textbox","id":"sh/vaho3ulk","slide":19,"text":"친구에게 기억되고 싶은 내 모습은?","textPreview":"친구에게 기억되고 싶은 내 모습은?","textChars":19,"textLines":1,"bbox":[1488,231,174,77]}
+{"kind":"shape","id":"sh/a98nap4z","slide":19,"name":"board-3-cell-10","bbox":[1475,323,200,128]}
+{"kind":"textbox","id":"sh/98z61k3e","slide":19,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1483,328,38,30]}
+{"kind":"textbox","id":"sh/87q58fm9","slide":19,"text":"📷","textPreview":"📷","textChars":2,"textLines":1,"bbox":[1522,329,106,42]}
+{"kind":"textbox","id":"sh/ozy5szit","slide":19,"text":"이번 학기 꼭 남기고 싶은 추억?","textPreview":"이번 학기 꼭 남기고 싶은 추억?","textChars":18,"textLines":1,"bbox":[1488,369,174,77]}
+{"kind":"shape","id":"sh/p07614ze","slide":19,"name":"board-3-cell-11","bbox":[1475,461,200,128]}
+{"kind":"textbox","id":"sh/2dgnqp0n","slide":19,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1483,466,38,30]}
+{"kind":"textbox","id":"sh/nypozuh8","slide":19,"text":"🌿","textPreview":"🌿","textChars":2,"textLines":1,"bbox":[1522,467,106,42]}
+{"kind":"textbox","id":"sh/c3ypwji5","slide":19,"text":"나만의 기분 전환 방법은?","textPreview":"나만의 기분 전환 방법은?","textChars":14,"textLines":1,"bbox":[1488,507,174,77]}
+{"kind":"shape","id":"sh/x47654za","slide":19,"name":"board-3-cell-12","bbox":[1475,599,200,128]}
+{"kind":"textbox","id":"sh/a1gnu90z","slide":19,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1483,604,38,30]}
+{"kind":"textbox","id":"sh/b2po3ehk","slide":19,"text":"💬","textPreview":"💬","textChars":2,"textLines":1,"bbox":[1522,605,106,42]}
+{"kind":"textbox","id":"sh/s7e5kfil","slide":19,"text":"나도 다른 사람에게 건네고 싶은 응원은?","textPreview":"나도 다른 사람에게 건네고 싶은 응원은?","textChars":22,"textLines":1,"bbox":[1488,645,174,77]}
+{"kind":"shape","id":"sh/t8n6tkz6","slide":19,"name":"board-3-cell-13","bbox":[1475,737,200,128]}
+{"kind":"textbox","id":"sh/ved0fm50","slide":19,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1483,742,38,30]}
+{"kind":"textbox","id":"sh/ud4zmhof","slide":19,"text":"😄","textPreview":"😄","textChars":2,"textLines":1,"bbox":[1522,743,106,42]}
+{"kind":"textbox","id":"sh/h0vihcn6","slide":19,"text":"최근 나를 웃게 한 일은?","textPreview":"최근 나를 웃게 한 일은?","textChars":14,"textLines":1,"bbox":[1488,783,174,77]}
+{"kind":"shape","id":"sh/gzmhor6l","slide":19,"name":"board-3-cell-14","bbox":[1475,875,200,128]}
+{"kind":"textbox","id":"sh/7ad0b25o","slide":19,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1483,880,38,30]}
+{"kind":"textbox","id":"sh/69kzixoj","slide":19,"text":"🔎","textPreview":"🔎","textChars":2,"textLines":1,"bbox":[1522,881,106,42]}
+{"kind":"textbox","id":"sh/tcvidcnu","slide":19,"text":"오늘 발견한 누군가의 좋은 점?","textPreview":"오늘 발견한 누군가의 좋은 점?","textChars":17,"textLines":1,"bbox":[1488,921,174,77]}
+{"kind":"shape","id":"sh/8bmhk769","slide":19,"name":"board-3-cell-15","bbox":[1475,1013,200,170]}
+{"kind":"textbox","id":"sh/j6t0725s","slide":19,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1483,1018,38,30]}
+{"kind":"textbox","id":"sh/y5kzexo7","slide":19,"text":"✨","textPreview":"✨","textChars":1,"textLines":1,"bbox":[1540,1019,70,48]}
+{"kind":"textbox","id":"sh/m10jqx8z","slide":19,"text":"내가 은근 잘하는 것 한 가지?","textPreview":"내가 은근 잘하는 것 한 가지?","textChars":17,"textLines":1,"bbox":[1488,1067,174,108]}
+{"kind":"shape","id":"sh/n290jipk","slide":19,"name":"board-3-cell-16","bbox":[1265,1013,200,170]}
+{"kind":"textbox","id":"sh/o321snq5","slide":19,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1273,1018,38,30]}
+{"kind":"textbox","id":"sh/94bils7q","slide":19,"text":"🌱","textPreview":"🌱","textChars":2,"textLines":1,"bbox":[1330,1019,70,48]}
+{"kind":"textbox","id":"sh/a5kjux8b","slide":19,"text":"올해 한 뼘 성장하고 싶은 부분?","textPreview":"올해 한 뼘 성장하고 싶은 부분?","textChars":18,"textLines":1,"bbox":[1278,1067,174,108]}
+{"kind":"shape","id":"sh/b6t0n2pw","slide":19,"name":"board-3-cell-17","bbox":[1055,1013,200,170]}
+{"kind":"textbox","id":"sh/w721w7qh","slide":19,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1063,1018,38,30]}
+{"kind":"textbox","id":"sh/x8bipc7m","slide":19,"text":"🦸","textPreview":"🦸","textChars":2,"textLines":1,"bbox":[1120,1019,70,48]}
+{"kind":"textbox","id":"sh/y9kjyh87","slide":19,"text":"하루 동안 초능력을 쓴다면?","textPreview":"하루 동안 초능력을 쓴다면?","textChars":15,"textLines":1,"bbox":[1068,1067,174,108]}
+{"kind":"shape","id":"sh/jadkr2ps","slide":19,"name":"board-3-cell-18","bbox":[845,1013,200,170]}
+{"kind":"textbox","id":"sh/t4fmhgru","slide":19,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[853,1018,38,30]}
+{"kind":"textbox","id":"sh/836lobap","slide":19,"text":"🫶","textPreview":"🫶","textChars":2,"textLines":1,"bbox":[910,1019,70,48]}
+{"kind":"textbox","id":"sh/72x4f694","slide":19,"text":"실수한 친구에게 건넬 말은?","textPreview":"실수한 친구에게 건넬 말은?","textChars":15,"textLines":1,"bbox":[858,1067,174,108]}
+{"kind":"shape","id":"sh/6143m1sj","slide":19,"name":"board-3-cell-19","bbox":[635,1013,200,170]}
+{"kind":"textbox","id":"sh/hsfmlgr6","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[643,1018,38,30]}
+{"kind":"textbox","id":"sh/gr6lsbal","slide":19,"text":"🏫","textPreview":"🏫","textChars":2,"textLines":1,"bbox":[700,1019,70,48]}
+{"kind":"textbox","id":"sh/v6x4j690","slide":19,"text":"학교에서 제일 좋아하는 시간은?","textPreview":"학교에서 제일 좋아하는 시간은?","textChars":17,"textLines":1,"bbox":[648,1067,174,108]}
+{"kind":"shape","id":"sh/u5o3qlsf","slide":19,"name":"board-3-cell-20","bbox":[425,1013,200,170]}
+{"kind":"textbox","id":"sh/5wzmp0r2","slide":19,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[433,1018,38,30]}
+{"kind":"textbox","id":"sh/4vqlwvah","slide":19,"text":"🚀","textPreview":"🚀","textChars":2,"textLines":1,"bbox":[490,1019,70,48]}
+{"kind":"textbox","id":"sh/czmxc3qt","slide":19,"text":"함께라서 가능할 것 같은 일?","textPreview":"함께라서 가능할 것 같은 일?","textChars":16,"textLines":1,"bbox":[438,1067,174,108]}
+{"kind":"shape","id":"sh/x0vel8re","slide":19,"name":"board-3-cell-21","bbox":[215,1013,200,170]}
+{"kind":"textbox","id":"sh/ax4vat83","slide":19,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[223,1018,38,30]}
+{"kind":"textbox","id":"sh/bydwjy9o","slide":19,"text":"🍜","textPreview":"🍜","textChars":2,"textLines":1,"bbox":[280,1019,70,48]}
+{"kind":"textbox","id":"sh/ovmd8jqx","slide":19,"text":"힘날 때 먹고 싶은 음식은?","textPreview":"힘날 때 먹고 싶은 음식은?","textChars":15,"textLines":1,"bbox":[228,1067,174,108]}
+{"kind":"shape","id":"sh/pwvehori","slide":19,"name":"board-3-cell-22","bbox":[5,1013,200,170]}
+{"kind":"textbox","id":"sh/2tkv6t8r","slide":19,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[13,1018,38,30]}
+{"kind":"textbox","id":"sh/nutwfy9c","slide":19,"text":"🔋","textPreview":"🔋","textChars":2,"textLines":1,"bbox":[70,1019,70,48]}
+{"kind":"textbox","id":"sh/0r2d4jq1","slide":19,"text":"힘들 때 나를 다시 움직이는 것?","textPreview":"힘들 때 나를 다시 움직이는 것?","textChars":18,"textLines":1,"bbox":[18,1067,174,108]}
+{"kind":"shape","id":"sh/1sbedor6","slide":19,"name":"board-3-cell-23","bbox":[5,875,200,128]}
+{"kind":"textbox","id":"sh/j29wnet8","slide":19,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[13,880,38,30]}
+{"kind":"textbox","id":"sh/i10fu9cn","slide":19,"text":"⛪","textPreview":"⛪","textChars":1,"textLines":1,"bbox":[52,881,106,42]}
+{"kind":"textbox","id":"sh/54bepobe","slide":19,"text":"교회에서 가장 편한 공간은?","textPreview":"교회에서 가장 편한 공간은?","textChars":15,"textLines":1,"bbox":[18,921,174,77]}
+{"kind":"shape","id":"sh/43ixwjut","slide":19,"name":"board-3-cell-24","bbox":[5,737,200,128]}
+{"kind":"textbox","id":"sh/rqtgret4","slide":19,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[13,742,38,30]}
+{"kind":"textbox","id":"sh/qpkfytcz","slide":19,"text":"🎨","textPreview":"🎨","textChars":2,"textLines":1,"bbox":[52,743,106,42]}
+{"kind":"textbox","id":"sh/dsbytoba","slide":19,"text":"내가 팀에 보태고 싶은 분위기?","textPreview":"내가 팀에 보태고 싶은 분위기?","textChars":17,"textLines":1,"bbox":[18,783,174,77]}
+{"kind":"shape","id":"sh/sr2x0jup","slide":19,"name":"board-3-cell-25","bbox":[5,599,200,128]}
+{"kind":"textbox","id":"sh/futgvytg","slide":19,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[13,604,38,30]}
+{"kind":"textbox","id":"sh/etkf2tcv","slide":19,"text":"🧩","textPreview":"🧩","textChars":2,"textLines":1,"bbox":[52,605,106,42]}
+{"kind":"textbox","id":"sh/bi5gfip8","slide":19,"text":"지금 새로 배우고 싶은 것은?","textPreview":"지금 새로 배우고 싶은 것은?","textChars":16,"textLines":1,"bbox":[18,645,174,77]}
+{"kind":"shape","id":"sh/ahwfmdon","slide":19,"name":"board-3-cell-26","bbox":[5,461,200,128]}
+{"kind":"textbox","id":"sh/xknyhs7e","slide":19,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[13,466,38,30]}
+{"kind":"textbox","id":"sh/cjex8n6t","slide":19,"text":"🗓️","textPreview":"🗓️","textChars":3,"textLines":1,"bbox":[52,467,106,42]}
+{"kind":"textbox","id":"sh/nelgbipw","slide":19,"text":"한 달 뒤 나에게 해줄 한마디?","textPreview":"한 달 뒤 나에게 해줄 한마디?","textChars":17,"textLines":1,"bbox":[18,507,174,77]}
+{"kind":"shape","id":"sh/2dcfidor","slide":19,"name":"board-3-cell-27","bbox":[5,323,200,128]}
+{"kind":"textbox","id":"sh/pg3yd872","slide":19,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[13,328,38,30]}
+{"kind":"textbox","id":"sh/ofuxkn6h","slide":19,"text":"🌟","textPreview":"🌟","textChars":2,"textLines":1,"bbox":[52,329,106,42]}
+{"kind":"textbox","id":"sh/fqlg7yp0","slide":19,"text":"찬양팀에서 기대되는 순간은?","textPreview":"찬양팀에서 기대되는 순간은?","textChars":15,"textLines":1,"bbox":[18,369,174,77]}
+{"kind":"shape","id":"sh/epcfetof","slide":19,"name":"board-3-cell-28","bbox":[5,185,200,128]}
+{"kind":"textbox","id":"sh/4vqd8zmd","slide":19,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[13,190,38,30]}
+{"kind":"textbox","id":"sh/5wzuh4ny","slide":19,"text":"🙌","textPreview":"🙌","textChars":2,"textLines":1,"bbox":[52,191,106,42]}
+{"kind":"textbox","id":"sh/it8v6p47","slide":19,"text":"다음 모임에서 함께 해보고 싶은 것은?","textPreview":"다음 모임에서 함께 해보고 싶은 것은?","textChars":21,"textLines":1,"bbox":[18,231,174,77]}
+{"kind":"textbox","id":"sh/juhcfu5s","slide":19,"text":"고등부 찬양팀","textPreview":"고등부 찬양팀","textChars":7,"textLines":1,"bbox":[340,316,1000,60]}
+{"kind":"textbox","id":"sh/sjadcjm9","slide":19,"text":"나눔마블","textPreview":"나눔마블","textChars":4,"textLines":1,"bbox":[330,370,1020,130]}
+{"kind":"shape","id":"sh/tkjelonu","slide":19,"bbox":[462,520,756,72]}
+{"kind":"textbox","id":"sh/6x8va94j","slide":19,"text":"ROUND 3 · 응원으로 깊게","textPreview":"ROUND 3 · 응원으로 깊게","textChars":17,"textLines":1,"bbox":[480,528,720,56]}
+{"kind":"textbox","id":"sh/ri1cje5o","slide":19,"text":"듣고 싶은 응원: 아이디어 · 든든함 · 괜찮아 · 같이","textPreview":"듣고 싶은 응원: 아이디어 · 든든함 · 괜찮아 · 같이","textChars":31,"textLines":1,"bbox":[380,620,920,48]}
+{"kind":"textbox","id":"sh/8n6d0f65","slide":19,"text":"굴린 사람 10–20초 답하기  →  아직 덜 말한 친구 한 명 지목","textPreview":"굴린 사람 10–20초 답하기  →  아직 덜 말한 친구 한 명 지목","textChars":38,"textLines":1,"bbox":[350,700,980,48]}
+{"kind":"textbox","id":"sh/9ofu9knq","slide":19,"text":"답하기 어려우면 한 번 패스 가능  ·  면접 호출 시 바로 다녀오기","textPreview":"답하기 어려우면 한 번 패스 가능  ·  면접 호출 시 바로 다녀오기","textChars":38,"textLines":1,"bbox":[350,758,980,42]}
+{"kind":"textbox","id":"sh/9k7adgfe","slide":19,"text":"🎲","textPreview":"🎲","textChars":2,"textLines":1,"bbox":[730,834,220,108]}
+{"kind":"textbox","id":"sh/ojyt4byt","slide":19,"text":"게임판 3  ·  1–28칸","textPreview":"게임판 3  ·  1–28칸","textChars":15,"textLines":1,"bbox":[600,954,480,34]}
+{"kind":"notes","id":"nt/xsl64d","slide":19,"text":""}
+{"kind":"slide","id":"sl/4m1usm","slide":20,"title":"11 · 디자인 제작 명세","textShapes":29}
+{"kind":"textbox","id":"sh/lwnqx0ze","slide":20,"text":"11 · 디자인 제작 명세","textPreview":"11 · 디자인 제작 명세","textChars":14,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/ytw72lgn","slide":20,"text":"A3 가로 인쇄와 화면 투사를 모두 고려한 편집형 보드입니다","textPreview":"A3 가로 인쇄와 화면 투사를 모두 고려한 편집형 보드입니다","textChars":33,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/zu58vqh8","slide":20,"text":"모든 칸·문구·색상은 PowerPoint에서 직접 수정할 수 있습니다.","textPreview":"모든 칸·문구·색상은 PowerPoint에서 직접 수정할 수 있습니다.","textChars":39,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/crup0byx","slide":20,"bbox":[72,220,1536,4]}
+{"kind":"shape","id":"sh/ds3qtgzi","slide":20,"bbox":[92,284,704,148]}
+{"kind":"textbox","id":"sh/qpc7ylgr","slide":20,"text":"📐","textPreview":"📐","textChars":2,"textLines":1,"bbox":[112,316,90,74]}
+{"kind":"textbox","id":"sh/bql8rqhc","slide":20,"text":"캔버스","textPreview":"캔버스","textChars":3,"textLines":1,"bbox":[218,308,518,42]}
+{"kind":"textbox","id":"sh/onupwbyl","slide":20,"text":"1680×1188 px · A3 가로와 같은 1.414:1 비율","textPreview":"1680×1188 px · A3 가로와 같은 1.414:1 비율","textChars":35,"textLines":1,"bbox":[218,354,532,58]}
+{"kind":"shape","id":"sh/po3qpgz6","slide":20,"bbox":[852,284,704,148]}
+{"kind":"textbox","id":"sh/twvmh0jq","slide":20,"text":"🔄","textPreview":"🔄","textChars":2,"textLines":1,"bbox":[872,316,90,74]}
+{"kind":"textbox","id":"sh/sv25ov25","slide":20,"text":"28칸 배치","textPreview":"28칸 배치","textChars":6,"textLines":1,"bbox":[978,308,518,42]}
+{"kind":"textbox","id":"sh/rut4fq1k","slide":20,"text":"위 8칸 → 오른쪽 6칸 → 아래 8칸 → 왼쪽 6칸","textPreview":"위 8칸 → 오른쪽 6칸 → 아래 8칸 → 왼쪽 6칸","textChars":29,"textLines":1,"bbox":[978,354,532,58]}
+{"kind":"shape","id":"sh/6tk3mlkz","slide":20,"bbox":[92,469,704,148]}
+{"kind":"textbox","id":"sh/5sbmdgje","slide":20,"text":"🖨️","textPreview":"🖨️","textChars":3,"textLines":1,"bbox":[112,501,90,74]}
+{"kind":"textbox","id":"sh/4r2lkv2t","slide":20,"text":"인쇄","textPreview":"인쇄","textChars":2,"textLines":1,"bbox":[218,493,518,42]}
+{"kind":"textbox","id":"sh/jqt4bq1o","slide":20,"text":"A3 가로 권장 · 실제 크기 100% · 여백 최소","textPreview":"A3 가로 권장 · 실제 크기 100% · 여백 최소","textChars":29,"textLines":1,"bbox":[218,539,532,58]}
+{"kind":"shape","id":"sh/ipk3ilk3","slide":20,"bbox":[852,469,704,148]}
+{"kind":"textbox","id":"sh/hobm9gji","slide":20,"text":"🔤","textPreview":"🔤","textChars":2,"textLines":1,"bbox":[872,501,90,74]}
+{"kind":"textbox","id":"sh/wnilgb2x","slide":20,"text":"글꼴","textPreview":"글꼴","textChars":2,"textLines":1,"bbox":[978,493,518,42]}
+{"kind":"textbox","id":"sh/8j6dcfe5","slide":20,"text":"Apple SD Gothic Neo · 제목 66pt+ · 칸 16–18pt+","textPreview":"Apple SD Gothic Neo · 제목 66pt+ · 칸 16–18pt+","textChars":43,"textLines":1,"bbox":[978,539,532,58]}
+{"kind":"shape","id":"sh/9kfelkva","slide":20,"bbox":[92,654,704,148]}
+{"kind":"textbox","id":"sh/mhova5wz","slide":20,"text":"🎨","textPreview":"🎨","textChars":2,"textLines":1,"bbox":[112,686,90,74]}
+{"kind":"textbox","id":"sh/7ixwjadk","slide":20,"text":"색상","textPreview":"색상","textChars":2,"textLines":1,"bbox":[218,678,518,42]}
+{"kind":"textbox","id":"sh/kf6d8vet","slide":20,"text":"8색 공통 팔레트 · 흰 테두리 · 인접 칸 색상 교차","textPreview":"8색 공통 팔레트 · 흰 테두리 · 인접 칸 색상 교차","textChars":30,"textLines":1,"bbox":[218,724,532,58]}
+{"kind":"shape","id":"sh/lgfuh0fe","slide":20,"bbox":[852,654,704,148]}
+{"kind":"textbox","id":"sh/yd4v65wn","slide":20,"text":"🙂","textPreview":"🙂","textChars":2,"textLines":1,"bbox":[872,686,90,74]}
+{"kind":"textbox","id":"sh/zedcfqx8","slide":20,"text":"아이콘","textPreview":"아이콘","textChars":3,"textLines":1,"bbox":[978,678,518,42]}
+{"kind":"textbox","id":"sh/4bqdkzed","slide":20,"text":"질문당 이모지 1개 · 동일한 컬러 이모지 스타일","textPreview":"질문당 이모지 1개 · 동일한 컬러 이모지 스타일","textChars":27,"textLines":1,"bbox":[978,724,532,58]}
+{"kind":"shape","id":"sh/5czet4vi","slide":20,"bbox":[92,839,704,148]}
+{"kind":"textbox","id":"sh/f6lgjyx0","slide":20,"text":"↵","textPreview":"↵","textChars":1,"textLines":1,"bbox":[112,871,90,74]}
+{"kind":"textbox","id":"sh/e5szatgf","slide":20,"text":"줄바꿈","textPreview":"줄바꿈","textChars":3,"textLines":1,"bbox":[218,863,518,42]}
+{"kind":"textbox","id":"sh/183yl8fq","slide":20,"text":"의미 단위로 2–4줄 · 조사와 명사를 분리하지 않음","textPreview":"의미 단위로 2–4줄 · 조사와 명사를 분리하지 않음","textChars":29,"textLines":1,"bbox":[218,909,532,58]}
+{"kind":"shape","id":"sh/g7uhc3yl","slide":20,"bbox":[852,839,704,148]}
+{"kind":"textbox","id":"sh/3algnyxw","slide":20,"text":"🏷️","textPreview":"🏷️","textChars":3,"textLines":1,"bbox":[872,871,90,74]}
+{"kind":"textbox","id":"sh/29czetgb","slide":20,"text":"라운드 구별","textPreview":"라운드 구별","textChars":6,"textLines":1,"bbox":[978,863,518,42]}
+{"kind":"textbox","id":"sh/pc3yp8f2","slide":20,"text":"1차 코랄 · 2차 하늘 · 3차 보라의 중앙 띠","textPreview":"1차 코랄 · 2차 하늘 · 3차 보라의 중앙 띠","textChars":27,"textLines":1,"bbox":[978,909,532,58]}
+{"kind":"shape","id":"sh/obuhg3yh","slide":20,"bbox":[92,1044,1496,52]}
+{"kind":"textbox","id":"sh/je1gbehs","slide":20,"text":"긴 질문을 줄이기보다 2–4줄로 나누고, PPTX에서 글자가 깨지지 않았는지 출력 전 한 번 확인합니다.","textPreview":"긴 질문을 줄이기보다 2–4줄로 나누고, PPTX에서 글자가 깨지지 않았는지 출력 전 한 번 확인합니다.","textChars":58,"textLines":1,"bbox":[120,1049,1440,42]}
+{"kind":"textbox","id":"sh/id8f29g7","slide":20,"text":"고등부 찬양팀 나눔마블  ·  20","textPreview":"고등부 찬양팀 나눔마블  ·  20","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/4m1usm","slide":20,"text":""}
+{"kind":"slide","id":"sl/p4kh1h","slide":21,"title":"12 · 준비물과 진행자 체크리스트","textShapes":31}
+{"kind":"textbox","id":"sh/cvm547it","slide":21,"text":"12 · 준비물과 진행자 체크리스트","textPreview":"12 · 준비물과 진행자 체크리스트","textChars":19,"textLines":1,"bbox":[72,46,880,34]}
+{"kind":"textbox","id":"sh/rudob218","slide":21,"text":"게임판보다 중요한 것은 ‘모두 한 번 말하게 하는 진행’입니다","textPreview":"게임판보다 중요한 것은 ‘모두 한 번 말하게 하는 진행’입니다","textChars":34,"textLines":1,"bbox":[72,83,1536,78]}
+{"kind":"textbox","id":"sh/qt4n2xkn","slide":21,"text":"라운드 시작 5분 전에 아래 항목만 확인하면 바로 운영할 수 있습니다.","textPreview":"라운드 시작 5분 전에 아래 항목만 확인하면 바로 운영할 수 있습니다.","textChars":39,"textLines":1,"bbox":[76,166,1528,46]}
+{"kind":"shape","id":"sh/10f6hcja","slide":21,"bbox":[72,220,1536,4]}
+{"kind":"textbox","id":"sh/0z6587i5","slide":21,"text":"준비물","textPreview":"준비물","textChars":3,"textLines":1,"bbox":[92,280,660,58]}
+{"kind":"shape","id":"sh/zyxof21k","slide":21,"bbox":[92,364,46,46]}
+{"kind":"textbox","id":"sh/ex4n6x0z","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[92,361,46,46]}
+{"kind":"textbox","id":"sh/h4b658j6","slide":21,"text":"라운드별 A3 게임판 4장씩 — 총 12장","textPreview":"라운드별 A3 게임판 4장씩 — 총 12장","textChars":23,"textLines":1,"bbox":[158,358,624,58]}
+{"kind":"shape","id":"sh/g325wn2l","slide":21,"bbox":[92,476,46,46]}
+{"kind":"textbox","id":"sh/2h472d8j","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[92,473,46,46]}
+{"kind":"textbox","id":"sh/nidobi94","slide":21,"text":"그룹별 주사위 1개와 말 1개 — 각 4개","textPreview":"그룹별 주사위 1개와 말 1개 — 각 4개","textChars":23,"textLines":1,"bbox":[158,470,624,58]}
+{"kind":"shape","id":"sh/o3mp4nq9","slide":21,"bbox":[92,588,46,46]}
+{"kind":"textbox","id":"sh/p4v6dsru","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[92,585,46,46]}
+{"kind":"textbox","id":"sh/a5o76x8f","slide":21,"text":"학생 이름표와 발언 표시용 점 스티커","textPreview":"학생 이름표와 발언 표시용 점 스티커","textChars":20,"textLines":1,"bbox":[158,582,624,58]}
+{"kind":"shape","id":"sh/b6xofi90","slide":21,"bbox":[92,700,46,46]}
+{"kind":"textbox","id":"sh/c76p8nql","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[92,697,46,46]}
+{"kind":"textbox","id":"sh/x8f6hsr6","slide":21,"text":"4개 그룹 위치 표지판과 선택지 표지","textPreview":"4개 그룹 위치 표지판과 선택지 표지","textChars":20,"textLines":1,"bbox":[158,694,624,58]}
+{"kind":"shape","id":"sh/y9o7ax8r","slide":21,"bbox":[92,812,46,46]}
+{"kind":"textbox","id":"sh/zaxoj29w","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[92,809,46,46]}
+{"kind":"textbox","id":"sh/vehor254","slide":21,"text":"면접 순서표·호출 명단·필기구","textPreview":"면접 순서표·호출 명단·필기구","textChars":16,"textLines":1,"bbox":[158,806,624,58]}
+{"kind":"shape","id":"sh/ud8nyxoj","slide":21,"bbox":[92,924,46,46]}
+{"kind":"textbox","id":"sh/hgz6tcna","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[92,921,46,46]}
+{"kind":"textbox","id":"sh/wfq5076p","slide":21,"text":"20분 타이머와 종료 알림음","textPreview":"20분 타이머와 종료 알림음","textChars":15,"textLines":1,"bbox":[158,918,624,58]}
+{"kind":"textbox","id":"sh/7axon258","slide":21,"text":"진행자","textPreview":"진행자","textChars":3,"textLines":1,"bbox":[852,280,660,58]}
+{"kind":"shape","id":"sh/m9onuxon","slide":21,"bbox":[852,364,46,46]}
+{"kind":"textbox","id":"sh/9cz6psny","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[852,361,46,46]}
+{"kind":"textbox","id":"sh/8b65wn6t","slide":21,"text":"진행자 4명 + 면접 호출 담당 1명 배치","textPreview":"진행자 4명 + 면접 호출 담당 1명 배치","textChars":23,"textLines":1,"bbox":[918,358,624,58]}
+{"kind":"shape","id":"sh/z6x4jipw","slide":21,"bbox":[852,476,46,46]}
+{"kind":"textbox","id":"sh/y5onqdob","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[852,473,46,46]}
+{"kind":"textbox","id":"sh/4f2t4fix","slide":21,"text":"‘패스 1회’와 답변 10–20초 안내","textPreview":"‘패스 1회’와 답변 10–20초 안내","textChars":21,"textLines":1,"bbox":[918,470,624,58]}
+{"kind":"shape","id":"sh/p0budkzi","slide":21,"bbox":[852,588,46,46]}
+{"kind":"textbox","id":"sh/2d0b2p07","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[852,585,46,46]}
+{"kind":"textbox","id":"sh/3e9cbuhs","slide":21,"text":"첫 답변은 진행자가 짧게 시범","textPreview":"첫 답변은 진행자가 짧게 시범","textChars":16,"textLines":1,"bbox":[918,582,624,58]}
+{"kind":"shape","id":"sh/c32t8zi9","slide":21,"bbox":[852,700,46,46]}
+{"kind":"textbox","id":"sh/d4buh4zu","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[852,697,46,46]}
+{"kind":"textbox","id":"sh/q1kb6p03","slide":21,"text":"말 적은 학생을 먼저 지목하지 않기","textPreview":"말 적은 학생을 먼저 지목하지 않기","textChars":19,"textLines":1,"bbox":[918,694,624,58]}
+{"kind":"shape","id":"sh/r2tcfuho","slide":21,"bbox":[852,812,46,46]}
+{"kind":"textbox","id":"sh/s7ytwvi5","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[852,809,46,46]}
+{"kind":"textbox","id":"sh/t8ru50ja","slide":21,"text":"복귀자는 다음 주사위 순서로 자연스럽게 합류","textPreview":"복귀자는 다음 주사위 순서로 자연스럽게 합류","textChars":24,"textLines":1,"bbox":[918,806,624,58]}
+{"kind":"shape","id":"sh/lg3u14n6","slide":21,"bbox":[852,924,46,46]}
+{"kind":"textbox","id":"sh/kfudszml","slide":21,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[852,921,46,46]}
+{"kind":"textbox","id":"sh/jelczu50","slide":21,"text":"17분에 마지막 질문, 20분에 즉시 이동","textPreview":"17분에 마지막 질문, 20분에 즉시 이동","textChars":23,"textLines":1,"bbox":[918,918,624,58]}
+{"kind":"shape","id":"sh/ydcbqp4f","slide":21,"bbox":[190,1030,1300,72]}
+{"kind":"textbox","id":"sh/xc3uxknu","slide":21,"text":"마지막 3분: 각자 오늘 새롭게 알게 된 사람 한 명과 기억에 남은 답 하나를 말하고 마칩니다.","textPreview":"마지막 3분: 각자 오늘 새롭게 알게 된 사람 한 명과 기억에 남은 답 하나를 말하고 마칩니다.","textChars":53,"textLines":1,"bbox":[220,1037,1240,56]}
+{"kind":"textbox","id":"sh/cbutofm9","slide":21,"text":"고등부 찬양팀 나눔마블  ·  21","textPreview":"고등부 찬양팀 나눔마블  ·  21","textChars":19,"textLines":1,"bbox":[72,1138,1536,24]}
+{"kind":"notes","id":"nt/p4kh1h","slide":21,"text":""}

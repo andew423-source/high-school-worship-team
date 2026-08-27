@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Local environment and credentials
+.env*
+!.env.example
+*.pem
+
+# Dependencies and caches
+node_modules/
+.pnpm-store/
+.tmp_*/
+
+# Build and runtime output
+.next/
+.vinext/
+.wrangler/
+dist/
+out/
+coverage/
+outputs/
+work/
+
+# Local databases and logs
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.log
+
+# Preserved OpenAI Sites Git metadata
+staff-guide-site/.git.openai-sites-backup/
