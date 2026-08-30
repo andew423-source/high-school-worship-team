@@ -26,12 +26,15 @@ test("불가능한 조 조건은 임의 배정 대신 오류를 반환한다", a
   assert.match(result.error, /정원|배정/); assert.equal(result.assignments.length, 0);
 });
 
-test("등단 배정은 출석·예배 부서·학생 인도자 제외 규칙을 지킨다", async () => {
+test("등단 배정은 출석·부서·싱어팀·학생 인도자 규칙을 지킨다", async () => {
   const { generateStage } = await loadTypeScriptModule("../lib/stage.ts");
   const students = [
-    { id: "leader", name: "인도", service_part: 1, is_student_leader: 1, active: 1 }, { id: "s1", name: "출석1", service_part: 1, is_student_leader: 0, active: 1 },
-    { id: "s2", name: "출석2", service_part: 1, is_student_leader: 0, active: 1 }, { id: "wrong", name: "2부", service_part: 2, is_student_leader: 0, active: 1 },
+    { id: "leader", name: "인도", service_part: 1, worship_team: "인도팀", is_student_leader: 1, active: 1 },
+    { id: "s1", name: "출석1", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    { id: "s2", name: "출석2", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    { id: "other", name: "악기팀", service_part: 1, worship_team: "악기팀", is_student_leader: 0, active: 1 },
+    { id: "wrong", name: "2부", service_part: 2, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
   ];
-  const result = generateStage({ students, staff: [], eligibleStudentIds: new Set(["leader", "s1", "s2", "wrong"]), presentStaffIds: new Set(), histories: [], servicePart: 1, singerSlots: 1, choirSlots: 1, leaderType: "student", leaderId: "leader", usedStaffIds: new Set() });
-  assert.equal(result.assignments.filter((item) => item.role === "leader").length, 1); assert.ok(!result.assignments.some((item) => item.personId === "wrong")); assert.equal(result.assignments.filter((item) => item.personId === "leader").length, 1);
+  const result = generateStage({ students, staff: [], eligibleStudentIds: new Set(["leader", "s1", "s2", "other", "wrong"]), presentStaffIds: new Set(), histories: [], servicePart: 1, singerSlots: 1, choirSlots: 1, leaderType: "student", leaderId: "leader", usedStaffIds: new Set() });
+  assert.equal(result.assignments.filter((item) => item.role === "leader").length, 1); assert.ok(!result.assignments.some((item) => item.personId === "wrong")); assert.ok(!result.assignments.some((item) => item.personId === "other")); assert.equal(result.assignments.filter((item) => item.personId === "leader").length, 1);
 });

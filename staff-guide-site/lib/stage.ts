@@ -1,6 +1,7 @@
 import type { StageRole, StudentRecord, StaffRecord } from "./domain";
 export type StageCandidate = { personType: "student" | "staff"; personId: string; name: string; role: StageRole; reason: string; side: "left" | "center" | "right"; positionOrder: number };
 type History = { person_id: string; total_count: number; singer_count: number; last_date: string | null };
+function isSingerTeam(student: StudentRecord) { return String(student.worship_team ?? "").replace(/\s/g, "") === "싱어팀"; }
 
 function layout(people: Omit<StageCandidate, "side" | "positionOrder">[]): StageCandidate[] {
   const leader = people.find((person) => person.role === "leader");
@@ -11,12 +12,12 @@ function layout(people: Omit<StageCandidate, "side" | "positionOrder">[]): Stage
 
 export function generateStage(params: { students: StudentRecord[]; staff: StaffRecord[]; eligibleStudentIds: Set<string>; presentStaffIds: Set<string>; histories: History[]; servicePart: 1 | 2; singerSlots: number; choirSlots: number; leaderType: "student" | "staff"; leaderId: string; usedStaffIds: Set<string> }) {
   const history = new Map(params.histories.map((item) => [item.person_id, item]));
-  const leaderStudent = params.leaderType === "student" ? params.students.find((item) => item.id === params.leaderId && item.is_student_leader && params.eligibleStudentIds.has(item.id)) : null;
+  const leaderStudent = params.leaderType === "student" ? params.students.find((item) => item.id === params.leaderId && item.service_part === params.servicePart && item.is_student_leader && params.eligibleStudentIds.has(item.id)) : null;
   const leaderStaff = params.leaderType === "staff" ? params.staff.find((item) => item.id === params.leaderId && item.can_sing && params.presentStaffIds.has(item.id)) : null;
   const leader = leaderStudent ?? leaderStaff;
   if (!leader) return { assignments: [] as StageCandidate[], warnings: ["선택한 인도자가 등단 자격을 충족하지 않습니다."] };
   const warnings: string[] = [];
-  const studentPool = params.students.filter((student) => student.service_part === params.servicePart && params.eligibleStudentIds.has(student.id) && student.id !== params.leaderId);
+  const studentPool = params.students.filter((student) => student.service_part === params.servicePart && isSingerTeam(student) && params.eligibleStudentIds.has(student.id) && student.id !== params.leaderId);
   const score = (student: StudentRecord, singer: boolean) => { const item = history.get(student.id); return (item?.total_count ?? 0) * 10 + (item?.last_date ? 20 : 0) + (singer ? (item?.singer_count ?? 0) * 4 : 0) + student.name.charCodeAt(0) / 100000; };
   const singers = [...studentPool].sort((a, b) => score(a, true) - score(b, true)).slice(0, params.singerSlots);
   const singerIds = new Set(singers.map((item) => item.id));

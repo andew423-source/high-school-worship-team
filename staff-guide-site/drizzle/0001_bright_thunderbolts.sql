@@ -1,0 +1,1 @@
+ALTER TABLE `students` ADD `worship_team` text;

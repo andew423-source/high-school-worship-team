@@ -28,7 +28,7 @@ export async function ensureSchema() {
   const db = getD1();
   const statements = [
     `CREATE TABLE IF NOT EXISTS app_users (id TEXT PRIMARY KEY, platform_user_id TEXT NOT NULL UNIQUE, email TEXT NOT NULL UNIQUE, display_name TEXT NOT NULL, role TEXT NOT NULL, status TEXT NOT NULL, staff_id TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
-    `CREATE TABLE IF NOT EXISTS students (id TEXT PRIMARY KEY, name TEXT NOT NULL, grade INTEGER, gender TEXT, service_part INTEGER NOT NULL, is_student_leader INTEGER NOT NULL DEFAULT 0, active INTEGER NOT NULL DEFAULT 1, notes TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
+    `CREATE TABLE IF NOT EXISTS students (id TEXT PRIMARY KEY, name TEXT NOT NULL, grade INTEGER, gender TEXT, service_part INTEGER NOT NULL, worship_team TEXT, is_student_leader INTEGER NOT NULL DEFAULT 0, active INTEGER NOT NULL DEFAULT 1, notes TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
     `CREATE TABLE IF NOT EXISTS staff (id TEXT PRIMARY KEY, name TEXT NOT NULL, email TEXT, duty TEXT, can_sing INTEGER NOT NULL DEFAULT 0, can_lead_group INTEGER NOT NULL DEFAULT 0, preferred_service INTEGER, active INTEGER NOT NULL DEFAULT 1, notes TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
     `CREATE TABLE IF NOT EXISTS terms (id TEXT PRIMARY KEY, name TEXT NOT NULL, start_date TEXT NOT NULL, end_date TEXT NOT NULL, eligible_statuses TEXT NOT NULL DEFAULT 'present', status TEXT NOT NULL DEFAULT 'draft', created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
     `CREATE TABLE IF NOT EXISTS meetings (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, meeting_date TEXT NOT NULL, kind TEXT NOT NULL DEFAULT 'regular', title TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(term_id, meeting_date))`,
@@ -54,6 +54,10 @@ export async function ensureSchema() {
     `CREATE INDEX IF NOT EXISTS idx_audit_logs_created ON audit_logs(created_at)`,
   ];
   await db.batch(statements.map((sql) => db.prepare(sql)));
+  const studentColumns = await db.prepare("PRAGMA table_info(students)").all<{ name: string }>();
+  if (!(studentColumns.results ?? []).some((column) => column.name === "worship_team")) {
+    await db.prepare("ALTER TABLE students ADD COLUMN worship_team TEXT").run();
+  }
   await db.prepare("PRAGMA optimize").run();
   schemaReady = true;
 }

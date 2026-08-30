@@ -9,7 +9,8 @@ export const appUsers = sqliteTable("app_users", {
 
 export const students = sqliteTable("students", {
   id: text("id").primaryKey(), name: text("name").notNull(), grade: integer("grade"), gender: text("gender"),
-  servicePart: integer("service_part").notNull(), isStudentLeader: integer("is_student_leader", { mode: "boolean" }).notNull().default(false),
+  servicePart: integer("service_part").notNull(), worshipTeam: text("worship_team"),
+  isStudentLeader: integer("is_student_leader", { mode: "boolean" }).notNull().default(false),
   active: integer("active", { mode: "boolean" }).notNull().default(true), notes: text("notes"), ...timestamps,
 }, (table) => [index("idx_students_active_service").on(table.active, table.servicePart), index("idx_students_name").on(table.name)]);
 
