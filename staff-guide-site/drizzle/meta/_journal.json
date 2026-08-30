@@ -15,6 +15,13 @@
       "when": 1788077208491,
       "tag": "0001_bright_thunderbolts",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1788078448210,
+      "tag": "0002_moaning_morph",
+      "breakpoints": true
     }
   ]
 }

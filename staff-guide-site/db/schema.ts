@@ -14,6 +14,16 @@ export const students = sqliteTable("students", {
   active: integer("active", { mode: "boolean" }).notNull().default(true), notes: text("notes"), ...timestamps,
 }, (table) => [index("idx_students_active_service").on(table.active, table.servicePart), index("idx_students_name").on(table.name)]);
 
+export const termStudents = sqliteTable("term_students", {
+  id: text("id").primaryKey(), termId: text("term_id").notNull(), studentId: text("student_id").notNull(),
+  grade: integer("grade"), gender: text("gender"), servicePart: integer("service_part").notNull(), worshipTeam: text("worship_team"),
+  isStudentLeader: integer("is_student_leader", { mode: "boolean" }).notNull().default(false),
+  active: integer("active", { mode: "boolean" }).notNull().default(true), ...timestamps,
+}, (table) => [
+  uniqueIndex("idx_term_students_term_student").on(table.termId, table.studentId),
+  index("idx_term_students_term_active_service").on(table.termId, table.active, table.servicePart),
+]);
+
 export const staff = sqliteTable("staff", {
   id: text("id").primaryKey(), name: text("name").notNull(), email: text("email"), duty: text("duty"),
   canSing: integer("can_sing", { mode: "boolean" }).notNull().default(false), canLeadGroup: integer("can_lead_group", { mode: "boolean" }).notNull().default(false),
@@ -56,7 +66,7 @@ export const attendance = sqliteTable("attendance", {
 }, (table) => [uniqueIndex("idx_attendance_meeting_student").on(table.meetingId, table.studentId), index("idx_attendance_student").on(table.studentId)]);
 
 export const importBatches = sqliteTable("import_batches", {
-  id: text("id").primaryKey(), kind: text("kind").notNull(), filename: text("filename").notNull(), objectKey: text("object_key").notNull(),
+  id: text("id").primaryKey(), termId: text("term_id"), kind: text("kind").notNull(), filename: text("filename").notNull(), objectKey: text("object_key").notNull(),
   rowCount: integer("row_count").notNull(), importedBy: text("imported_by").notNull(), createdAt: text("created_at").notNull(),
 }, (table) => [index("idx_import_batches_kind_created").on(table.kind, table.createdAt)]);
 

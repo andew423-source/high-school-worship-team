@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   const [meetings, services, students, staff, availability, assignments] = await Promise.all([
     all("SELECT * FROM meetings WHERE term_id=? AND kind<>'break' ORDER BY meeting_date DESC", [termId]),
     sundayDate ? all("SELECT * FROM services WHERE term_id=? AND sunday_date=? ORDER BY service_part", [termId, sundayDate]) : all("SELECT * FROM services WHERE term_id=? ORDER BY sunday_date DESC,service_part", [termId]),
-    all<StudentRecord>("SELECT * FROM students WHERE active=1 ORDER BY service_part,name"), all<StaffRecord>("SELECT * FROM staff WHERE active=1 ORDER BY name"),
+    all<StudentRecord>("SELECT s.id,s.name,s.notes,ts.grade,ts.gender,ts.service_part,ts.worship_team,ts.is_student_leader,ts.active FROM term_students ts JOIN students s ON s.id=ts.student_id WHERE ts.term_id=? AND ts.active=1 ORDER BY ts.service_part,s.name", [termId]), all<StaffRecord>("SELECT * FROM staff WHERE active=1 ORDER BY name"),
     sundayDate ? all("SELECT * FROM staff_availability WHERE sunday_date=?", [sundayDate]) : Promise.resolve([]),
     sundayDate ? all("SELECT sa.*,COALESCE(s.name,st.name) name FROM stage_assignments sa LEFT JOIN students s ON sa.person_type='student' AND s.id=sa.person_id LEFT JOIN staff st ON sa.person_type='staff' AND st.id=sa.person_id WHERE sa.service_id IN (SELECT id FROM services WHERE term_id=? AND sunday_date=?) ORDER BY sa.service_id,sa.role,sa.side,sa.position_order", [termId, sundayDate]) : Promise.resolve([]),
   ]);
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     const service = await first<{ id: string; term_id: string; meeting_id: string; sunday_date: string; service_part: 1 | 2; singer_slots: number; choir_slots: number; leader_type: "student" | "staff"; leader_id: string }>("SELECT * FROM services WHERE id=?", [body.serviceId]); if (!service) return jsonError("등단 설정을 먼저 저장해주세요.");
     const term = await first<{ eligible_statuses: string }>("SELECT eligible_statuses FROM terms WHERE id=?", [service.term_id]); const eligibleStatuses = (term?.eligible_statuses ?? "present").split(",");
     const [students, staff, eligibleRows, presentRows, histories, usedStaff] = await Promise.all([
-      all<StudentRecord>("SELECT * FROM students WHERE active=1"), all<StaffRecord>("SELECT * FROM staff WHERE active=1"),
+      all<StudentRecord>("SELECT s.id,s.name,s.notes,ts.grade,ts.gender,ts.service_part,ts.worship_team,ts.is_student_leader,ts.active FROM term_students ts JOIN students s ON s.id=ts.student_id WHERE ts.term_id=? AND ts.active=1", [service.term_id]), all<StaffRecord>("SELECT * FROM staff WHERE active=1"),
       all<{ student_id: string }>(`SELECT student_id FROM attendance WHERE meeting_id=? AND status IN (${eligibleStatuses.map(() => "?").join(",")})`, [service.meeting_id, ...eligibleStatuses]),
       all<{ staff_id: string }>("SELECT staff_id FROM staff_availability WHERE sunday_date=? AND present=1", [service.sunday_date]),
       all<{ person_id: string; total_count: number; singer_count: number; last_date: string | null }>("SELECT sa.person_id,COUNT(*) total_count,SUM(CASE WHEN sa.role='singer' THEN 1 ELSE 0 END) singer_count,MAX(s.sunday_date) last_date FROM stage_assignments sa JOIN services s ON s.id=sa.service_id WHERE sa.person_type='student' AND s.status='confirmed' AND s.sunday_date>=date(?,'-28 days') GROUP BY sa.person_id", [service.sunday_date]),

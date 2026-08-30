@@ -4,7 +4,7 @@ import { requireAuthorizedUser } from "../../lib/auth";
 import "./manage.css";
 
 export const dynamic = "force-dynamic";
-const links = [["/manage", "대시보드"], ["/manage/people", "인원 DB"], ["/manage/terms", "학기·일정"], ["/manage/groups", "조 편성"], ["/manage/attendance", "출결"], ["/manage/stage", "등단"]];
+const links = [["/manage", "대시보드"], ["/manage/terms", "학기·일정"], ["/manage/people", "인원 DB"], ["/manage/groups", "조 편성"], ["/manage/attendance", "출결"], ["/manage/stage", "등단"]];
 const roleName = { admin: "관리자", group_staff: "조 담당 스탭", staff: "일반 스탭" };
 
 export default async function ManageLayout({ children }: { children: ReactNode }) {

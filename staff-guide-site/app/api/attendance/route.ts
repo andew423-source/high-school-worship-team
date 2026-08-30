@@ -21,7 +21,7 @@ export async function GET(request: Request) {
   const [meetings, groups, rows] = await Promise.all([
     all("SELECT * FROM meetings WHERE term_id=? AND kind<>'break' ORDER BY meeting_date DESC", [termId]),
     all(`SELECT * FROM groups WHERE id IN (${marks}) ORDER BY sort_order`, groupIds),
-    meetingId ? all(`SELECT gm.group_id,s.id student_id,s.name,s.grade,s.service_part,COALESCE(a.status,'unset') status,COALESCE(a.note,'') note FROM group_members gm JOIN students s ON s.id=gm.student_id LEFT JOIN attendance a ON a.student_id=s.id AND a.meeting_id=? WHERE gm.term_id=? AND gm.group_id IN (${marks}) ORDER BY gm.group_id,s.name`, [meetingId, termId, ...groupIds]) : Promise.resolve([]),
+    meetingId ? all(`SELECT gm.group_id,s.id student_id,s.name,ts.grade,ts.service_part,COALESCE(a.status,'unset') status,COALESCE(a.note,'') note FROM group_members gm JOIN students s ON s.id=gm.student_id JOIN term_students ts ON ts.term_id=gm.term_id AND ts.student_id=gm.student_id LEFT JOIN attendance a ON a.student_id=s.id AND a.meeting_id=? WHERE gm.term_id=? AND ts.active=1 AND gm.group_id IN (${marks}) ORDER BY gm.group_id,s.name`, [meetingId, termId, ...groupIds]) : Promise.resolve([]),
   ]);
   const unset = (rows as Array<{ status: string }>).filter((row) => row.status === "unset").length;
   return Response.json({ meetings, groups, rows, summary: { total: rows.length, unset } });
