@@ -56,7 +56,10 @@ export async function POST(request: Request) {
     return { rowNumber: index + 2, name, email: String(valueFor(row, "email", mapping) ?? "").trim().toLowerCase() || null, duty: String(valueFor(row, "duty", mapping) ?? "").trim() || null, canSing: booleanValue(valueFor(row, "canSing", mapping)), canLeadGroup: booleanValue(valueFor(row, "canLeadGroup", mapping)), preferredService: serviceValue(valueFor(row, "preferredService", mapping)), notes: String(valueFor(row, "notes", mapping) ?? "").trim() || null, duplicate: existingNames.has(name), errors };
   });
   const objectKey = String(form.get("objectKey") || `imports/${kind === "students" ? `terms/${termId}/` : ""}${new Date().toISOString().slice(0, 10)}/${crypto.randomUUID()}-${file.name.replace(/[^a-zA-Z0-9가-힣._-]/g, "_")}`);
-  if (!form.get("objectKey")) await getUploads().put(objectKey, buffer, { httpMetadata: { contentType: file.type || "application/octet-stream" } });
+  if (!form.get("objectKey")) {
+    try { await getUploads().put(objectKey, buffer, { httpMetadata: { contentType: file.type || "application/octet-stream" } }); }
+    catch (caught) { console.error("R2 upload failed", caught instanceof Error ? caught.message : "unknown error"); return jsonError("업로드 원본 저장소에 연결할 수 없습니다. 잠시 후 다시 시도해주세요.", 503); }
+  }
   return Response.json({ kind, termId: kind === "students" ? termId : null, filename: file.name, objectKey, headers, mapping: { ...suggestedMapping, ...mapping }, rows, summary: { total: rows.length, errors: rows.filter((row) => row.errors.length).length, duplicates: rows.filter((row) => row.duplicate).length } });
 }
 

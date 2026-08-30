@@ -2,8 +2,12 @@
 import { useEffect, useState } from "react";
 
 export async function api<T>(url: string, options?: RequestInit): Promise<T> {
-  const response = await fetch(url, options); const data = await response.json() as T & { error?: string };
-  if (!response.ok) throw new Error(data.error || "요청을 처리하지 못했습니다."); return data;
+  const response = await fetch(url, options); const text = await response.text();
+  let data: (T & { error?: string }) | null = null;
+  if (text) { try { data = JSON.parse(text) as T & { error?: string }; } catch { data = null; } }
+  if (!response.ok) throw new Error(data?.error || "서버에서 요청을 처리하지 못했습니다. 잠시 후 다시 시도해주세요.");
+  if (!data) throw new Error("서버 응답을 확인할 수 없습니다. 잠시 후 다시 시도해주세요.");
+  return data;
 }
 export function useApi<T>(url: string | null, initial: T) {
   const [data, setData] = useState(initial); const [loading, setLoading] = useState(Boolean(url)); const [error, setError] = useState("");
