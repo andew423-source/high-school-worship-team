@@ -1,8 +1,11 @@
+import { requireAuthorizedUser } from "../lib/auth";
+
+export const dynamic = "force-dynamic";
+
 const rooms = [
-  { room: "607호", lead: "김기윤", kind: "싱어", people: [{ name: "신효린" }, { name: "홍재나" }, { name: "길하진", mark: "new" }, { name: "소예은" }, { name: "이예원" }, { name: "강민채" }] },
-  { room: "610호", lead: "황지현", kind: "싱어", people: [{ name: "김예빛나래" }, { name: "원은서" }, { name: "배성재", mark: "new" }, { name: "전하준" }, { name: "진율", mark: "retreat" }, { name: "이예담" }] },
-  { room: "706호", lead: "이지윤", kind: "싱어", people: [{ name: "정수아", mark: "new" }, { name: "김강현" }, { name: "정예준", mark: "new" }, { name: "권영민" }, { name: "박은후" }] },
-  { room: "707호", lead: "박준규", kind: "싱어", people: [{ name: "손희준" }, { name: "이하영" }, { name: "박해민", mark: "retreat" }, { name: "지예환" }, { name: "김윤석" }] },
+  { room: "607호", lead: "김기윤", kind: "싱어", people: [{ name: "홍재나" }, { name: "길하진", mark: "new" }, { name: "소예은" }, { name: "이예원" }, { name: "강민채" }, { name: "손희준" }] },
+  { room: "610호", lead: "황지현", kind: "싱어", people: [{ name: "김예빛나래" }, { name: "원은서" }, { name: "배성재", mark: "new" }, { name: "전하준" }, { name: "이예담" }, { name: "이하영" }] },
+  { room: "706호", lead: "이지윤", kind: "싱어", people: [{ name: "정예준", mark: "new" }, { name: "김강현" }, { name: "권영민" }, { name: "박은후" }, { name: "지예환" }] },
   { room: "611호", lead: "황현민", kind: "세션 전용", people: [{ name: "임시연" }, { name: "조수민" }, { name: "신은결" }, { name: "김단아" }, { name: "이준영" }, { name: "심사랑" }, { name: "문건오" }, { name: "최환희" }] },
 ];
 
@@ -33,7 +36,8 @@ function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.
   );
 }
 
-export default function Home() {
+export default async function Home() {
+  await requireAuthorizedUser("/");
   return (
     <main>
       <header className="hero" id="top">
@@ -44,7 +48,7 @@ export default function Home() {
           <div className="hero-facts" aria-label="핵심 일정">
             <div><strong>11:30–12:30</strong><span>동시 진행</span></div>
             <div><strong>604호</strong><span>나눔마블·면접 대기실</span></div>
-            <div><strong>5개 면접실</strong><span>순서대로 1명씩</span></div>
+            <div><strong>4개 면접실</strong><span>607·610·706·611호</span></div>
           </div>
         </div>
       </header>
@@ -74,7 +78,6 @@ export default function Home() {
               <li><b>610호</b> 황지현</li>
               <li><b>611호</b> 황현민 <em>세션 전용</em></li>
               <li><b>706호</b> 이지윤</li>
-              <li><b>707호</b> 박준규</li>
             </ul>
             <p className="role-note">기도 → 녹음 안내 → 질문 → 오디션 순서로 진행하고, 면접을 마친 학생에게 604호로 바로 복귀하도록 안내합니다.</p>
           </article>
@@ -94,7 +97,7 @@ export default function Home() {
           <article className="role-card share-card">
             <div className="role-icon">🎲</div>
             <p className="role-label">604호 나눔 진행</p>
-            <h3>이채희 · 허준혁</h3>
+            <h3>이채희 · 박준규</h3>
             <ol className="number-list">
               <li><b>나눔마블을 3라운드 동안 진행합니다.</b></li>
               <li>온유한의 호출을 받으면 현재 답변 뒤 학생을 보냅니다.</li>

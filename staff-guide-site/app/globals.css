@@ -92,7 +92,7 @@ main { overflow: hidden; }
 .micro-rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
 .micro-rules p { margin: 0; padding: 16px 18px; border-radius: 14px; background: #eaf4f8; font-size: 14px; }
 
-.room-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.room-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .room-card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: white; }
 .room-head { padding: 17px 16px 14px; color: white; background: var(--navy-2); }
 .room-head div { display: flex; align-items: center; justify-content: space-between; gap: 8px; }

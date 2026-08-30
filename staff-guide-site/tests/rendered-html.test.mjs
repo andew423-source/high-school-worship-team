@@ -23,8 +23,10 @@ test("스탭 운영 가이드 핵심 흐름을 렌더링한다", async () => {
   assert.match(html, /604호 앞에서 계속 대기/);
   assert.match(html, /복귀자 확인 후/);
   assert.match(html, /길하진/);
-  assert.match(html, /수련회팀/);
+  assert.match(html, /이채희 · 박준규/);
+  assert.match(html, /4개 면접실/);
+  assert.match(html, /706호[\s\S]*?정예준[\s\S]*?김강현/);
   assert.match(html, /주사위 1개와 말 8개/);
   assert.match(html, /뒤로 한 칸/);
-  assert.doesNotMatch(html, /김하진|한 번 패스 가능|10–20초/);
+  assert.doesNotMatch(html, /707호|허준혁|정수아|박해민|진율|신효린|김윤석|김하진|한 번 패스 가능|10–20초/);
 });

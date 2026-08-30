@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "sqlite",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1788052459565,
+      "tag": "0000_bouncy_puppet_master",
+      "breakpoints": true
+    }
+  ]
 }
