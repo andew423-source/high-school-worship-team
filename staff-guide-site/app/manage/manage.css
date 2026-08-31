@@ -116,3 +116,23 @@ body { margin: 0; }
 
 /* Fill wide screens while keeping compact horizontal scrolling on small screens. */
 .attendance-matrix { width: 100%; min-width: max-content; }
+
+/* Stage planning workspace */
+.stage-page { max-width: 1380px; }
+.stage-workspace { gap: 12px; }
+.stage-day-settings { display: grid; grid-template-columns: minmax(0,1fr) minmax(280px,.8fr); align-items: end; gap: 24px; }
+.stage-day-settings h2 { margin: 0 0 6px; font: 400 28px/1.2 "Gowun Dodum",sans-serif; }
+.stage-day-settings p { margin: 0; color: var(--manage-muted); font-size: 11px; line-height: 1.6; }
+.stage-leader-control { display: grid; grid-template-columns: minmax(180px,1fr) auto; gap: 8px; }
+.stage-capacity-overview { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.stage-capacity-overview article { padding: 15px 17px; display: flex; align-items: center; gap: 14px; border: 1px solid var(--manage-line); border-radius: 13px; background: #fff; }
+.stage-capacity-overview article > b { margin-right: auto; font-size: 12px; }.stage-capacity-overview article span { color: var(--manage-muted); font-size: 10px; }.stage-capacity-overview article strong { color: var(--manage-green); font-size: 13px; }
+.stage-capacity-overview .staff-summary { background: #eef4ef; }
+.stage-continuity { display: grid; gap: 5px; }.stage-continuity span { font-size: 11px; }
+.stage-section-head { margin-bottom: 14px; display: flex; align-items: start; justify-content: space-between; gap: 12px; }.stage-section-head h2,.stage-section-head p { margin: 0; }.stage-section-head p,.stage-section-head > span { color: var(--manage-muted); font-size: 11px; }
+.stage-staff-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); gap: 8px; }
+.stage-staff-card { min-width: 0; padding: 8px; display: grid; grid-template-columns: 30px minmax(0,1fr) 62px; align-items: center; gap: 7px; border: 1px solid var(--manage-line); border-radius: 10px; background: #fafaf7; }
+.stage-staff-card.active { border-color: #7baa90; background: #edf6f0; }.stage-staff-card > button { width: 30px; height: 30px; border: 0; border-radius: 8px; color: var(--manage-green); background: #e5ece7; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; }.stage-staff-card.active > button { color: white; background: var(--manage-green); }.stage-staff-card b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; }.stage-staff-card select { width: 62px; padding: 6px 4px; border: 1px solid #cbd3cd; border-radius: 7px; background: white; color: inherit; font: inherit; font-size: 10px; }.stage-staff-card select:disabled { opacity: .45; }
+.stage-service-grid { align-items: start; }.stage-service { min-width: 0; }.stage-person small { display: inline-block; margin-left: 5px; color: #c8d6cf; font-size: 8px; }
+@media (max-width: 900px) { .stage-day-settings { grid-template-columns: 1fr; }.stage-capacity-overview { grid-template-columns: 1fr; }.stage-service-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .stage-leader-control { grid-template-columns: 1fr; }.stage-capacity-overview article { align-items: flex-start; flex-wrap: wrap; }.stage-staff-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }.stage-staff-card { grid-template-columns: 28px minmax(0,1fr); }.stage-staff-card select { grid-column: 1 / -1; width: 100%; }.stage-row { grid-template-columns: 1fr 38px 1fr; }.stage-board { padding: 18px 10px; }.stage-person { min-width: 62px; padding: 7px 5px; font-size: 10px; } }

@@ -112,3 +112,17 @@ test("등단 배정은 출석·부서·싱어팀·학생 인도자 규칙을 지
   const result = generateStage({ students, staff: [], eligibleStudentIds: new Set(["leader", "s1", "s2", "other", "wrong"]), presentStaffIds: new Set(), histories: [], servicePart: 1, singerSlots: 1, choirSlots: 1, leaderType: "student", leaderId: "leader", usedStaffIds: new Set() });
   assert.equal(result.assignments.filter((item) => item.role === "leader").length, 1); assert.ok(!result.assignments.some((item) => item.personId === "wrong")); assert.ok(!result.assignments.some((item) => item.personId === "other")); assert.equal(result.assignments.filter((item) => item.personId === "leader").length, 1);
 });
+
+test("지난주 미등단 학생을 먼저 배정하고 선택한 스탭을 인도자로 배정한다", async () => {
+  const { generateStage } = await loadTypeScriptModule("../lib/stage.ts");
+  const students = [
+    { id: "recent", name: "최근등단", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    { id: "missed1", name: "미등단1", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    { id: "missed2", name: "미등단2", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+  ];
+  const staff = [{ id: "staff-leader", name: "황현민", can_sing: 0, can_lead_group: 0, active: 1 }];
+  const result = generateStage({ students, staff, eligibleStudentIds: new Set(students.map((student) => student.id)), presentStaffIds: new Set(), histories: [], servicePart: 1, singerSlots: 1, choirSlots: 1, leaderType: "staff", leaderId: "staff-leader", usedStaffIds: new Set(), missedPreviousWeekIds: new Set(["missed1", "missed2"]) });
+  assert.ok(result.assignments.some((item) => item.personId === "staff-leader" && item.role === "leader"));
+  assert.deepEqual(new Set(result.assignments.filter((item) => item.personType === "student").map((item) => item.personId)), new Set(["missed1", "missed2"]));
+  assert.ok(!result.warnings.some((warning) => warning.includes("2주 연속")));
+});

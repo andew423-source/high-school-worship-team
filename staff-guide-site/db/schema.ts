@@ -93,7 +93,7 @@ export const services = sqliteTable("services", {
 
 export const staffAvailability = sqliteTable("staff_availability", {
   id: text("id").primaryKey(), sundayDate: text("sunday_date").notNull(), staffId: text("staff_id").notNull(), present: integer("present", { mode: "boolean" }).notNull().default(false),
-  updatedBy: text("updated_by").notNull(), updatedAt: text("updated_at").notNull(),
+  stageRole: text("stage_role").notNull().default("session"), updatedBy: text("updated_by").notNull(), updatedAt: text("updated_at").notNull(),
 }, (table) => [uniqueIndex("idx_staff_availability_date_staff").on(table.sundayDate, table.staffId)]);
 
 export const stageAssignments = sqliteTable("stage_assignments", {

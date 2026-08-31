@@ -1,0 +1,1 @@
+ALTER TABLE `staff_availability` ADD `stage_role` text DEFAULT 'session' NOT NULL;
