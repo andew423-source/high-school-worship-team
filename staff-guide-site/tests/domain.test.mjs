@@ -11,7 +11,14 @@ async function loadTypeScriptModule(relativePath) {
 
 test("자동 조 편성은 같은 조·다른 조와 정원을 지킨다", async () => {
   const { autoAssignGroups } = await loadTypeScriptModule("../lib/grouping.ts");
-  const students = Array.from({ length: 6 }, (_, index) => ({ id: `s${index + 1}`, name: `학생${index + 1}`, grade: index < 3 ? 1 : 2, gender: index % 2 ? "여" : "남", service_part: index % 2 + 1, active: 1, is_student_leader: 0 }));
+  const students = [
+    { id: "s1", name: "학생1", grade: 1, gender: "남", service_part: 1, worship_team: "싱어팀", active: 1, is_student_leader: 0 },
+    { id: "s2", name: "학생2", grade: 1, gender: "남", service_part: 1, worship_team: "싱어팀", active: 1, is_student_leader: 0 },
+    { id: "s3", name: "학생3", grade: 2, gender: "여", service_part: 2, worship_team: "세션팀", active: 1, is_student_leader: 0 },
+    { id: "s4", name: "학생4", grade: 1, gender: "남", service_part: 1, worship_team: "싱어팀", active: 1, is_student_leader: 0 },
+    { id: "s5", name: "학생5", grade: 2, gender: "여", service_part: 2, worship_team: "세션팀", active: 1, is_student_leader: 0 },
+    { id: "s6", name: "학생6", grade: 2, gender: "여", service_part: 2, worship_team: "세션팀", active: 1, is_student_leader: 0 },
+  ];
   const groups = [1, 2].map((number) => ({ id: `g${number}`, term_id: "t", name: `${number}조`, capacity: 3, required_staff: 1, status: "draft", sort_order: number }));
   const result = autoAssignGroups(students, groups, [{ id: "c1", type: "together", student_a_id: "s1", student_b_id: "s2" }, { id: "c2", type: "apart", student_a_id: "s1", student_b_id: "s3" }], 42);
   assert.equal(result.error, undefined); assert.equal(result.assignments.length, 6);
@@ -28,12 +35,35 @@ test("불가능한 조 조건은 임의 배정 대신 오류를 반환한다", a
 
 test("학생 수가 나누어떨어지지 않아도 최소·최대 범위로 편성한다", async () => {
   const { autoAssignGroups } = await loadTypeScriptModule("../lib/grouping.ts");
-  const students = Array.from({ length: 7 }, (_, index) => ({ id: `flex${index}`, name: `학생${index}`, grade: index % 3 + 1, gender: index % 2 ? "여" : "남", service_part: 1, worship_team: index % 2 ? "싱어팀" : "세션팀", active: 1, is_student_leader: 0 }));
+  const students = [
+    ...Array.from({ length: 3 }, (_, index) => ({ id: `grade1-${index}`, name: `1학년${index}`, grade: 1, gender: "남", service_part: 1, worship_team: "싱어팀", active: 1, is_student_leader: 0 })),
+    ...Array.from({ length: 2 }, (_, index) => ({ id: `grade2-${index}`, name: `2학년${index}`, grade: 2, gender: "여", service_part: 1, worship_team: "세션팀", active: 1, is_student_leader: 0 })),
+    ...Array.from({ length: 2 }, (_, index) => ({ id: `grade3-${index}`, name: `3학년${index}`, grade: 3, gender: "남", service_part: 1, worship_team: "세션팀", active: 1, is_student_leader: 0 })),
+  ];
   const groups = [1, 2, 3].map((number) => ({ id: `fg${number}`, term_id: "t", name: `${number}조`, capacity: 3, required_staff: 1, status: "draft", sort_order: number }));
   const result = autoAssignGroups(students, groups, [], 19, { studentMin: 2, studentMax: 3, staffMin: 0, staffMax: 2, clusterGender: false, clusterGrade: false, splitWorshipRole: false });
   assert.equal(result.error, undefined);
   const counts = groups.map((group) => result.assignments.filter((item) => item.groupId === group.id).length);
   assert.deepEqual([...counts].sort(), [2, 2, 3]);
+  for (const group of groups) for (const grade of [1, 2, 3]) {
+    const ids = new Set(result.assignments.filter((item) => item.groupId === group.id).map((item) => item.studentId));
+    assert.notEqual(students.filter((student) => ids.has(student.id) && student.grade === grade).length, 1);
+  }
+});
+
+test("자동 편성은 학년이 한 명만 남는 결과를 반환하지 않는다", async () => {
+  const { autoAssignGroups } = await loadTypeScriptModule("../lib/grouping.ts");
+  const students = [
+    ...Array.from({ length: 6 }, (_, index) => ({ id: `g1-${index}`, name: `1학년${index}`, grade: 1, gender: "남", service_part: 1, worship_team: "싱어팀", active: 1, is_student_leader: 0 })),
+    ...Array.from({ length: 4 }, (_, index) => ({ id: `g3-${index}`, name: `3학년${index}`, grade: 3, gender: "여", service_part: 2, worship_team: "세션팀", active: 1, is_student_leader: 0 })),
+  ];
+  const groups = [1, 2].map((number) => ({ id: `no-single-${number}`, term_id: "t", name: `${number}조`, capacity: 5, required_staff: 0, status: "draft", sort_order: number }));
+  const result = autoAssignGroups(students, groups, [], 31, { studentMin: 5, studentMax: 5, staffMin: 0, staffMax: 1, clusterGender: false, clusterGrade: false, splitWorshipRole: false });
+  assert.equal(result.error, undefined);
+  for (const group of groups) {
+    const ids = new Set(result.assignments.filter((item) => item.groupId === group.id).map((item) => item.studentId));
+    assert.notEqual(students.filter((student) => ids.has(student.id) && student.grade === 3).length, 1);
+  }
 });
 
 test("분리 모드는 서로 다른 범주의 혼합을 막는다", async () => {

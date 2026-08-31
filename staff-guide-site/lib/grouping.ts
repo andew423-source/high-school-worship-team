@@ -32,10 +32,17 @@ function matchesMinimum(student: StudentRecord, rule: NonNullable<GroupingSettin
   return roleOf(student) === rule.value;
 }
 function singletonCount(group: StudentRecord[]) {
-  if (group.length < 3) return 0;
   return (["gender", "grade", "role"] as const).reduce((total, type) => {
     const counts = new Map<string, number>(); group.forEach((student) => { const value = categoryFor(student, type); if (value !== "미입력") counts.set(value, (counts.get(value) ?? 0) + 1); });
     return total + [...counts.values()].filter((count) => count === 1).length;
+  }, 0);
+}
+function introducedSingletons(current: StudentRecord[], block: StudentRecord[]) {
+  if (!current.length) return 0;
+  return (["gender", "grade", "role"] as const).reduce((total, type) => {
+    const existing = new Set(current.map((student) => categoryFor(student, type)).filter((value) => value !== "미입력")); const additions = new Map<string, number>();
+    block.forEach((student) => { const value = categoryFor(student, type); if (value !== "미입력" && !existing.has(value)) additions.set(value, (additions.get(value) ?? 0) + 1); });
+    return total + [...additions.values()].filter((count) => count === 1).length;
   }, 0);
 }
 function categoryAllowed(current: StudentRecord[], block: StudentRecord[], settings: GroupingSettings) {
@@ -53,7 +60,7 @@ export function compositionWarnings(group: StudentRecord[], groupName: string, s
   if (settings.clusterGender && hasMixedCategory(group, "gender")) warnings.push(`${groupName}에 서로 다른 성별이 섞입니다.`);
   if (settings.clusterGrade && hasMixedCategory(group, "grade")) warnings.push(`${groupName}에 서로 다른 학년이 섞입니다.`);
   if (settings.splitWorshipRole && hasMixedCategory(group, "role")) warnings.push(`${groupName}에 싱어와 세션이 섞입니다.`);
-  if (group.length >= 3) (["gender", "grade", "role"] as const).forEach((type) => {
+  if (group.length) (["gender", "grade", "role"] as const).forEach((type) => {
     const counts = new Map<string, number>(); group.forEach((student) => { const value = categoryFor(student, type); if (value !== "미입력") counts.set(value, (counts.get(value) ?? 0) + 1); });
     const label = type === "gender" ? "성별" : type === "grade" ? "학년" : "싱어·세션";
     [...counts.entries()].filter(([, count]) => count === 1).forEach(([value]) => warnings.push(`${groupName}에서 ${label} ‘${value}’ 학생이 혼자 남습니다.`));
@@ -79,6 +86,10 @@ export function autoAssignGroups(students: StudentRecord[], groups: GroupRecord[
   const settings = { ...defaults, ...settingsInput, studentMax: settingsInput?.studentMax ?? Math.max(...groups.map((group) => group.capacity)) };
   if (groups.length * settings.studentMax < students.length) return { assignments: [], warnings: [], score: 0, error: "학생 수가 전체 최대 정원보다 많습니다." };
   if (groups.length * settings.studentMin > students.length) return { assignments: [], warnings: [], score: 0, error: "학생 수가 전체 최소 정원을 채우기에 부족합니다." };
+  for (const type of ["gender", "grade", "role"] as const) {
+    const counts = new Map<string, number>(); students.forEach((student) => { const value = categoryFor(student, type); if (value !== "미입력") counts.set(value, (counts.get(value) ?? 0) + 1); });
+    const impossible = [...counts.entries()].find(([, count]) => count === 1); if (impossible) return { assignments: [], warnings: [], score: 0, error: `${impossible[0]} 학생이 전체에서 1명뿐이라 어느 조에도 혼자 배정하지 않을 수 없습니다.` };
+  }
   for (const rule of settings.minimumRules ?? []) if (students.filter((student) => matchesMinimum(student, rule)).length < groups.length * rule.minCount) return { assignments: [], warnings: [], score: 0, error: `${rule.value} 학생 수가 조별 최소 ${rule.minCount}명 조건을 충족하기에 부족합니다.` };
   const parent = new Map(students.map((student) => [student.id, student.id]));
   const find = (id: string): string => { const root = parent.get(id) ?? id; if (root === id) return id; const next = find(root); parent.set(id, next); return next; };
@@ -88,12 +99,12 @@ export function autoAssignGroups(students: StudentRecord[], groups: GroupRecord[
   const blocks = new Map<string, StudentRecord[]>(); students.forEach((student) => { const root = find(student.id); blocks.set(root, [...(blocks.get(root) ?? []), student]); });
   if ([...blocks.values()].some((block) => block.length > settings.studentMax)) return { assignments: [], warnings: [], score: 0, error: "반드시 함께 배정할 학생 묶음이 최대 정원보다 큽니다." };
   if ([...blocks.values()].some((block) => !categoryAllowed([], block, settings))) return { assignments: [], warnings: [], score: 0, error: "같은 조 조건과 선택한 동성·동학년·역할 분리 모드가 충돌합니다." };
-  const apartPairs = new Set(constraints.filter((item) => item.type === "apart").flatMap((item) => [`${item.student_a_id}:${item.student_b_id}`, `${item.student_b_id}:${item.student_a_id}`])); let best: GroupingResult | null = null;
-  for (let attempt = 0; attempt < 260; attempt += 1) {
-    const random = seeded(seed + attempt * 7919); const orderedBlocks = [...blocks.values()].sort((a, b) => b.length - a.length || random() - .5); const buckets = new Map(groups.map((group) => [group.id, [] as StudentRecord[]])); let failed = false;
+  const apartPairs = new Set(constraints.filter((item) => item.type === "apart").flatMap((item) => [`${item.student_a_id}:${item.student_b_id}`, `${item.student_b_id}:${item.student_a_id}`]));
+  for (let attempt = 0; attempt < 6000; attempt += 1) {
+    const random = seeded(seed + attempt * 7919); const orderedBlocks = [...blocks.values()]; for (let index = orderedBlocks.length - 1; index > 0; index -= 1) { const swap = Math.floor(random() * (index + 1)); [orderedBlocks[index], orderedBlocks[swap]] = [orderedBlocks[swap], orderedBlocks[index]]; } orderedBlocks.sort((a, b) => b.length - a.length); const buckets = new Map(groups.map((group) => [group.id, [] as StudentRecord[]])); const explore = attempt % 4 === 3; let failed = false;
     for (const block of orderedBlocks) {
       const candidates = groups.filter((group) => { const current = buckets.get(group.id) ?? []; return current.length + block.length <= settings.studentMax && categoryAllowed(current, block, settings) && !current.some((member) => block.some((student) => apartPairs.has(`${member.id}:${student.id}`))); }).map((group) => {
-        const next = [...(buckets.get(group.id) ?? []), ...block]; let score = balanceScore(next, students, settings) + next.length / settings.studentMax + random() * .02;
+        const current = buckets.get(group.id) ?? []; const next = [...current, ...block]; let score = explore ? current.length / settings.studentMax + random() * 1.25 : balanceScore(next, students, settings) + next.length / settings.studentMax + (singletonCount(next) - singletonCount(current)) * 3 + introducedSingletons(current, block) * 4 + random() * .45;
         for (const rule of settings.minimumRules ?? []) score -= Math.min(rule.minCount, next.filter((student) => matchesMinimum(student, rule)).length) * .7;
         return { group, score };
       }).sort((a, b) => a.score - b.score);
@@ -101,9 +112,10 @@ export function autoAssignGroups(students: StudentRecord[], groups: GroupRecord[
     }
     if (failed || groups.some((group) => (buckets.get(group.id)?.length ?? 0) < settings.studentMin)) continue;
     if ((settings.minimumRules ?? []).some((rule) => groups.some((group) => (buckets.get(group.id) ?? []).filter((student) => matchesMinimum(student, rule)).length < rule.minCount))) continue;
-    const singletons = groups.reduce((total, group) => total + singletonCount(buckets.get(group.id) ?? []), 0); const score = groups.reduce((total, group) => total + balanceScore(buckets.get(group.id) ?? [], students, settings), 0) + singletons * 25;
-    const assignments = groups.flatMap((group) => (buckets.get(group.id) ?? []).map((student) => ({ studentId: student.id, groupId: group.id }))); const warnings = singletons ? ["필수 조건과 인원 구성 때문에 일부 조에서 특정 성별·학년·역할이 1명만 배정되었습니다."] : [];
-    if (!best || score < best.score) best = { assignments, warnings, score }; if (best && !warnings.length) break;
+    const singletons = groups.reduce((total, group) => total + singletonCount(buckets.get(group.id) ?? []), 0); if (singletons) continue;
+    const score = groups.reduce((total, group) => total + balanceScore(buckets.get(group.id) ?? [], students, settings), 0);
+    const assignments = groups.flatMap((group) => (buckets.get(group.id) ?? []).map((student) => ({ studentId: student.id, groupId: group.id })));
+    return { assignments, warnings: [], score };
   }
-  return best ?? { assignments: [], warnings: [], score: 0, error: "최소·최대 정원과 모든 필수 조건을 만족하는 편성안을 찾지 못했습니다." };
+  return { assignments: [], warnings: [], score: 0, error: "최소·최대 정원과 조건을 지키면서 성별·학년·싱어/세션 인원이 각 조에서 0명 또는 2명 이상이 되는 편성안을 찾지 못했습니다. 조 수나 정원, 세부 조건을 조정해주세요." };
 }
