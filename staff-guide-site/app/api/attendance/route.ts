@@ -3,7 +3,7 @@ import { jsonError, requireApiUser } from "../../../lib/api-auth";
 import type { AttendanceStatus } from "../../../lib/domain";
 
 export const dynamic = "force-dynamic";
-const statuses = new Set<AttendanceStatus>(["present", "late", "left_early", "absent", "excused", "unset"]);
+const statuses = new Set<AttendanceStatus>(["present", "late", "absent", "unset"]);
 
 async function permittedGroupIds(user: { role: string; staffId: string | null }, termId: string) {
   if (user.role === "admin") return (await all<{ id: string }>("SELECT id FROM groups WHERE term_id=?", [termId])).map((row) => row.id);
@@ -16,15 +16,16 @@ export async function GET(request: Request) {
   const url = new URL(request.url); const termId = url.searchParams.get("termId"); const meetingId = url.searchParams.get("meetingId");
   if (!termId) return jsonError("학기를 선택해주세요.");
   const groupIds = await permittedGroupIds(user, termId);
-  if (!groupIds.length) return Response.json({ meetings: [], groups: [], rows: [], summary: { total: 0, unset: 0 } });
+  if (!groupIds.length) return Response.json({ meetings: [], groups: [], students: [], rows: [], summary: { total: 0, unset: 0 } });
   const marks = groupIds.map(() => "?").join(",");
-  const [meetings, groups, rows] = await Promise.all([
-    all("SELECT * FROM meetings WHERE term_id=? AND kind<>'break' ORDER BY meeting_date DESC", [termId]),
+  const [meetings, groups, students, rows] = await Promise.all([
+    all("SELECT * FROM meetings WHERE term_id=? AND kind<>'break' ORDER BY meeting_date", [termId]),
     all(`SELECT * FROM groups WHERE id IN (${marks}) ORDER BY sort_order`, groupIds),
-    meetingId ? all(`SELECT gm.group_id,s.id student_id,s.name,ts.grade,ts.service_part,COALESCE(a.status,'unset') status,COALESCE(a.note,'') note FROM group_members gm JOIN students s ON s.id=gm.student_id JOIN term_students ts ON ts.term_id=gm.term_id AND ts.student_id=gm.student_id LEFT JOIN attendance a ON a.student_id=s.id AND a.meeting_id=? WHERE gm.term_id=? AND ts.active=1 AND gm.group_id IN (${marks}) ORDER BY gm.group_id,s.name`, [meetingId, termId, ...groupIds]) : Promise.resolve([]),
+    all(`SELECT gm.group_id,s.id student_id,s.name,ts.grade,ts.service_part FROM group_members gm JOIN groups g ON g.id=gm.group_id JOIN students s ON s.id=gm.student_id JOIN term_students ts ON ts.term_id=gm.term_id AND ts.student_id=gm.student_id WHERE gm.term_id=? AND ts.active=1 AND gm.group_id IN (${marks}) ORDER BY g.sort_order,COALESCE(ts.grade,99),s.name`, [termId, ...groupIds]),
+    meetingId ? all(`SELECT gm.group_id,s.id student_id,s.name,ts.grade,ts.service_part,m.id meeting_id,COALESCE(a.status,'unset') status FROM group_members gm JOIN students s ON s.id=gm.student_id JOIN term_students ts ON ts.term_id=gm.term_id AND ts.student_id=gm.student_id JOIN meetings m ON m.id=? LEFT JOIN attendance a ON a.student_id=s.id AND a.meeting_id=m.id WHERE gm.term_id=? AND ts.active=1 AND gm.group_id IN (${marks}) ORDER BY gm.group_id,s.name`, [meetingId, termId, ...groupIds]) : all(`SELECT gm.group_id,s.id student_id,s.name,ts.grade,ts.service_part,m.id meeting_id,COALESCE(a.status,'unset') status FROM group_members gm JOIN groups g ON g.id=gm.group_id JOIN students s ON s.id=gm.student_id JOIN term_students ts ON ts.term_id=gm.term_id AND ts.student_id=gm.student_id JOIN meetings m ON m.term_id=gm.term_id AND m.kind<>'break' LEFT JOIN attendance a ON a.student_id=s.id AND a.meeting_id=m.id WHERE gm.term_id=? AND ts.active=1 AND gm.group_id IN (${marks}) ORDER BY g.sort_order,COALESCE(ts.grade,99),s.name,m.meeting_date`, [termId, ...groupIds]),
   ]);
   const unset = (rows as Array<{ status: string }>).filter((row) => row.status === "unset").length;
-  return Response.json({ meetings, groups, rows, summary: { total: rows.length, unset } });
+  return Response.json({ meetings, groups, students, rows, summary: { total: rows.length, unset } });
 }
 
 export async function POST(request: Request) {
