@@ -113,3 +113,6 @@ body { margin: 0; }
 @media (max-width: 680px) { .group-switches { grid-template-columns: 1fr; }.group-capacity-form { grid-template-columns: repeat(2,1fr); }.group-capacity-form .manage-button { grid-column: 1 / -1; }.rule-student-picker > div { grid-template-columns: repeat(2,minmax(0,1fr)); }.group-actions,.group-actions > div { align-items: stretch; flex-direction: column; }.group-actions > div:last-child { display: grid; grid-template-columns: 1fr 1fr; }.manage-group-board { grid-template-columns: 1fr; } }
 @media (max-width: 680px) { .attendance-toolbar { align-items: flex-start; flex-wrap: wrap; justify-content: space-between; }.attendance-toolbar > .manage-select { width: 100%; margin-right: 0; }.attendance-table-shell { border-radius: 11px; }.attendance-matrix .attendance-number { width: 32px; min-width: 32px; }.attendance-matrix .attendance-name { left: 32px; width: 112px; min-width: 112px; padding: 0 7px; }.attendance-date,.attendance-cell { width: 48px; min-width: 48px; }.attendance-cell select { font-size: 9px; }.attendance-group-row span { display: block; margin: 1px 0 0; } }
 @media (max-width: 420px) { .rule-student-picker > div { grid-template-columns: 1fr; } }
+
+/* Fill wide screens while keeping compact horizontal scrolling on small screens. */
+.attendance-matrix { width: 100%; min-width: max-content; }
