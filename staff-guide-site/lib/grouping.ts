@@ -70,13 +70,14 @@ export function compositionWarnings(group: StudentRecord[], groupName: string, s
 }
 
 export function evaluateAssignmentWarnings(students: StudentRecord[], groups: GroupRecord[], constraints: GroupConstraint[], assignments: Array<{ studentId: string; groupId: string }>, settingsInput?: Partial<GroupingSettings>, focusGroupIds?: string[]) {
-  const settings = { ...defaults, ...settingsInput }; const warnings: string[] = []; const groupOf = new Map(assignments.map((item) => [item.studentId, item.groupId]));
+  const settings = { ...defaults, ...settingsInput }; const warnings: string[] = []; const groupOf = new Map(assignments.map((item) => [item.studentId, item.groupId])); const studentById = new Map(students.map((student) => [student.id, student])); const groupNameById = new Map(groups.map((group) => [group.id, group.name]));
   for (const constraint of constraints) {
     const a = groupOf.get(constraint.student_a_id); const b = groupOf.get(constraint.student_b_id); if (!a || !b) continue;
-    if (constraint.type === "together" && a !== b) warnings.push("같은 조로 지정한 학생들이 떨어집니다.");
-    if (constraint.type === "apart" && a === b) warnings.push("다른 조로 지정한 학생들이 같은 조가 됩니다.");
+    const nameA = studentById.get(constraint.student_a_id)?.name ?? "알 수 없는 학생"; const nameB = studentById.get(constraint.student_b_id)?.name ?? "알 수 없는 학생";
+    if (constraint.type === "together" && a !== b) warnings.push(`같은 조 조건인 ${nameA}·${nameB} 학생이 ${groupNameById.get(a) ?? "다른 조"}와 ${groupNameById.get(b) ?? "다른 조"}로 떨어져 있습니다.`);
+    if (constraint.type === "apart" && a === b) warnings.push(`다른 조 조건인 ${nameA}·${nameB} 학생이 모두 ${groupNameById.get(a) ?? "같은 조"}에 배정되어 있습니다.`);
   }
-  const studentById = new Map(students.map((student) => [student.id, student])); const focus = focusGroupIds ? new Set(focusGroupIds.filter(Boolean)) : null;
+  const focus = focusGroupIds ? new Set(focusGroupIds.filter(Boolean)) : null;
   for (const group of groups) { if (focus && !focus.has(group.id)) continue; const members = assignments.filter((item) => item.groupId === group.id).map((item) => studentById.get(item.studentId)).filter((item): item is StudentRecord => Boolean(item)); warnings.push(...compositionWarnings(members, group.name, settings)); }
   return [...new Set(warnings)];
 }

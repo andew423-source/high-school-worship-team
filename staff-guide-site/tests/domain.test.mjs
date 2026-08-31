@@ -88,7 +88,16 @@ test("수동 이동 검증은 관계 위반과 특정 범주 1인 구성을 알�
   const groups = [{ id: "wg1", term_id: "t", name: "1조", capacity: 4, required_staff: 0, status: "draft", sort_order: 1 }, { id: "wg2", term_id: "t", name: "2조", capacity: 4, required_staff: 0, status: "draft", sort_order: 2 }];
   const warnings = evaluateAssignmentWarnings(students, groups, [{ id: "t", type: "apart", student_a_id: "w1", student_b_id: "w3" }], [{ studentId: "w1", groupId: "wg1" }, { studentId: "w2", groupId: "wg1" }, { studentId: "w3", groupId: "wg1" }], { studentMin: 1, studentMax: 4, staffMin: 0, staffMax: 0, clusterGender: false, clusterGrade: false, splitWorshipRole: false });
   assert.ok(warnings.some((warning) => warning.includes("다른 조")));
+  assert.ok(warnings.some((warning) => warning.includes("남1") && warning.includes("여1") && warning.includes("1조")));
   assert.ok(warnings.some((warning) => warning.includes("성별") && warning.includes("혼자")));
+});
+
+test("같은 조 조건 경고에는 학생 이름과 현재 조가 표시된다", async () => {
+  const { evaluateAssignmentWarnings } = await loadTypeScriptModule("../lib/grouping.ts");
+  const students = [{ id: "a", name: "가학생", grade: 1, gender: "남", service_part: 1, active: 1, is_student_leader: 0 }, { id: "b", name: "나학생", grade: 1, gender: "남", service_part: 1, active: 1, is_student_leader: 0 }];
+  const groups = [{ id: "g1", term_id: "t", name: "1조", capacity: 2, required_staff: 0, status: "draft", sort_order: 1 }, { id: "g2", term_id: "t", name: "2조", capacity: 2, required_staff: 0, status: "draft", sort_order: 2 }];
+  const warnings = evaluateAssignmentWarnings(students, groups, [{ id: "t", type: "together", student_a_id: "a", student_b_id: "b" }], [{ studentId: "a", groupId: "g1" }, { studentId: "b", groupId: "g2" }], { studentMin: 1, studentMax: 2, staffMin: 0, staffMax: 0, clusterGender: false, clusterGrade: false, splitWorshipRole: false });
+  assert.ok(warnings.some((warning) => warning.includes("가학생") && warning.includes("나학생") && warning.includes("1조") && warning.includes("2조")));
 });
 
 test("등단 배정은 출석·부서·싱어팀·학생 인도자 규칙을 지킨다", async () => {
