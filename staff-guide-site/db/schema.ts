@@ -60,6 +60,21 @@ export const groupConstraints = sqliteTable("group_constraints", {
   studentBId: text("student_b_id").notNull(), createdAt: text("created_at").notNull(),
 }, (table) => [index("idx_group_constraints_term").on(table.termId)]);
 
+export const groupingSettings = sqliteTable("grouping_settings", {
+  termId: text("term_id").primaryKey(), studentMin: integer("student_min").notNull().default(1), studentMax: integer("student_max").notNull().default(8),
+  staffMin: integer("staff_min").notNull().default(1), staffMax: integer("staff_max").notNull().default(1),
+  clusterGender: integer("cluster_gender", { mode: "boolean" }).notNull().default(false), clusterGrade: integer("cluster_grade", { mode: "boolean" }).notNull().default(false),
+  splitWorshipRole: integer("split_worship_role", { mode: "boolean" }).notNull().default(false), ...timestamps,
+});
+
+export const groupRules = sqliteTable("group_rules", {
+  id: text("id").primaryKey(), termId: text("term_id").notNull(), type: text("type").notNull(), configJson: text("config_json").notNull().default("{}"), createdAt: text("created_at").notNull(),
+}, (table) => [index("idx_group_rules_term").on(table.termId)]);
+
+export const groupRuleMembers = sqliteTable("group_rule_members", {
+  id: text("id").primaryKey(), ruleId: text("rule_id").notNull(), studentId: text("student_id").notNull(), createdAt: text("created_at").notNull(),
+}, (table) => [uniqueIndex("idx_group_rule_members_rule_student").on(table.ruleId, table.studentId), index("idx_group_rule_members_rule").on(table.ruleId)]);
+
 export const attendance = sqliteTable("attendance", {
   id: text("id").primaryKey(), meetingId: text("meeting_id").notNull(), studentId: text("student_id").notNull(), status: text("status").notNull(),
   note: text("note"), updatedBy: text("updated_by").notNull(), ...timestamps,

@@ -37,6 +37,9 @@ export async function ensureSchema() {
     `CREATE TABLE IF NOT EXISTS group_members (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, group_id TEXT NOT NULL, student_id TEXT NOT NULL, assigned_by TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(term_id, student_id))`,
     `CREATE TABLE IF NOT EXISTS group_staff (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, group_id TEXT NOT NULL, staff_id TEXT NOT NULL, assigned_by TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(term_id, staff_id))`,
     `CREATE TABLE IF NOT EXISTS group_constraints (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, type TEXT NOT NULL, student_a_id TEXT NOT NULL, student_b_id TEXT NOT NULL, created_at TEXT NOT NULL)`,
+    `CREATE TABLE IF NOT EXISTS grouping_settings (term_id TEXT PRIMARY KEY, student_min INTEGER NOT NULL DEFAULT 1, student_max INTEGER NOT NULL DEFAULT 8, staff_min INTEGER NOT NULL DEFAULT 1, staff_max INTEGER NOT NULL DEFAULT 1, cluster_gender INTEGER NOT NULL DEFAULT 0, cluster_grade INTEGER NOT NULL DEFAULT 0, split_worship_role INTEGER NOT NULL DEFAULT 0, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
+    `CREATE TABLE IF NOT EXISTS group_rules (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, type TEXT NOT NULL, config_json TEXT NOT NULL DEFAULT '{}', created_at TEXT NOT NULL)`,
+    `CREATE TABLE IF NOT EXISTS group_rule_members (id TEXT PRIMARY KEY, rule_id TEXT NOT NULL, student_id TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(rule_id, student_id))`,
     `CREATE TABLE IF NOT EXISTS attendance (id TEXT PRIMARY KEY, meeting_id TEXT NOT NULL, student_id TEXT NOT NULL, status TEXT NOT NULL, note TEXT, updated_by TEXT NOT NULL, created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(meeting_id, student_id))`,
     `CREATE TABLE IF NOT EXISTS import_batches (id TEXT PRIMARY KEY, term_id TEXT, kind TEXT NOT NULL, filename TEXT NOT NULL, object_key TEXT NOT NULL, row_count INTEGER NOT NULL, imported_by TEXT NOT NULL, created_at TEXT NOT NULL)`,
     `CREATE TABLE IF NOT EXISTS services (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, meeting_id TEXT NOT NULL, sunday_date TEXT NOT NULL, service_part INTEGER NOT NULL, singer_slots INTEGER NOT NULL, choir_slots INTEGER NOT NULL, leader_type TEXT, leader_id TEXT, status TEXT NOT NULL DEFAULT 'draft', created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(sunday_date, service_part))`,
@@ -50,6 +53,8 @@ export async function ensureSchema() {
     `CREATE INDEX IF NOT EXISTS idx_groups_term ON groups(term_id)`,
     `CREATE INDEX IF NOT EXISTS idx_group_members_group ON group_members(group_id)`,
     `CREATE INDEX IF NOT EXISTS idx_group_staff_group ON group_staff(group_id)`,
+    `CREATE INDEX IF NOT EXISTS idx_group_rules_term ON group_rules(term_id)`,
+    `CREATE INDEX IF NOT EXISTS idx_group_rule_members_rule ON group_rule_members(rule_id)`,
     `CREATE INDEX IF NOT EXISTS idx_attendance_student ON attendance(student_id)`,
     `CREATE INDEX IF NOT EXISTS idx_services_term ON services(term_id)`,
     `CREATE INDEX IF NOT EXISTS idx_stage_assignments_history ON stage_assignments(person_type, person_id)`,
@@ -69,6 +74,9 @@ export async function ensureSchema() {
     FROM students s JOIN terms t ON t.status='active'
     WHERE NOT EXISTS (SELECT 1 FROM term_students ts WHERE ts.term_id=t.id AND ts.student_id=s.id)`).run();
   await db.prepare("UPDATE import_batches SET term_id=(SELECT id FROM terms WHERE status='active' ORDER BY start_date DESC LIMIT 1) WHERE kind='students' AND term_id IS NULL").run();
+  await db.prepare("INSERT OR IGNORE INTO group_rules (id,term_id,type,config_json,created_at) SELECT 'legacy_' || id,term_id,type,'{}',created_at FROM group_constraints").run();
+  await db.prepare("INSERT OR IGNORE INTO group_rule_members (id,rule_id,student_id,created_at) SELECT 'legacy_a_' || id,'legacy_' || id,student_a_id,created_at FROM group_constraints").run();
+  await db.prepare("INSERT OR IGNORE INTO group_rule_members (id,rule_id,student_id,created_at) SELECT 'legacy_b_' || id,'legacy_' || id,student_b_id,created_at FROM group_constraints").run();
   await db.prepare("PRAGMA optimize").run();
   schemaReady = true;
 }

@@ -26,6 +26,41 @@ test("불가능한 조 조건은 임의 배정 대신 오류를 반환한다", a
   assert.match(result.error, /정원|배정/); assert.equal(result.assignments.length, 0);
 });
 
+test("학생 수가 나누어떨어지지 않아도 최소·최대 범위로 편성한다", async () => {
+  const { autoAssignGroups } = await loadTypeScriptModule("../lib/grouping.ts");
+  const students = Array.from({ length: 7 }, (_, index) => ({ id: `flex${index}`, name: `학생${index}`, grade: index % 3 + 1, gender: index % 2 ? "여" : "남", service_part: 1, worship_team: index % 2 ? "싱어팀" : "세션팀", active: 1, is_student_leader: 0 }));
+  const groups = [1, 2, 3].map((number) => ({ id: `fg${number}`, term_id: "t", name: `${number}조`, capacity: 3, required_staff: 1, status: "draft", sort_order: number }));
+  const result = autoAssignGroups(students, groups, [], 19, { studentMin: 2, studentMax: 3, staffMin: 0, staffMax: 2, clusterGender: false, clusterGrade: false, splitWorshipRole: false });
+  assert.equal(result.error, undefined);
+  const counts = groups.map((group) => result.assignments.filter((item) => item.groupId === group.id).length);
+  assert.deepEqual([...counts].sort(), [2, 2, 3]);
+});
+
+test("분리 모드는 서로 다른 범주의 혼합을 막는다", async () => {
+  const { autoAssignGroups } = await loadTypeScriptModule("../lib/grouping.ts");
+  const students = ["남", "남", "여", "여"].map((gender, index) => ({ id: `mode${index}`, name: `학생${index}`, grade: 1, gender, service_part: 1, worship_team: "싱어팀", active: 1, is_student_leader: 0 }));
+  const groups = [1, 2].map((number) => ({ id: `mg${number}`, term_id: "t", name: `${number}조`, capacity: 2, required_staff: 0, status: "draft", sort_order: number }));
+  const result = autoAssignGroups(students, groups, [], 7, { studentMin: 2, studentMax: 2, staffMin: 0, staffMax: 0, clusterGender: true, clusterGrade: false, splitWorshipRole: false });
+  assert.equal(result.error, undefined);
+  for (const group of groups) {
+    const ids = new Set(result.assignments.filter((item) => item.groupId === group.id).map((item) => item.studentId));
+    assert.equal(new Set(students.filter((student) => ids.has(student.id)).map((student) => student.gender)).size, 1);
+  }
+});
+
+test("수동 이동 검증은 관계 위반과 특정 범주 1인 구성을 알린다", async () => {
+  const { evaluateAssignmentWarnings } = await loadTypeScriptModule("../lib/grouping.ts");
+  const students = [
+    { id: "w1", name: "남1", grade: 1, gender: "남", service_part: 1, worship_team: "세션팀", active: 1, is_student_leader: 0 },
+    { id: "w2", name: "남2", grade: 1, gender: "남", service_part: 1, worship_team: "세션팀", active: 1, is_student_leader: 0 },
+    { id: "w3", name: "여1", grade: 1, gender: "여", service_part: 1, worship_team: "세션팀", active: 1, is_student_leader: 0 },
+  ];
+  const groups = [{ id: "wg1", term_id: "t", name: "1조", capacity: 4, required_staff: 0, status: "draft", sort_order: 1 }, { id: "wg2", term_id: "t", name: "2조", capacity: 4, required_staff: 0, status: "draft", sort_order: 2 }];
+  const warnings = evaluateAssignmentWarnings(students, groups, [{ id: "t", type: "apart", student_a_id: "w1", student_b_id: "w3" }], [{ studentId: "w1", groupId: "wg1" }, { studentId: "w2", groupId: "wg1" }, { studentId: "w3", groupId: "wg1" }], { studentMin: 1, studentMax: 4, staffMin: 0, staffMax: 0, clusterGender: false, clusterGrade: false, splitWorshipRole: false });
+  assert.ok(warnings.some((warning) => warning.includes("다른 조")));
+  assert.ok(warnings.some((warning) => warning.includes("성별") && warning.includes("혼자")));
+});
+
 test("등단 배정은 출석·부서·싱어팀·학생 인도자 규칙을 지킨다", async () => {
   const { generateStage } = await loadTypeScriptModule("../lib/stage.ts");
   const students = [
