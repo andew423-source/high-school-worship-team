@@ -8,4 +8,6 @@ CREATE TABLE `stage_overrides` (
 --> statement-breakpoint
 CREATE UNIQUE INDEX `idx_stage_overrides_service_student` ON `stage_overrides` (`service_id`,`student_id`);--> statement-breakpoint
 CREATE INDEX `idx_stage_overrides_service` ON `stage_overrides` (`service_id`);--> statement-breakpoint
-ALTER TABLE `services` ADD `special_notes` text;
+ALTER TABLE `services` ADD `special_notes` text;--> statement-breakpoint
+UPDATE `staff_availability` SET `stage_role`='singer' WHERE `staff_id` IN (SELECT `id` FROM `staff` WHERE REPLACE(`name`,' ','')<>'이소정');--> statement-breakpoint
+UPDATE `staff_availability` SET `stage_role`='session' WHERE `staff_id` IN (SELECT `id` FROM `staff` WHERE REPLACE(`name`,' ','')='이소정');
