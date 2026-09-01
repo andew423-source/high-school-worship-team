@@ -11,6 +11,10 @@ export function reorderStageIds(ids: string[], movingId: string, targetPosition:
   const ordered = ids.filter((id) => id !== movingId); const position = Math.max(0, Math.min(Math.trunc(targetPosition), ordered.length)); ordered.splice(position, 0, movingId); return ordered;
 }
 
+export function stageRoleCountsComplete(counts: ReadonlyMap<string, number>, singerSlots: number, choirSlots: number) {
+  return (counts.get("leader") ?? 0) === 1 && (counts.get("singer") ?? 0) === singerSlots && (counts.get("choir") ?? 0) === choirSlots;
+}
+
 export function evaluateManualStageWarnings(params: { personId: string; personName: string; newRole: "singer" | "choir"; previousRoles: string[]; assignments: Array<{ personId: string; role: string; gender?: string | null }>; singerSlots: number; choirSlots: number; minimumFemaleSingers?: number }) {
   const warnings: string[] = []; const sameRoleWeeks = params.previousRoles.filter((role) => role === params.newRole).length;
   if (sameRoleWeeks >= 2 && !(params.newRole === "singer" && params.choirSlots === 0)) warnings.push(`${params.personName} 학생이 3주 연속 ${params.newRole === "singer" ? "싱어" : "콰이어"}가 됩니다.`);
