@@ -58,7 +58,7 @@ export function generateStage(params: {
   const fixedChoir = fixed.filter((item) => item.role === "choir").slice(0, params.choirSlots); const fixedSingers = fixed.filter((item) => item.role === "singer").slice(0, params.singerSlots);
   if (fixed.filter((item) => item.role === "choir").length > params.choirSlots || fixed.filter((item) => item.role === "singer").length > params.singerSlots) warnings.push("특별 배정 인원이 역할 정원을 초과해 정원 내에서만 반영했습니다.");
   const selectedIds = new Set([...fixedChoir, ...fixedSingers].map((item) => item.student.id));
-  const choirCandidates = studentPool.filter((student) => !selectedIds.has(student.id)).sort((a, b) => Number(!params.blockedConsecutiveSingerIds?.has(a.id)) - Number(!params.blockedConsecutiveSingerIds?.has(b.id)) || score(a, false) - score(b, false));
+  const choirCandidates = studentPool.filter((student) => !selectedIds.has(student.id)).sort((a, b) => Number(!params.missedPreviousWeekIds?.has(a.id)) - Number(!params.missedPreviousWeekIds?.has(b.id)) || Number(!params.blockedConsecutiveSingerIds?.has(a.id)) - Number(!params.blockedConsecutiveSingerIds?.has(b.id)) || score(a, false) - score(b, false));
   const choir = [...fixedChoir.map((item) => item.student), ...choirCandidates.slice(0, Math.max(0, params.choirSlots - fixedChoir.length))]; choir.forEach((student) => selectedIds.add(student.id));
   const remainingStudentTarget = Math.max(0, targetStudents - choir.length - fixedSingers.length);
   const singerCandidates = studentPool.filter((student) => !selectedIds.has(student.id) && (params.choirSlots === 0 || !params.blockedConsecutiveSingerIds?.has(student.id))).sort((a, b) => score(a, true) - score(b, true));
