@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { first } from "../../../../db/runtime";
 import { requireAuthorizedUser } from "../../../../lib/auth";
+import { redirect } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 type TermSummary = { id: string; name: string; start_date: string; end_date: string; status: string; student_count: number; meeting_count: number; group_count: number };
 export default async function TermHub({ params }: { params: Promise<{ termId: string }> }) {
   const [{ termId }, user] = await Promise.all([params, requireAuthorizedUser("/manage")]);
+  if (user.role !== "admin") redirect("/manage");
   const term = await first<TermSummary>(`SELECT t.*,(SELECT COUNT(*) FROM term_students ts WHERE ts.term_id=t.id AND ts.active=1) student_count,(SELECT COUNT(*) FROM meetings m WHERE m.term_id=t.id AND m.kind<>'break') meeting_count,(SELECT COUNT(*) FROM groups g WHERE g.term_id=t.id) group_count FROM terms t WHERE t.id=?`, [termId]);
   if (!term) return <main className="manage-content"><div className="term-empty"><h1>학기를 찾을 수 없습니다.</h1><Link className="manage-button primary" href="/manage">학기 홈으로</Link></div></main>;
   const query = `?termId=${encodeURIComponent(term.id)}`;

@@ -1,4 +1,5 @@
 import { requireAuthorizedUser } from "../lib/auth";
+import { redirect } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
@@ -37,7 +38,8 @@ function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.
 }
 
 export default async function Home() {
-  await requireAuthorizedUser("/");
+  const user = await requireAuthorizedUser("/");
+  if (user.role !== "admin") redirect("/manage");
   return (
     <main>
       <header className="hero" id="top">
