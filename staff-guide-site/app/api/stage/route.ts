@@ -1,7 +1,7 @@
 import { all, audit, createId, first, now, run } from "../../../db/runtime";
 import { jsonError, requireApiUser } from "../../../lib/api-auth";
 import type { StaffRecord, StudentRecord } from "../../../lib/domain";
-import { evaluateManualStageWarnings, generateStage } from "../../../lib/stage";
+import { evaluateManualStageWarnings, generateStage, reorderStageIds } from "../../../lib/stage";
 
 export const dynamic = "force-dynamic";
 
@@ -64,7 +64,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   const { user, error } = await requireApiUser(["admin"]); if (error || !user) return error;
-  const body = await request.json() as { action: string; termId?: string; meetingId?: string; sundayDate?: string; servicePart?: 1 | 2; singerSlots?: number; choirSlots?: number; leaderType?: "student" | "staff"; leaderId?: string; staffId?: string; present?: boolean; stageRole?: "singer" | "session"; serviceId?: string; personType?: "student" | "staff"; personId?: string; studentId?: string; overrideId?: string; overrideKind?: "department" | "force"; role?: "leader" | "singer" | "choir" | "random"; side?: "left" | "center" | "right"; positionOrder?: number; positionDelta?: number; specialNotes?: string; force?: boolean };
+  const body = await request.json() as { action: string; termId?: string; meetingId?: string; sundayDate?: string; servicePart?: 1 | 2; singerSlots?: number; choirSlots?: number; leaderType?: "student" | "staff"; leaderId?: string; staffId?: string; present?: boolean; stageRole?: "singer" | "session"; serviceId?: string; personType?: "student" | "staff"; personId?: string; studentId?: string; overrideId?: string; overrideKind?: "department" | "force"; role?: "leader" | "singer" | "choir" | "random"; side?: "left" | "center" | "right"; positionOrder?: number; positionDelta?: number; targetPosition?: number; specialNotes?: string; force?: boolean };
   const timestamp = now();
   if (body.action === "availability" && body.sundayDate && body.staffId) {
     const stageRole = body.stageRole === "singer" ? "singer" : "session";
@@ -130,7 +130,13 @@ export async function POST(request: Request) {
       if (warnings.length && !body.force) return Response.json({ error: warnings.join(" "), requiresConfirmation: true, warnings }, { status: 409 });
     }
     const oldRole = current.role; const oldSide = current.side;
-    if (body.positionDelta && current.role === body.role && current.side === body.side) {
+    if (Number.isFinite(body.targetPosition)) {
+      await run("UPDATE stage_assignments SET role=?,side=?,position_order=999999,is_manual=1 WHERE id=?", [body.role, body.side, current.id]);
+      if (oldRole !== body.role || oldSide !== body.side) await normalizePositions(body.serviceId, oldRole, oldSide);
+      const targetRows = await all<{ id: string }>("SELECT id FROM stage_assignments WHERE service_id=? AND role=? AND side=? AND id<>? ORDER BY position_order,id", [body.serviceId, body.role, body.side, current.id]);
+      const orderedIds = reorderStageIds(targetRows.map((row) => row.id), current.id, Number(body.targetPosition));
+      for (let index = 0; index < orderedIds.length; index += 1) await run("UPDATE stage_assignments SET position_order=? WHERE id=?", [index, orderedIds[index]]);
+    } else if (body.positionDelta && current.role === body.role && current.side === body.side) {
       const target = await first<{ id: string; position_order: number }>("SELECT id,position_order FROM stage_assignments WHERE service_id=? AND role=? AND side=? AND position_order=?", [body.serviceId, current.role, current.side, current.position_order + Math.sign(body.positionDelta)]);
       if (target) { await run("UPDATE stage_assignments SET position_order=?,is_manual=1 WHERE id=?", [current.position_order, target.id]); await run("UPDATE stage_assignments SET position_order=?,is_manual=1 WHERE id=?", [target.position_order, current.id]); }
     } else {

@@ -218,3 +218,10 @@ test("수동 역할 변경은 3주 연속 역할과 여자 싱어 부족을 구�
   const choirWarnings = evaluateManualStageWarnings({ personId: "target", personName: "길하진", newRole: "choir", previousRoles: ["choir", "choir"], assignments, singerSlots: 4, choirSlots: 2, minimumFemaleSingers: 3 });
   assert.ok(choirWarnings.some((warning) => warning.includes("길하진") && warning.includes("3주 연속 콰이어")));
 });
+
+test("등단표 드래그 이동은 원하는 순서에 정확히 삽입한다", async () => {
+  const { reorderStageIds } = await loadTypeScriptModule("../lib/stage.ts");
+  assert.deepEqual(reorderStageIds(["a", "b", "c", "d"], "c", 1), ["a", "c", "b", "d"]);
+  assert.deepEqual(reorderStageIds(["a", "b", "c"], "x", 99), ["a", "b", "c", "x"]);
+  assert.deepEqual(reorderStageIds(["a", "b", "c"], "b", -3), ["b", "a", "c"]);
+});
