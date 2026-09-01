@@ -1,5 +1,6 @@
 import { requireAuthorizedUser } from "../lib/auth";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
@@ -37,11 +38,10 @@ function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.
   );
 }
 
-export default async function Home() {
-  const user = await requireAuthorizedUser("/");
-  if (user.role !== "admin") redirect("/manage");
+export function FirstMeetingGuide({ backHref }: { backHref?: string }) {
   return (
-    <main>
+    <main className={`first-meeting-guide${backHref ? " embedded" : ""}`}>
+      {backHref && <div className="guide-context-bar"><Link href={backHref}>← 1주차 메뉴</Link><div><b>1주차 모임 가이드</b><span>8월 29일 · 첫 모임</span></div></div>}
       <header className="hero" id="top">
         <div className="hero-inner">
           <p className="kicker">고등부 찬양팀 · 첫 모임</p>
@@ -253,4 +253,9 @@ export default async function Home() {
       </footer>
     </main>
   );
+}
+
+export default async function Home() {
+  await requireAuthorizedUser("/");
+  redirect("/manage");
 }

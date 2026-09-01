@@ -27,6 +27,10 @@ body {
 }
 a { color: inherit; }
 main { overflow: hidden; }
+.first-meeting-guide { color: var(--ink); background: var(--paper); font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; }
+.guide-context-bar { min-height: 64px; padding: 10px max(20px,calc((100% - 1120px)/2)); display: flex; align-items: center; gap: 18px; color: white; background: var(--navy); }
+.guide-context-bar > a { flex: 0 0 auto; padding: 8px 11px; border: 1px solid rgba(255,255,255,.22); border-radius: 9px; text-decoration: none; font-size: 12px; font-weight: 800; }
+.guide-context-bar > div { display: grid; gap: 1px; }.guide-context-bar b { font-size: 13px; }.guide-context-bar span { color: #b8cbd8; font-size: 10px; }
 
 .hero {
   position: relative;
