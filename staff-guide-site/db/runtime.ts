@@ -30,7 +30,7 @@ export async function ensureSchema() {
     `CREATE TABLE IF NOT EXISTS app_users (id TEXT PRIMARY KEY, platform_user_id TEXT NOT NULL UNIQUE, email TEXT NOT NULL UNIQUE, display_name TEXT NOT NULL, role TEXT NOT NULL, status TEXT NOT NULL, staff_id TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
     `CREATE TABLE IF NOT EXISTS students (id TEXT PRIMARY KEY, name TEXT NOT NULL, grade INTEGER, gender TEXT, service_part INTEGER NOT NULL, worship_team TEXT, is_student_leader INTEGER NOT NULL DEFAULT 0, active INTEGER NOT NULL DEFAULT 1, notes TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
     `CREATE TABLE IF NOT EXISTS term_students (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, student_id TEXT NOT NULL, grade INTEGER, gender TEXT, service_part INTEGER NOT NULL, worship_team TEXT, is_student_leader INTEGER NOT NULL DEFAULT 0, active INTEGER NOT NULL DEFAULT 1, created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(term_id, student_id))`,
-    `CREATE TABLE IF NOT EXISTS staff (id TEXT PRIMARY KEY, name TEXT NOT NULL, email TEXT, duty TEXT, can_sing INTEGER NOT NULL DEFAULT 0, can_lead_group INTEGER NOT NULL DEFAULT 0, preferred_service INTEGER, active INTEGER NOT NULL DEFAULT 1, notes TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
+    `CREATE TABLE IF NOT EXISTS staff (id TEXT PRIMARY KEY, name TEXT NOT NULL, gender TEXT, email TEXT, duty TEXT, can_sing INTEGER NOT NULL DEFAULT 0, can_lead_group INTEGER NOT NULL DEFAULT 0, preferred_service INTEGER, active INTEGER NOT NULL DEFAULT 1, notes TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
     `CREATE TABLE IF NOT EXISTS terms (id TEXT PRIMARY KEY, name TEXT NOT NULL, start_date TEXT NOT NULL, end_date TEXT NOT NULL, eligible_statuses TEXT NOT NULL DEFAULT 'present', status TEXT NOT NULL DEFAULT 'draft', created_at TEXT NOT NULL, updated_at TEXT NOT NULL)`,
     `CREATE TABLE IF NOT EXISTS meetings (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, meeting_date TEXT NOT NULL, kind TEXT NOT NULL DEFAULT 'regular', title TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(term_id, meeting_date))`,
     `CREATE TABLE IF NOT EXISTS groups (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, name TEXT NOT NULL, capacity INTEGER NOT NULL, required_staff INTEGER NOT NULL DEFAULT 1, status TEXT NOT NULL DEFAULT 'draft', sort_order INTEGER NOT NULL DEFAULT 0, created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(term_id, name))`,
@@ -45,7 +45,7 @@ export async function ensureSchema() {
     `CREATE TABLE IF NOT EXISTS services (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, meeting_id TEXT NOT NULL, sunday_date TEXT NOT NULL, service_part INTEGER NOT NULL, singer_slots INTEGER NOT NULL, choir_slots INTEGER NOT NULL, leader_type TEXT, leader_id TEXT, special_notes TEXT, status TEXT NOT NULL DEFAULT 'draft', created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(sunday_date, service_part))`,
     `CREATE TABLE IF NOT EXISTS staff_availability (id TEXT PRIMARY KEY, sunday_date TEXT NOT NULL, staff_id TEXT NOT NULL, present INTEGER NOT NULL DEFAULT 0, stage_role TEXT NOT NULL DEFAULT 'session', updated_by TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(sunday_date, staff_id))`,
     `CREATE TABLE IF NOT EXISTS stage_assignments (id TEXT PRIMARY KEY, service_id TEXT NOT NULL, person_type TEXT NOT NULL, person_id TEXT NOT NULL, role TEXT NOT NULL, side TEXT NOT NULL, position_order INTEGER NOT NULL, reason TEXT, is_manual INTEGER NOT NULL DEFAULT 0, created_at TEXT NOT NULL, UNIQUE(service_id, person_type, person_id))`,
-    `CREATE TABLE IF NOT EXISTS stage_overrides (id TEXT PRIMARY KEY, service_id TEXT NOT NULL, student_id TEXT NOT NULL, role TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(service_id, student_id))`,
+    `CREATE TABLE IF NOT EXISTS stage_overrides (id TEXT PRIMARY KEY, service_id TEXT NOT NULL, student_id TEXT NOT NULL, kind TEXT NOT NULL DEFAULT 'force', role TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(service_id, student_id))`,
     `CREATE TABLE IF NOT EXISTS audit_logs (id TEXT PRIMARY KEY, actor_user_id TEXT NOT NULL, action TEXT NOT NULL, entity_type TEXT NOT NULL, entity_id TEXT, before_json TEXT, after_json TEXT, created_at TEXT NOT NULL)`,
     `CREATE INDEX IF NOT EXISTS idx_students_active_service ON students(active, service_part)`,
     `CREATE INDEX IF NOT EXISTS idx_term_students_term_active_service ON term_students(term_id, active, service_part)`,
@@ -71,6 +71,10 @@ export async function ensureSchema() {
   if (!(importColumns.results ?? []).some((column) => column.name === "term_id")) {
     await db.prepare("ALTER TABLE import_batches ADD COLUMN term_id TEXT").run();
   }
+  const staffColumns = await db.prepare("PRAGMA table_info(staff)").all<{ name: string }>();
+  if (!(staffColumns.results ?? []).some((column) => column.name === "gender")) {
+    await db.prepare("ALTER TABLE staff ADD COLUMN gender TEXT").run();
+  }
   const availabilityColumns = await db.prepare("PRAGMA table_info(staff_availability)").all<{ name: string }>();
   if (!(availabilityColumns.results ?? []).some((column) => column.name === "stage_role")) {
     await db.prepare("ALTER TABLE staff_availability ADD COLUMN stage_role TEXT NOT NULL DEFAULT 'session'").run();
@@ -78,6 +82,10 @@ export async function ensureSchema() {
   const serviceColumns = await db.prepare("PRAGMA table_info(services)").all<{ name: string }>();
   if (!(serviceColumns.results ?? []).some((column) => column.name === "special_notes")) {
     await db.prepare("ALTER TABLE services ADD COLUMN special_notes TEXT").run();
+  }
+  const overrideColumns = await db.prepare("PRAGMA table_info(stage_overrides)").all<{ name: string }>();
+  if (!(overrideColumns.results ?? []).some((column) => column.name === "kind")) {
+    await db.prepare("ALTER TABLE stage_overrides ADD COLUMN kind TEXT NOT NULL DEFAULT 'force'").run();
   }
   await db.prepare(`INSERT OR IGNORE INTO term_students (id,term_id,student_id,grade,gender,service_part,worship_team,is_student_leader,active,created_at,updated_at)
     SELECT 'termstudent_' || lower(hex(randomblob(16))),t.id,s.id,s.grade,s.gender,s.service_part,s.worship_team,s.is_student_leader,s.active,s.created_at,s.updated_at

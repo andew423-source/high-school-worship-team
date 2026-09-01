@@ -1,7 +1,7 @@
 import { all, audit, createId, first, now, run } from "../../../db/runtime";
 import { jsonError, requireApiUser } from "../../../lib/api-auth";
 import type { StaffRecord, StudentRecord } from "../../../lib/domain";
-import { generateStage } from "../../../lib/stage";
+import { evaluateManualStageWarnings, generateStage } from "../../../lib/stage";
 
 export const dynamic = "force-dynamic";
 
@@ -9,7 +9,7 @@ type MeetingRow = { id: string; meeting_date: string; kind: string };
 type ServiceRow = { id: string; term_id: string; meeting_id: string; sunday_date: string; service_part: 1 | 2; singer_slots: number; choir_slots: number; leader_type: "student" | "staff"; leader_id: string; special_notes?: string | null; status: string; updated_at?: string };
 type AvailabilityRow = { staff_id: string; present: number; stage_role: "singer" | "session" };
 type AssignmentRow = { service_id: string; person_type: "student" | "staff"; person_id: string; name: string; role: "leader" | "singer" | "choir"; side: "left" | "center" | "right"; position_order: number; reason: string };
-type OverrideRow = { id: string; service_id: string; student_id: string; name: string; service_part: number; role: "singer" | "choir" };
+type OverrideRow = { id: string; service_id: string; student_id: string; name: string; service_part: number; kind: "department" | "force"; role: "singer" | "choir" | "random" };
 type EligibleStudentRow = { student_id: string; name: string; service_part: number; worship_team: string | null; gender: string | null };
 
 function dateBefore(date: string) { const value = new Date(`${date}T00:00:00Z`); value.setUTCDate(value.getUTCDate() - 1); return value.toISOString().slice(0, 10); }
@@ -19,6 +19,7 @@ async function validLeader(termId: string, leaderType: "student" | "staff", lead
   if (leaderType === "student") return Boolean(await first("SELECT 1 ok FROM term_students WHERE term_id=? AND student_id=? AND active=1 AND is_student_leader=1", [termId, leaderId]));
   return Boolean(await first("SELECT 1 ok FROM staff WHERE id=? AND active=1", [leaderId]));
 }
+async function normalizePositions(serviceId: string, role: string, side: string) { const rows = await all<{ id: string }>("SELECT id FROM stage_assignments WHERE service_id=? AND role=? AND side=? ORDER BY position_order,id", [serviceId, role, side]); for (let index = 0; index < rows.length; index += 1) await run("UPDATE stage_assignments SET position_order=? WHERE id=?", [index, rows[index].id]); }
 
 export async function GET(request: Request) {
   const { error } = await requireApiUser(); if (error) return error;
@@ -31,7 +32,7 @@ export async function GET(request: Request) {
     all<StaffRecord>("SELECT * FROM staff WHERE active=1 ORDER BY name"),
     sundayDate ? all<AvailabilityRow>("SELECT staff_id,present,stage_role FROM staff_availability WHERE sunday_date=?", [sundayDate]) : Promise.resolve([]),
     sundayDate ? all<AssignmentRow>("SELECT sa.*,COALESCE(s.name,st.name) name FROM stage_assignments sa LEFT JOIN students s ON sa.person_type='student' AND s.id=sa.person_id LEFT JOIN staff st ON sa.person_type='staff' AND st.id=sa.person_id WHERE sa.service_id IN (SELECT id FROM services WHERE term_id=? AND sunday_date=?) ORDER BY sa.service_id,sa.role,sa.side,sa.position_order", [termId, sundayDate]) : Promise.resolve([]),
-    sundayDate ? all<OverrideRow>("SELECT so.id,so.service_id,so.student_id,s.name,ts.service_part,so.role FROM stage_overrides so JOIN services sv ON sv.id=so.service_id JOIN students s ON s.id=so.student_id JOIN term_students ts ON ts.student_id=so.student_id AND ts.term_id=sv.term_id WHERE sv.term_id=? AND sv.sunday_date=? ORDER BY sv.service_part,s.name", [termId, sundayDate]) : Promise.resolve([]),
+    sundayDate ? all<OverrideRow>("SELECT so.id,so.service_id,so.student_id,s.name,ts.service_part,so.kind,so.role FROM stage_overrides so JOIN services sv ON sv.id=so.service_id JOIN students s ON s.id=so.student_id JOIN term_students ts ON ts.student_id=so.student_id AND ts.term_id=sv.term_id WHERE sv.term_id=? AND sv.sunday_date=? ORDER BY sv.service_part,s.name", [termId, sundayDate]) : Promise.resolve([]),
   ]);
 
   const stats = { 1: { attendance: 0, eligibleStudents: 0 }, 2: { attendance: 0, eligibleStudents: 0 }, singerStaff: 0, sessionStaff: 0 };
@@ -63,7 +64,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   const { user, error } = await requireApiUser(["admin"]); if (error || !user) return error;
-  const body = await request.json() as { action: string; termId?: string; meetingId?: string; sundayDate?: string; servicePart?: 1 | 2; singerSlots?: number; choirSlots?: number; leaderType?: "student" | "staff"; leaderId?: string; staffId?: string; present?: boolean; stageRole?: "singer" | "session"; serviceId?: string; personType?: "student" | "staff"; personId?: string; studentId?: string; overrideId?: string; role?: "leader" | "singer" | "choir"; side?: "left" | "center" | "right"; positionOrder?: number; specialNotes?: string };
+  const body = await request.json() as { action: string; termId?: string; meetingId?: string; sundayDate?: string; servicePart?: 1 | 2; singerSlots?: number; choirSlots?: number; leaderType?: "student" | "staff"; leaderId?: string; staffId?: string; present?: boolean; stageRole?: "singer" | "session"; serviceId?: string; personType?: "student" | "staff"; personId?: string; studentId?: string; overrideId?: string; overrideKind?: "department" | "force"; role?: "leader" | "singer" | "choir" | "random"; side?: "left" | "center" | "right"; positionOrder?: number; positionDelta?: number; specialNotes?: string; force?: boolean };
   const timestamp = now();
   if (body.action === "availability" && body.sundayDate && body.staffId) {
     const stageRole = body.stageRole === "singer" ? "singer" : "session";
@@ -79,13 +80,13 @@ export async function POST(request: Request) {
     const id = (await first<{ id: string }>("SELECT id FROM services WHERE sunday_date=? AND service_part=?", [body.sundayDate, body.servicePart]))?.id ?? createId("service");
     await run("INSERT INTO services (id,term_id,meeting_id,sunday_date,service_part,singer_slots,choir_slots,leader_type,leader_id,special_notes,status,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,'draft',?,?) ON CONFLICT(sunday_date,service_part) DO UPDATE SET meeting_id=excluded.meeting_id,singer_slots=excluded.singer_slots,choir_slots=excluded.choir_slots,leader_type=excluded.leader_type,leader_id=excluded.leader_id,special_notes=excluded.special_notes,status='draft',updated_at=excluded.updated_at", [id, body.termId, body.meetingId, body.sundayDate, body.servicePart, Math.max(0, Number(body.singerSlots) || 0), Math.max(0, Number(body.choirSlots) || 0), body.leaderType, body.leaderId, body.specialNotes?.trim() || null, timestamp, timestamp]);
     await run("UPDATE services SET leader_type=?,leader_id=?,status='draft',updated_at=? WHERE term_id=? AND sunday_date=?", [body.leaderType, body.leaderId, timestamp, body.termId, body.sundayDate]);
-  } else if (body.action === "add_override" && body.serviceId && body.studentId && (body.role === "singer" || body.role === "choir")) {
+  } else if (body.action === "add_override" && body.serviceId && body.studentId && body.overrideKind && (body.role === "singer" || body.role === "choir" || body.role === "random")) {
     const service = await first<ServiceRow>("SELECT * FROM services WHERE id=?", [body.serviceId]); if (!service) return jsonError("등단 설정을 먼저 저장해주세요.");
     const term = await first<{ eligible_statuses: string }>("SELECT eligible_statuses FROM terms WHERE id=?", [service.term_id]); const statuses = (term?.eligible_statuses ?? "present").split(",");
     const eligible = await first(`SELECT 1 ok FROM attendance a JOIN term_students ts ON ts.student_id=a.student_id AND ts.term_id=? AND ts.active=1 WHERE a.meeting_id=? AND a.student_id=? AND a.status IN (${statuses.map(() => "?").join(",")}) AND REPLACE(COALESCE(ts.worship_team,''),' ','')='싱어팀'`, [service.term_id, service.meeting_id, body.studentId, ...statuses]);
     if (!eligible) return jsonError("토요모임에 출석한 싱어팀 학생만 특별 배정할 수 있습니다.");
     await run("DELETE FROM stage_overrides WHERE student_id=? AND service_id IN (SELECT id FROM services WHERE term_id=? AND sunday_date=?)", [body.studentId, service.term_id, service.sunday_date]);
-    await run("INSERT INTO stage_overrides (id,service_id,student_id,role,created_at) VALUES (?,?,?,?,?)", [createId("override"), service.id, body.studentId, body.role, timestamp]);
+    await run("INSERT INTO stage_overrides (id,service_id,student_id,kind,role,created_at) VALUES (?,?,?,?,?,?)", [createId("override"), service.id, body.studentId, body.overrideKind, body.overrideKind === "department" ? "random" : body.role, timestamp]);
     await run("UPDATE services SET status='draft',updated_at=? WHERE id=?", [timestamp, service.id]);
   } else if (body.action === "remove_override" && body.overrideId) {
     const override = await first<{ service_id: string }>("SELECT service_id FROM stage_overrides WHERE id=?", [body.overrideId]);
@@ -102,7 +103,7 @@ export async function POST(request: Request) {
       all<{ person_id: string; total_count: number; singer_count: number; last_date: string | null }>("SELECT sa.person_id,COUNT(DISTINCT s.sunday_date) total_count,COUNT(DISTINCT CASE WHEN sa.role='singer' THEN s.sunday_date END) singer_count,MAX(s.sunday_date) last_date FROM stage_assignments sa JOIN services s ON s.id=sa.service_id WHERE sa.person_type='student' AND s.status='confirmed' AND s.sunday_date>=date(?,'-28 days') GROUP BY sa.person_id", [service.sunday_date]),
       all<{ person_id: string }>("SELECT sa.person_id FROM stage_assignments sa JOIN services s ON s.id=sa.service_id WHERE sa.person_type='staff' AND s.sunday_date=? AND s.service_part<>?", [service.sunday_date, service.service_part]),
       first<{ sunday_date: string }>("SELECT sunday_date FROM services WHERE term_id=? AND sunday_date=date(?,'-7 days') AND status='confirmed' LIMIT 1", [service.term_id, service.sunday_date]),
-      all<{ student_id: string; role: "singer" | "choir" }>("SELECT student_id,role FROM stage_overrides WHERE service_id=?", [service.id]),
+      all<{ student_id: string; kind: "department" | "force"; role: "singer" | "choir" | "random" }>("SELECT student_id,kind,role FROM stage_overrides WHERE service_id=?", [service.id]),
       all<{ student_id: string }>("SELECT so.student_id FROM stage_overrides so JOIN services s ON s.id=so.service_id WHERE s.term_id=? AND s.sunday_date=? AND s.id<>?", [service.term_id, service.sunday_date, service.id]),
       all<{ person_id: string }>("SELECT sa.person_id FROM stage_assignments sa JOIN services s ON s.id=sa.service_id WHERE sa.person_type='student' AND s.term_id=? AND s.status='confirmed' AND s.sunday_date IN (date(?,'-7 days'),date(?,'-14 days')) GROUP BY sa.person_id HAVING COUNT(DISTINCT s.sunday_date)=2", [service.term_id, service.sunday_date, service.sunday_date]),
       all<{ person_id: string }>("SELECT sa.person_id FROM stage_assignments sa JOIN services s ON s.id=sa.service_id WHERE sa.person_type='student' AND sa.role='singer' AND s.term_id=? AND s.status='confirmed' AND s.sunday_date IN (date(?,'-7 days'),date(?,'-14 days')) GROUP BY sa.person_id HAVING COUNT(DISTINCT s.sunday_date)=2", [service.term_id, service.sunday_date, service.sunday_date]),
@@ -113,14 +114,30 @@ export async function POST(request: Request) {
       const previousIds = new Set(previousRows.map((row) => row.person_id));
       missedPreviousWeekIds = new Set(students.filter((student) => student.service_part === service.service_part && isSingerTeam(student.worship_team) && eligibleStudentIds.has(student.id) && !previousIds.has(student.id)).map((student) => student.id));
     }
-    const result = generateStage({ students, staff, eligibleStudentIds, presentStaffIds: new Set(singerStaffRows.map((row) => row.staff_id)), histories, servicePart: service.service_part, singerSlots: service.singer_slots, choirSlots: service.choir_slots, leaderType: service.leader_type, leaderId: service.leader_id, usedStaffIds: new Set(usedStaff.map((row) => row.person_id)), missedPreviousWeekIds, fixedStudents: fixedRows.map((row) => ({ studentId: row.student_id, role: row.role })), excludedStudentIds: new Set(excludedRows.map((row) => row.student_id)), blockedConsecutiveStageIds: new Set(blockedStageRows.map((row) => row.person_id)), blockedConsecutiveSingerIds: new Set(blockedSingerRows.map((row) => row.person_id)), studentRatio: .75 });
+    const result = generateStage({ students, staff, eligibleStudentIds, presentStaffIds: new Set(singerStaffRows.map((row) => row.staff_id)), histories, servicePart: service.service_part, singerSlots: service.singer_slots, choirSlots: service.choir_slots, leaderType: service.leader_type, leaderId: service.leader_id, usedStaffIds: new Set(usedStaff.map((row) => row.person_id)), missedPreviousWeekIds, fixedStudents: fixedRows.filter((row) => row.kind === "force").map((row) => ({ studentId: row.student_id, role: row.role })), includedStudentIds: new Set(fixedRows.filter((row) => row.kind === "department").map((row) => row.student_id)), excludedStudentIds: new Set(excludedRows.map((row) => row.student_id)), blockedConsecutiveStageIds: new Set(blockedStageRows.map((row) => row.person_id)), blockedConsecutiveSingerIds: new Set(blockedSingerRows.map((row) => row.person_id)), studentRatio: .75, minimumFemaleSingers: 3 });
     if (!result.assignments.length) return jsonError(result.warnings.join(" "), 409);
     await run("DELETE FROM stage_assignments WHERE service_id=?", [service.id]);
     for (const item of result.assignments) await run("INSERT INTO stage_assignments (id,service_id,person_type,person_id,role,side,position_order,reason,is_manual,created_at) VALUES (?,?,?,?,?,?,?,?,0,?)", [createId("stage"), service.id, item.personType, item.personId, item.role, item.side, item.positionOrder, item.reason, timestamp]);
     await audit(user.id, "generate", "service", service.id, null, result); return Response.json({ ok: true, warnings: result.warnings });
-  } else if (body.action === "move" && body.serviceId && body.personType && body.personId && body.role && body.side) {
+  } else if (body.action === "move" && body.serviceId && body.personType && body.personId && (body.role === "singer" || body.role === "choir") && body.side) {
     if (body.personType === "staff" && body.role !== "singer") return jsonError("스탭은 싱어로만 등단할 수 있습니다.");
-    await run("UPDATE stage_assignments SET role=?,side=?,position_order=?,is_manual=1 WHERE service_id=? AND person_type=? AND person_id=?", [body.role, body.side, Number(body.positionOrder) || 0, body.serviceId, body.personType, body.personId]);
+    const current = await first<{ id: string; role: "singer" | "choir"; side: "left" | "right"; position_order: number; name: string; gender: string | null }>("SELECT sa.id,sa.role,sa.side,sa.position_order,COALESCE(s.name,st.name) name,COALESCE(s.gender,st.gender) gender FROM stage_assignments sa LEFT JOIN students s ON sa.person_type='student' AND s.id=sa.person_id LEFT JOIN staff st ON sa.person_type='staff' AND st.id=sa.person_id WHERE sa.service_id=? AND sa.person_type=? AND sa.person_id=?", [body.serviceId, body.personType, body.personId]);
+    const service = await first<ServiceRow>("SELECT * FROM services WHERE id=?", [body.serviceId]); if (!current || !service) return jsonError("이동할 등단 인원을 찾을 수 없습니다.");
+    if (body.personType === "student" && current.role !== body.role) {
+      const previous = await all<{ sunday_date: string; role: string }>("SELECT s.sunday_date,MAX(sa.role) role FROM stage_assignments sa JOIN services s ON s.id=sa.service_id WHERE sa.person_type='student' AND sa.person_id=? AND s.term_id=? AND s.status='confirmed' AND s.sunday_date IN (date(?,'-7 days'),date(?,'-14 days')) GROUP BY s.sunday_date", [body.personId, service.term_id, service.sunday_date, service.sunday_date]);
+      const currentAssignments = await all<{ personId: string; role: string; gender: string | null }>("SELECT sa.person_id personId,sa.role,COALESCE(s.gender,st.gender) gender FROM stage_assignments sa LEFT JOIN students s ON sa.person_type='student' AND s.id=sa.person_id LEFT JOIN staff st ON sa.person_type='staff' AND st.id=sa.person_id WHERE sa.service_id=? AND sa.role IN ('singer','choir')", [body.serviceId]);
+      const warnings = evaluateManualStageWarnings({ personId: body.personId, personName: current.name, newRole: body.role, previousRoles: previous.map((item) => item.role), assignments: currentAssignments, singerSlots: service.singer_slots, choirSlots: service.choir_slots, minimumFemaleSingers: 3 });
+      if (warnings.length && !body.force) return Response.json({ error: warnings.join(" "), requiresConfirmation: true, warnings }, { status: 409 });
+    }
+    const oldRole = current.role; const oldSide = current.side;
+    if (body.positionDelta && current.role === body.role && current.side === body.side) {
+      const target = await first<{ id: string; position_order: number }>("SELECT id,position_order FROM stage_assignments WHERE service_id=? AND role=? AND side=? AND position_order=?", [body.serviceId, current.role, current.side, current.position_order + Math.sign(body.positionDelta)]);
+      if (target) { await run("UPDATE stage_assignments SET position_order=?,is_manual=1 WHERE id=?", [current.position_order, target.id]); await run("UPDATE stage_assignments SET position_order=?,is_manual=1 WHERE id=?", [target.position_order, current.id]); }
+    } else {
+      const max = await first<{ value: number }>("SELECT COALESCE(MAX(position_order),-1)+1 value FROM stage_assignments WHERE service_id=? AND role=? AND side=?", [body.serviceId, body.role, body.side]);
+      await run("UPDATE stage_assignments SET role=?,side=?,position_order=?,is_manual=1 WHERE id=?", [body.role, body.side, max?.value ?? 0, current.id]);
+    }
+    await normalizePositions(body.serviceId, oldRole, oldSide); await normalizePositions(body.serviceId, body.role, body.side); await run("UPDATE services SET status='draft',updated_at=? WHERE id=?", [timestamp, body.serviceId]);
   } else if (body.action === "confirm" && body.serviceId) {
     const service = await first<{ singer_slots: number; choir_slots: number }>("SELECT singer_slots,choir_slots FROM services WHERE id=?", [body.serviceId]);
     const counts = await all<{ role: string; count: number }>("SELECT role,COUNT(*) count FROM stage_assignments WHERE service_id=? GROUP BY role", [body.serviceId]); const byRole = new Map(counts.map((row) => [row.role, Number(row.count)]));

@@ -25,7 +25,7 @@ export const termStudents = sqliteTable("term_students", {
 ]);
 
 export const staff = sqliteTable("staff", {
-  id: text("id").primaryKey(), name: text("name").notNull(), email: text("email"), duty: text("duty"),
+  id: text("id").primaryKey(), name: text("name").notNull(), gender: text("gender"), email: text("email"), duty: text("duty"),
   canSing: integer("can_sing", { mode: "boolean" }).notNull().default(false), canLeadGroup: integer("can_lead_group", { mode: "boolean" }).notNull().default(false),
   preferredService: integer("preferred_service"), active: integer("active", { mode: "boolean" }).notNull().default(true), notes: text("notes"), ...timestamps,
 }, (table) => [index("idx_staff_active").on(table.active), index("idx_staff_email").on(table.email)]);
@@ -103,7 +103,7 @@ export const stageAssignments = sqliteTable("stage_assignments", {
 }, (table) => [uniqueIndex("idx_stage_assignments_service_person").on(table.serviceId, table.personType, table.personId), index("idx_stage_assignments_history").on(table.personType, table.personId)]);
 
 export const stageOverrides = sqliteTable("stage_overrides", {
-  id: text("id").primaryKey(), serviceId: text("service_id").notNull(), studentId: text("student_id").notNull(), role: text("role").notNull(), createdAt: text("created_at").notNull(),
+  id: text("id").primaryKey(), serviceId: text("service_id").notNull(), studentId: text("student_id").notNull(), kind: text("kind").notNull().default("force"), role: text("role").notNull(), createdAt: text("created_at").notNull(),
 }, (table) => [uniqueIndex("idx_stage_overrides_service_student").on(table.serviceId, table.studentId), index("idx_stage_overrides_service").on(table.serviceId)]);
 
 export const auditLogs = sqliteTable("audit_logs", {

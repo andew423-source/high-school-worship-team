@@ -176,3 +176,45 @@ test("무대 배치는 좌우 인원과 성비를 맞추고 여성은 중앙, �
   const result = layoutStage(people); const left = result.filter((item) => item.side === "left").sort((a, b) => a.positionOrder - b.positionOrder); const right = result.filter((item) => item.side === "right").sort((a, b) => a.positionOrder - b.positionOrder);
   assert.equal(left.length, right.length); assert.ok(left[0].gender.includes("남")); assert.ok(left.at(-1).gender.includes("여")); assert.ok(right[0].gender.includes("여")); assert.ok(right.at(-1).gender.includes("남"));
 });
+
+test("여자 싱어가 부족하면 여자 스탭을 우선하고 황현민은 자동 싱어에서 제외한다", async () => {
+  const { generateStage } = await loadTypeScriptModule("../lib/stage.ts");
+  const students = [
+    { id: "female-1", name: "여학생1", gender: "여", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    { id: "female-2", name: "여학생2", gender: "여", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    ...Array.from({ length: 6 }, (_, index) => ({ id: `male-${index}`, name: `남학생${index}`, gender: "남", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 })),
+  ];
+  const staff = [
+    { id: "leader", name: "황현민", gender: "남", active: 1 },
+    { id: "female-staff", name: "여자스탭", gender: "여", active: 1 },
+    { id: "male-staff", name: "남자스탭", gender: "남", active: 1 },
+  ];
+  const result = generateStage({ students, staff, eligibleStudentIds: new Set(students.map((student) => student.id)), presentStaffIds: new Set(staff.map((person) => person.id)), histories: [], servicePart: 1, singerSlots: 5, choirSlots: 2, leaderType: "staff", leaderId: "leader", usedStaffIds: new Set(), minimumFemaleSingers: 3 });
+  const singers = result.assignments.filter((item) => item.role === "singer");
+  assert.ok(singers.filter((item) => String(item.gender).includes("여")).length >= 3);
+  assert.ok(singers.some((item) => item.personId === "female-staff"));
+  assert.ok(!singers.some((item) => item.personId === "leader"));
+});
+
+test("무조건 등단의 랜덤 역할은 기존 규칙 안에서 실제 배정된다", async () => {
+  const { generateStage } = await loadTypeScriptModule("../lib/stage.ts");
+  const students = Array.from({ length: 4 }, (_, index) => ({ id: `forced-${index}`, name: `학생${index}`, gender: index % 2 ? "여" : "남", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 }));
+  const staff = [{ id: "leader", name: "황현민", gender: "남", active: 1 }];
+  const result = generateStage({ students, staff, eligibleStudentIds: new Set(students.map((student) => student.id)), presentStaffIds: new Set(), histories: [], servicePart: 1, singerSlots: 1, choirSlots: 1, leaderType: "staff", leaderId: "leader", usedStaffIds: new Set(), fixedStudents: [{ studentId: "forced-3", role: "random" }], blockedConsecutiveStageIds: new Set(["forced-3"]) });
+  assert.ok(result.assignments.some((item) => item.personId === "forced-3" && ["singer", "choir"].includes(item.role)));
+  assert.ok(result.warnings.some((warning) => warning.includes("무조건 등단") && warning.includes("3주 연속")));
+});
+
+test("수동 역할 변경은 3주 연속 역할과 여자 싱어 부족을 구체적으로 경고한다", async () => {
+  const { evaluateManualStageWarnings } = await loadTypeScriptModule("../lib/stage.ts");
+  const assignments = [
+    { personId: "target", role: "choir", gender: "남" },
+    { personId: "female-1", role: "singer", gender: "여" },
+    { personId: "female-2", role: "singer", gender: "여" },
+  ];
+  const singerWarnings = evaluateManualStageWarnings({ personId: "target", personName: "강민채", newRole: "singer", previousRoles: ["singer", "singer"], assignments, singerSlots: 4, choirSlots: 2, minimumFemaleSingers: 3 });
+  assert.ok(singerWarnings.some((warning) => warning.includes("강민채") && warning.includes("3주 연속 싱어")));
+  assert.ok(singerWarnings.some((warning) => warning.includes("여자 싱어") && warning.includes("최소 3명")));
+  const choirWarnings = evaluateManualStageWarnings({ personId: "target", personName: "길하진", newRole: "choir", previousRoles: ["choir", "choir"], assignments, singerSlots: 4, choirSlots: 2, minimumFemaleSingers: 3 });
+  assert.ok(choirWarnings.some((warning) => warning.includes("길하진") && warning.includes("3주 연속 콰이어")));
+});
