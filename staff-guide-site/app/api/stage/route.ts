@@ -63,7 +63,7 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const { user, error } = await requireApiUser(["admin"]); if (error || !user) return error;
+  const { user, error } = await requireApiUser(["admin", "group_staff"]); if (error || !user) return error;
   const body = await request.json() as { action: string; termId?: string; meetingId?: string; sundayDate?: string; servicePart?: 1 | 2; singerSlots?: number; choirSlots?: number; leaderType?: "student" | "staff"; leaderId?: string; staffId?: string; present?: boolean; stageRole?: "singer" | "session"; serviceId?: string; personType?: "student" | "staff"; personId?: string; studentId?: string; overrideId?: string; overrideKind?: "department" | "force"; role?: "leader" | "singer" | "choir" | "random"; side?: "left" | "center" | "right"; positionOrder?: number; positionDelta?: number; targetPosition?: number; specialNotes?: string; force?: boolean };
   const timestamp = now();
   if (body.action === "availability" && body.sundayDate && body.staffId) {

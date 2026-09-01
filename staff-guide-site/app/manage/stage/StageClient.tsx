@@ -27,10 +27,10 @@ function shortDate(date: string) { const value = new Date(`${date}T00:00:00Z`); 
 function writeStageDrag(event: DragEvent, payload: StageDragPayload) { event.dataTransfer.effectAllowed = "move"; event.dataTransfer.setData("text/plain", JSON.stringify(payload)); }
 function readStageDrag(event: DragEvent) { try { return JSON.parse(event.dataTransfer.getData("text/plain")) as StageDragPayload; } catch { return null; } }
 
-export default function StageClient({ initialTermId = "" }: { initialTermId?: string }) {
+export default function StageClient({ initialTermId = "", initialMeetingId = "" }: { initialTermId?: string; initialMeetingId?: string }) {
   const terms = useApi<{ terms: Term[]; meetings: unknown[] }>("/api/terms", { terms: [], meetings: [] });
   const [termId, setTermId] = useState(initialTermId); const activeId = termId || terms.data.terms.find((term) => term.status === "active")?.id || "";
-  const base = useApi<StageData>(activeId ? `/api/stage?termId=${activeId}` : null, emptyData); const [meetingId, setMeetingId] = useState("");
+  const base = useApi<StageData>(activeId ? `/api/stage?termId=${activeId}` : null, emptyData); const [meetingId, setMeetingId] = useState(initialMeetingId);
   const targetSunday = useMemo(() => nextSunday(), []);
   const defaultMeeting = useMemo(() => { const ordered = [...base.data.meetings].sort((a, b) => sundayAfter(a.meeting_date).localeCompare(sundayAfter(b.meeting_date))); return ordered.find((meeting) => sundayAfter(meeting.meeting_date) >= targetSunday) ?? ordered.at(-1); }, [base.data.meetings, targetSunday]);
   const currentMeeting = base.data.meetings.find((item) => item.id === meetingId) ?? defaultMeeting; const sunday = currentMeeting ? sundayAfter(currentMeeting.meeting_date) : "";
@@ -57,7 +57,7 @@ export default function StageClient({ initialTermId = "" }: { initialTermId?: st
     else { const link = document.createElement("a"); link.download = `${service.sunday_date}-${service.service_part}부-등단표.png`; link.href = canvas.toDataURL("image/png"); link.click(); }
   };
 
-  return <main className="manage-content stage-page">{initialTermId && <a className="term-back" href={`/manage/terms/${initialTermId}`}>← 학기 운영 메뉴</a>}<PageTitle eyebrow="05 · STAGE" title="주일 등단 배정" detail="토요 출결과 스탭 참석을 바탕으로 공평하게 배정하고 등단표를 만듭니다." />
+  return <main className="manage-content stage-page">{initialTermId && <a className="term-back" href={initialMeetingId ? `/manage/weeks/${initialMeetingId}` : `/manage/terms/${initialTermId}`}>← {initialMeetingId ? "주차 메뉴" : "학기 운영 메뉴"}</a>}<PageTitle eyebrow="05 · STAGE" title="주일 등단 배정" detail="토요 출결과 스탭 참석을 바탕으로 공평하게 배정하고 등단표를 만듭니다." />
     <div className="manage-toolbar">{!initialTermId && <select className="manage-select" value={activeId} onChange={(event) => { setTermId(event.target.value); setMeetingId(""); }}><option value="">학기 선택</option>{terms.data.terms.map((term) => <option value={term.id} key={term.id}>{term.name}</option>)}</select>}<label className="manage-field">등단 주일<select className="manage-select" value={currentMeeting?.id ?? ""} onChange={(event) => setMeetingId(event.target.value)}><option value="">토요모임 선택</option>{base.data.meetings.map((meeting) => <option value={meeting.id} key={meeting.id}>{shortDate(meeting.meeting_date)}(토) → {shortDate(sundayAfter(meeting.meeting_date))}(일)</option>)}</select></label></div>
     {message && <Notice error={/부족|않|위험|선택/.test(message)}>{message}</Notice>}
     {!sunday ? <Notice>학기에 등록된 토요모임이 없습니다.</Notice> : <div className="manage-stack stage-workspace" style={{ marginTop: 14 }}>
