@@ -126,3 +126,48 @@ test("지난주 미등단 학생을 먼저 배정하고 선택한 스탭을 인�
   assert.deepEqual(new Set(result.assignments.filter((item) => item.personType === "student").map((item) => item.personId)), new Set(["missed1", "missed2"]));
   assert.ok(!result.warnings.some((warning) => warning.includes("2주 연속")));
 });
+
+test("학생은 출석 후보의 70~80%만 배정하고 남은 싱어 자리는 스탭이 채운다", async () => {
+  const { generateStage } = await loadTypeScriptModule("../lib/stage.ts");
+  const students = Array.from({ length: 8 }, (_, index) => ({ id: `ratio-${index}`, name: `학생${index}`, gender: index % 2 ? "여" : "남", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 }));
+  const staff = [{ id: "leader", name: "황현민", active: 1 }, { id: "helper", name: "싱어스탭", active: 1 }];
+  const result = generateStage({ students, staff, eligibleStudentIds: new Set(students.map((student) => student.id)), presentStaffIds: new Set(["helper"]), histories: [], servicePart: 1, singerSlots: 5, choirSlots: 2, leaderType: "staff", leaderId: "leader", usedStaffIds: new Set() });
+  assert.equal(result.assignments.filter((item) => item.personType === "student" && item.role !== "leader").length, 6);
+  assert.ok(result.assignments.some((item) => item.personId === "helper" && item.role === "singer"));
+});
+
+test("지난 2주 연속 등단한 학생은 쉬고 싱어 연속 학생은 콰이어로 우선 배정한다", async () => {
+  const { generateStage } = await loadTypeScriptModule("../lib/stage.ts");
+  const students = [
+    { id: "rest", name: "휴식", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    { id: "choir", name: "콰이어전환", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    ...Array.from({ length: 4 }, (_, index) => ({ id: `normal-${index}`, name: `일반${index}`, service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 })),
+  ];
+  const staff = [{ id: "leader", name: "황현민", active: 1 }];
+  const result = generateStage({ students, staff, eligibleStudentIds: new Set(students.map((student) => student.id)), presentStaffIds: new Set(), histories: [], servicePart: 1, singerSlots: 2, choirSlots: 2, leaderType: "staff", leaderId: "leader", usedStaffIds: new Set(), blockedConsecutiveStageIds: new Set(["rest"]), blockedConsecutiveSingerIds: new Set(["choir"]) });
+  assert.ok(!result.assignments.some((item) => item.personId === "rest"));
+  assert.ok(result.assignments.some((item) => item.personId === "choir" && item.role === "choir"));
+});
+
+test("콰이어가 없으면 싱어 3주 연속 제한을 예외로 두고 타부서 특별 배정을 반영한다", async () => {
+  const { generateStage } = await loadTypeScriptModule("../lib/stage.ts");
+  const students = [
+    { id: "cross", name: "타부서", service_part: 2, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+    { id: "same", name: "같은부서", service_part: 1, worship_team: "싱어팀", is_student_leader: 0, active: 1 },
+  ];
+  const staff = [{ id: "leader", name: "황현민", active: 1 }];
+  const result = generateStage({ students, staff, eligibleStudentIds: new Set(students.map((student) => student.id)), presentStaffIds: new Set(), histories: [], servicePart: 1, singerSlots: 2, choirSlots: 0, leaderType: "staff", leaderId: "leader", usedStaffIds: new Set(), blockedConsecutiveSingerIds: new Set(["cross"]), fixedStudents: [{ studentId: "cross", role: "singer" }] });
+  assert.ok(result.assignments.some((item) => item.personId === "cross" && item.role === "singer"));
+});
+
+test("무대 배치는 좌우 인원과 성비를 맞추고 여성은 중앙, 남성은 바깥에 둔다", async () => {
+  const { layoutStage } = await loadTypeScriptModule("../lib/stage.ts");
+  const people = [
+    { personType: "student", personId: "m1", name: "남1", gender: "남", role: "singer", reason: "" },
+    { personType: "student", personId: "m2", name: "남2", gender: "남", role: "singer", reason: "" },
+    { personType: "student", personId: "f1", name: "여1", gender: "여", role: "singer", reason: "" },
+    { personType: "student", personId: "f2", name: "여2", gender: "여", role: "singer", reason: "" },
+  ];
+  const result = layoutStage(people); const left = result.filter((item) => item.side === "left").sort((a, b) => a.positionOrder - b.positionOrder); const right = result.filter((item) => item.side === "right").sort((a, b) => a.positionOrder - b.positionOrder);
+  assert.equal(left.length, right.length); assert.ok(left[0].gender.includes("남")); assert.ok(left.at(-1).gender.includes("여")); assert.ok(right[0].gender.includes("여")); assert.ok(right.at(-1).gender.includes("남"));
+});

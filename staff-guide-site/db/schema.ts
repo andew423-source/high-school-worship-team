@@ -88,7 +88,7 @@ export const importBatches = sqliteTable("import_batches", {
 export const services = sqliteTable("services", {
   id: text("id").primaryKey(), termId: text("term_id").notNull(), meetingId: text("meeting_id").notNull(), sundayDate: text("sunday_date").notNull(),
   servicePart: integer("service_part").notNull(), singerSlots: integer("singer_slots").notNull(), choirSlots: integer("choir_slots").notNull(),
-  leaderType: text("leader_type"), leaderId: text("leader_id"), status: text("status").notNull().default("draft"), ...timestamps,
+  leaderType: text("leader_type"), leaderId: text("leader_id"), specialNotes: text("special_notes"), status: text("status").notNull().default("draft"), ...timestamps,
 }, (table) => [uniqueIndex("idx_services_date_part").on(table.sundayDate, table.servicePart), index("idx_services_term").on(table.termId)]);
 
 export const staffAvailability = sqliteTable("staff_availability", {
@@ -101,6 +101,10 @@ export const stageAssignments = sqliteTable("stage_assignments", {
   role: text("role").notNull(), side: text("side").notNull(), positionOrder: integer("position_order").notNull(), reason: text("reason"),
   isManual: integer("is_manual", { mode: "boolean" }).notNull().default(false), createdAt: text("created_at").notNull(),
 }, (table) => [uniqueIndex("idx_stage_assignments_service_person").on(table.serviceId, table.personType, table.personId), index("idx_stage_assignments_history").on(table.personType, table.personId)]);
+
+export const stageOverrides = sqliteTable("stage_overrides", {
+  id: text("id").primaryKey(), serviceId: text("service_id").notNull(), studentId: text("student_id").notNull(), role: text("role").notNull(), createdAt: text("created_at").notNull(),
+}, (table) => [uniqueIndex("idx_stage_overrides_service_student").on(table.serviceId, table.studentId), index("idx_stage_overrides_service").on(table.serviceId)]);
 
 export const auditLogs = sqliteTable("audit_logs", {
   id: text("id").primaryKey(), actorUserId: text("actor_user_id").notNull(), action: text("action").notNull(), entityType: text("entity_type").notNull(),

@@ -42,9 +42,10 @@ export async function ensureSchema() {
     `CREATE TABLE IF NOT EXISTS group_rule_members (id TEXT PRIMARY KEY, rule_id TEXT NOT NULL, student_id TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(rule_id, student_id))`,
     `CREATE TABLE IF NOT EXISTS attendance (id TEXT PRIMARY KEY, meeting_id TEXT NOT NULL, student_id TEXT NOT NULL, status TEXT NOT NULL, note TEXT, updated_by TEXT NOT NULL, created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(meeting_id, student_id))`,
     `CREATE TABLE IF NOT EXISTS import_batches (id TEXT PRIMARY KEY, term_id TEXT, kind TEXT NOT NULL, filename TEXT NOT NULL, object_key TEXT NOT NULL, row_count INTEGER NOT NULL, imported_by TEXT NOT NULL, created_at TEXT NOT NULL)`,
-    `CREATE TABLE IF NOT EXISTS services (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, meeting_id TEXT NOT NULL, sunday_date TEXT NOT NULL, service_part INTEGER NOT NULL, singer_slots INTEGER NOT NULL, choir_slots INTEGER NOT NULL, leader_type TEXT, leader_id TEXT, status TEXT NOT NULL DEFAULT 'draft', created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(sunday_date, service_part))`,
+    `CREATE TABLE IF NOT EXISTS services (id TEXT PRIMARY KEY, term_id TEXT NOT NULL, meeting_id TEXT NOT NULL, sunday_date TEXT NOT NULL, service_part INTEGER NOT NULL, singer_slots INTEGER NOT NULL, choir_slots INTEGER NOT NULL, leader_type TEXT, leader_id TEXT, special_notes TEXT, status TEXT NOT NULL DEFAULT 'draft', created_at TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(sunday_date, service_part))`,
     `CREATE TABLE IF NOT EXISTS staff_availability (id TEXT PRIMARY KEY, sunday_date TEXT NOT NULL, staff_id TEXT NOT NULL, present INTEGER NOT NULL DEFAULT 0, stage_role TEXT NOT NULL DEFAULT 'session', updated_by TEXT NOT NULL, updated_at TEXT NOT NULL, UNIQUE(sunday_date, staff_id))`,
     `CREATE TABLE IF NOT EXISTS stage_assignments (id TEXT PRIMARY KEY, service_id TEXT NOT NULL, person_type TEXT NOT NULL, person_id TEXT NOT NULL, role TEXT NOT NULL, side TEXT NOT NULL, position_order INTEGER NOT NULL, reason TEXT, is_manual INTEGER NOT NULL DEFAULT 0, created_at TEXT NOT NULL, UNIQUE(service_id, person_type, person_id))`,
+    `CREATE TABLE IF NOT EXISTS stage_overrides (id TEXT PRIMARY KEY, service_id TEXT NOT NULL, student_id TEXT NOT NULL, role TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(service_id, student_id))`,
     `CREATE TABLE IF NOT EXISTS audit_logs (id TEXT PRIMARY KEY, actor_user_id TEXT NOT NULL, action TEXT NOT NULL, entity_type TEXT NOT NULL, entity_id TEXT, before_json TEXT, after_json TEXT, created_at TEXT NOT NULL)`,
     `CREATE INDEX IF NOT EXISTS idx_students_active_service ON students(active, service_part)`,
     `CREATE INDEX IF NOT EXISTS idx_term_students_term_active_service ON term_students(term_id, active, service_part)`,
@@ -58,6 +59,7 @@ export async function ensureSchema() {
     `CREATE INDEX IF NOT EXISTS idx_attendance_student ON attendance(student_id)`,
     `CREATE INDEX IF NOT EXISTS idx_services_term ON services(term_id)`,
     `CREATE INDEX IF NOT EXISTS idx_stage_assignments_history ON stage_assignments(person_type, person_id)`,
+    `CREATE INDEX IF NOT EXISTS idx_stage_overrides_service ON stage_overrides(service_id)`,
     `CREATE INDEX IF NOT EXISTS idx_audit_logs_created ON audit_logs(created_at)`,
   ];
   await db.batch(statements.map((sql) => db.prepare(sql)));
@@ -72,6 +74,10 @@ export async function ensureSchema() {
   const availabilityColumns = await db.prepare("PRAGMA table_info(staff_availability)").all<{ name: string }>();
   if (!(availabilityColumns.results ?? []).some((column) => column.name === "stage_role")) {
     await db.prepare("ALTER TABLE staff_availability ADD COLUMN stage_role TEXT NOT NULL DEFAULT 'session'").run();
+  }
+  const serviceColumns = await db.prepare("PRAGMA table_info(services)").all<{ name: string }>();
+  if (!(serviceColumns.results ?? []).some((column) => column.name === "special_notes")) {
+    await db.prepare("ALTER TABLE services ADD COLUMN special_notes TEXT").run();
   }
   await db.prepare(`INSERT OR IGNORE INTO term_students (id,term_id,student_id,grade,gender,service_part,worship_team,is_student_leader,active,created_at,updated_at)
     SELECT 'termstudent_' || lower(hex(randomblob(16))),t.id,s.id,s.grade,s.gender,s.service_part,s.worship_team,s.is_student_leader,s.active,s.created_at,s.updated_at

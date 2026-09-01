@@ -13,6 +13,7 @@ const aliases: Record<string, string[]> = {
 function cleanKey(value: string) { return value.toLowerCase().replace(/[\s_()-]/g, ""); }
 function valueFor(row: RawRow, field: string, mapping: Record<string, string>) { if (mapping[field]) return row[mapping[field]]; const entry = Object.entries(row).find(([key]) => aliases[field]?.map(cleanKey).includes(cleanKey(key))); return entry?.[1]; }
 function booleanValue(value: unknown) { return ["1", "true", "y", "yes", "예", "가능", "o", "싱어"].includes(String(value ?? "").trim().toLowerCase()); }
+function studentLeaderValue(value: unknown) { const normalized = String(value ?? "").trim().toLowerCase().replace(/\s/g, ""); return booleanValue(value) || normalized.includes("학생인도") || normalized.includes("인도자"); }
 function serviceValue(value: unknown) { const match = String(value ?? "").match(/[12]/); return match ? Number(match[0]) : null; }
 function worshipTeamValue(value: unknown) { return String(value ?? "").trim() || null; }
 
@@ -51,7 +52,7 @@ export async function POST(request: Request) {
     if (kind === "students") {
       const servicePart = serviceValue(valueFor(row, "servicePart", mapping)); if (!servicePart) errors.push("예배 부서는 1부 또는 2부여야 합니다.");
       const worshipTeam = worshipTeamValue(valueFor(row, "worshipTeam", mapping));
-      return { rowNumber: index + 2, name, grade: Number(valueFor(row, "grade", mapping)) || null, gender: String(valueFor(row, "gender", mapping) ?? "").trim() || null, servicePart, worshipTeam, isStudentLeader: booleanValue(valueFor(row, "isStudentLeader", mapping)), notes: String(valueFor(row, "notes", mapping) ?? "").trim() || null, duplicate: existingNames.has(name), errors };
+      return { rowNumber: index + 2, name, grade: Number(valueFor(row, "grade", mapping)) || null, gender: String(valueFor(row, "gender", mapping) ?? "").trim() || null, servicePart, worshipTeam, isStudentLeader: studentLeaderValue(valueFor(row, "isStudentLeader", mapping)), notes: String(valueFor(row, "notes", mapping) ?? "").trim() || null, duplicate: existingNames.has(name), errors };
     }
     return { rowNumber: index + 2, name, email: String(valueFor(row, "email", mapping) ?? "").trim().toLowerCase() || null, duty: String(valueFor(row, "duty", mapping) ?? "").trim() || null, canSing: booleanValue(valueFor(row, "canSing", mapping)), canLeadGroup: booleanValue(valueFor(row, "canLeadGroup", mapping)), preferredService: serviceValue(valueFor(row, "preferredService", mapping)), notes: String(valueFor(row, "notes", mapping) ?? "").trim() || null, duplicate: existingNames.has(name), errors };
   });
