@@ -11,8 +11,8 @@ export function reorderStageIds(ids: string[], movingId: string, targetPosition:
   const ordered = ids.filter((id) => id !== movingId); const position = Math.max(0, Math.min(Math.trunc(targetPosition), ordered.length)); ordered.splice(position, 0, movingId); return ordered;
 }
 
-export function stageRoleCountsComplete(counts: ReadonlyMap<string, number>, singerSlots: number, choirSlots: number) {
-  return (counts.get("leader") ?? 0) === 1 && (counts.get("singer") ?? 0) === singerSlots && (counts.get("choir") ?? 0) === choirSlots;
+export function stageCanConfirm(counts: ReadonlyMap<string, number>) {
+  return (counts.get("leader") ?? 0) === 1;
 }
 
 export function evaluateManualStageWarnings(params: { personId: string; personName: string; newRole: "singer" | "choir"; previousRoles: string[]; assignments: Array<{ personId: string; role: string; gender?: string | null }>; singerSlots: number; choirSlots: number; minimumFemaleSingers?: number }) {

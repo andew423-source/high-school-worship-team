@@ -1,7 +1,7 @@
 import { all, audit, createId, first, now, run } from "../../../db/runtime";
 import { jsonError, requireApiUser } from "../../../lib/api-auth";
 import type { StaffRecord, StudentRecord } from "../../../lib/domain";
-import { evaluateManualStageWarnings, generateStage, reorderStageIds, stageRoleCountsComplete } from "../../../lib/stage";
+import { evaluateManualStageWarnings, generateStage, reorderStageIds, stageCanConfirm } from "../../../lib/stage";
 
 export const dynamic = "force-dynamic";
 
@@ -171,7 +171,7 @@ export async function POST(request: Request) {
   } else if (body.action === "confirm" && body.serviceId) {
     const service = await first<{ singer_slots: number; choir_slots: number }>("SELECT singer_slots,choir_slots FROM services WHERE id=?", [body.serviceId]);
     const counts = await all<{ role: string; count: number }>("SELECT role,COUNT(*) count FROM stage_assignments WHERE service_id=? GROUP BY role", [body.serviceId]); const byRole = new Map(counts.map((row) => [row.role, Number(row.count)]));
-    if (!service || !stageRoleCountsComplete(byRole, service.singer_slots, service.choir_slots)) return jsonError("인도자와 역할별 정원이 모두 채워져야 확정할 수 있습니다.", 409);
+    if (!service || !stageCanConfirm(byRole)) return jsonError("인도자가 1명 배정되어야 확정할 수 있습니다.", 409);
     await run("UPDATE services SET status='confirmed',updated_at=? WHERE id=?", [timestamp, body.serviceId]);
   } else return jsonError("지원하지 않는 작업입니다.");
   await audit(user.id, body.action, "stage", body.serviceId ?? body.sundayDate ?? null, null, body); return Response.json({ ok: true });

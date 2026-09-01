@@ -14,10 +14,11 @@ test("학생 DB의 인도자 여부에서 학생 인도자 문구를 인식한�
   assert.equal(studentLeaderValue("학생 인도자"), true); assert.equal(studentLeaderValue("학생인도자"), true); assert.equal(studentLeaderValue(""), false); assert.equal(studentLeaderValue("일반 학생"), false);
 });
 
-test("콰이어 정원이 0명이면 콰이어 집계 행이 없어도 등단 확정 조건을 만족한다", async () => {
-  const { stageRoleCountsComplete } = await loadTypeScriptModule("../lib/stage.ts");
-  assert.equal(stageRoleCountsComplete(new Map([["leader", 1], ["singer", 7]]), 7, 0), true);
-  assert.equal(stageRoleCountsComplete(new Map([["leader", 1], ["singer", 6]]), 7, 0), false);
+test("싱어·콰이어 실제 인원이 목표값과 달라도 인도자가 한 명이면 확정할 수 있다", async () => {
+  const { stageCanConfirm } = await loadTypeScriptModule("../lib/stage.ts");
+  assert.equal(stageCanConfirm(new Map([["leader", 1], ["singer", 5], ["choir", 2]])), true);
+  assert.equal(stageCanConfirm(new Map([["singer", 7]])), false);
+  assert.equal(stageCanConfirm(new Map([["leader", 2], ["singer", 7]])), false);
 });
 
 test("자동 조 편성은 같은 조·다른 조와 정원을 지킨다", async () => {
