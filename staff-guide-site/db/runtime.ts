@@ -8,7 +8,7 @@ type D1Prepared = {
   run: () => Promise<D1Result>;
 };
 type D1Binding = { prepare: (sql: string) => D1Prepared; batch: (statements: D1Prepared[]) => Promise<D1Result[]> };
-type R2Binding = { put: (key: string, value: ArrayBuffer, options?: { httpMetadata?: { contentType?: string } }) => Promise<unknown> };
+type R2Binding = { put: (key: string, value: ArrayBuffer, options?: { httpMetadata?: { contentType?: string } }) => Promise<unknown>; get: (key: string) => Promise<{ arrayBuffer: () => Promise<ArrayBuffer> } | null> };
 let schemaReady = false;
 
 export function getD1(): D1Binding {

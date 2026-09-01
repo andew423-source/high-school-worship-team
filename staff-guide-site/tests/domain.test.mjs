@@ -9,6 +9,11 @@ async function loadTypeScriptModule(relativePath) {
   return import(`data:text/javascript;base64,${Buffer.from(output).toString("base64")}`);
 }
 
+test("학생 DB의 인도자 여부에서 학생 인도자 문구를 인식한다", async () => {
+  const { studentLeaderValue } = await loadTypeScriptModule("../lib/people-import.ts");
+  assert.equal(studentLeaderValue("학생 인도자"), true); assert.equal(studentLeaderValue("학생인도자"), true); assert.equal(studentLeaderValue(""), false); assert.equal(studentLeaderValue("일반 학생"), false);
+});
+
 test("자동 조 편성은 같은 조·다른 조와 정원을 지킨다", async () => {
   const { autoAssignGroups } = await loadTypeScriptModule("../lib/grouping.ts");
   const students = [

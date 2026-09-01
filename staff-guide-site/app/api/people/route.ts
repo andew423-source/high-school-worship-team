@@ -1,6 +1,7 @@
 import * as XLSX from "xlsx";
 import { all, audit, createId, first, getUploads, now, run } from "../../../db/runtime";
 import { jsonError, requireApiUser } from "../../../lib/api-auth";
+import { studentLeaderValue } from "../../../lib/people-import";
 
 export const dynamic = "force-dynamic";
 type RawRow = Record<string, unknown>;
@@ -13,7 +14,6 @@ const aliases: Record<string, string[]> = {
 function cleanKey(value: string) { return value.toLowerCase().replace(/[\s_()-]/g, ""); }
 function valueFor(row: RawRow, field: string, mapping: Record<string, string>) { if (mapping[field]) return row[mapping[field]]; const entry = Object.entries(row).find(([key]) => aliases[field]?.map(cleanKey).includes(cleanKey(key))); return entry?.[1]; }
 function booleanValue(value: unknown) { return ["1", "true", "y", "yes", "예", "가능", "o", "싱어"].includes(String(value ?? "").trim().toLowerCase()); }
-function studentLeaderValue(value: unknown) { const normalized = String(value ?? "").trim().toLowerCase().replace(/\s/g, ""); return booleanValue(value) || normalized.includes("학생인도") || normalized.includes("인도자"); }
 function serviceValue(value: unknown) { const match = String(value ?? "").match(/[12]/); return match ? Number(match[0]) : null; }
 function worshipTeamValue(value: unknown) { return String(value ?? "").trim() || null; }
 
@@ -67,6 +67,19 @@ export async function POST(request: Request) {
 export async function PUT(request: Request) {
   const { user, error } = await requireApiUser(["admin"]); if (error || !user) return error;
   const body = await request.json() as { action?: string; kind: "students" | "staff"; termId?: string; rows?: Array<Record<string, unknown>>; objectKey?: string; filename?: string; allowDuplicates?: boolean; record?: Record<string, unknown>; userId?: string; role?: string; staffId?: string | null; status?: string };
+  if (body.action === "refresh_student_leaders" && body.termId) {
+    const batch = await first<{ object_key: string; filename: string }>("SELECT object_key,filename FROM import_batches WHERE term_id=? AND kind='students' ORDER BY created_at DESC LIMIT 1", [body.termId]);
+    if (!batch) return jsonError("이 학기의 학생 DB 업로드 기록이 없습니다.");
+    let object: Awaited<ReturnType<ReturnType<typeof getUploads>["get"]>>; try { object = await getUploads().get(batch.object_key); } catch { return jsonError("업로드 원본 저장소에 연결할 수 없습니다. 같은 학생 DB 파일을 다시 올려주세요.", 503); } if (!object) return jsonError("기존 업로드 원본을 찾을 수 없습니다. 같은 학생 DB 파일을 다시 올려주세요.", 404);
+    const buffer = await object.arrayBuffer(); const workbook = /\.csv$/i.test(batch.filename) ? XLSX.read(new TextDecoder("utf-8").decode(buffer).replace(/^\uFEFF/, ""), { type: "string", cellDates: false }) : XLSX.read(buffer, { type: "array", cellDates: false });
+    const rawRows = XLSX.utils.sheet_to_json<RawRow>(workbook.Sheets[workbook.SheetNames[0]], { defval: "" }); const timestamp = now(); const leaders: string[] = []; let matched = 0;
+    for (const row of rawRows) {
+      const name = String(valueFor(row, "name", {}) ?? "").trim(); if (!name) continue;
+      const matches = await all<{ id: string }>("SELECT s.id FROM term_students ts JOIN students s ON s.id=ts.student_id WHERE ts.term_id=? AND s.name=?", [body.termId, name]); if (matches.length !== 1) continue;
+      const isLeader = studentLeaderValue(valueFor(row, "isStudentLeader", {})); await run("UPDATE term_students SET is_student_leader=?,updated_at=? WHERE term_id=? AND student_id=?", [Number(isLeader), timestamp, body.termId, matches[0].id]); await run("UPDATE students SET is_student_leader=?,updated_at=? WHERE id=?", [Number(isLeader), timestamp, matches[0].id]); matched += 1; if (isLeader) leaders.push(name);
+    }
+    await audit(user.id, "refresh_student_leaders", "term", body.termId, null, { matched, leaders }); return Response.json({ ok: true, matched, leaders });
+  }
   if (body.action === "authorize_user" && body.userId) {
     const role = ["admin", "group_staff", "staff"].includes(body.role ?? "") ? body.role : "staff";
     const status = body.status === "disabled" ? "disabled" : "active";
@@ -88,7 +101,7 @@ export async function PUT(request: Request) {
   }
   if (!body.rows?.length || !body.objectKey || !body.filename) return jsonError("가져올 데이터가 없습니다.");
   if (body.kind === "students" && !body.termId) return jsonError("학생 명단을 넣을 학기를 먼저 선택해주세요.");
-  const validRows = body.rows.filter((row) => !(row.errors as unknown[])?.length && (body.allowDuplicates || !row.duplicate)); const timestamp = now();
+  const validRows = body.rows.filter((row) => !(row.errors as unknown[])?.length && (body.kind === "students" || body.allowDuplicates || !row.duplicate)); const timestamp = now();
   for (const row of validRows) {
     if (body.kind === "students") {
       const existing = await first<{ id: string }>("SELECT id FROM students WHERE name=? ORDER BY created_at LIMIT 1", [row.name]);
