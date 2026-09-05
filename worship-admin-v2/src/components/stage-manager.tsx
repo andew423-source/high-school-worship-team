@@ -7,7 +7,7 @@ import { horizontalListSortingStrategy, SortableContext, useSortable } from "@dn
 import { CSS } from "@dnd-kit/utilities";
 import { useQuery } from "@tanstack/react-query";
 import { toPng } from "html-to-image";
-import { includeStageExportNode } from "@/lib/stage-export";
+import { includeStageExportNode, prepareStageExport } from "@/lib/stage-export";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { getRestingStageStudents, summarizeStageAttendance } from "@/domain/stage";
 import type { StageAssignment, StageDepartment, StageHistory, StagePerformanceRole, StagePersonType, StageSide } from "@/domain/stage";
@@ -197,7 +197,28 @@ function StageWorkspace({ meetingId, initial, reload }: { meetingId: string; ini
     setOverrideRole("");
     setMessage(null);
   }
-  async function exportImage(department: StageDepartment, pdf = false) { const node = exportRefs[department].current; if (!node) return; setBusy(true); try { const dataUrl = await toPng(node, { pixelRatio: 2, backgroundColor: "#12221b", filter: includeStageExportNode, style: { gridTemplateRows: node.querySelector('.choir-row[data-export-empty="true"]') ? "auto 1fr auto" : "auto 1fr 1fr auto" } }); const label = `${current.plan.sunday_date}-${department === "FIRST" ? "1부" : "2부"}-등단표`; if (pdf) { const { jsPDF } = await import("jspdf"); const document = new jsPDF({ orientation: "landscape", unit: "px", format: [node.clientWidth, node.clientHeight] }); document.addImage(dataUrl, "PNG", 0, 0, node.clientWidth, node.clientHeight); document.save(`${label}.pdf`); } else { const link = document.createElement("a"); link.download = `${label}.png`; link.href = dataUrl; link.click(); } } finally { setBusy(false); } }
+  async function exportImage(department: StageDepartment, pdf = false) {
+    const node = exportRefs[department].current;
+    if (!node || busy) return;
+    setBusy(true);
+    let prepared: ReturnType<typeof prepareStageExport> | undefined;
+    try {
+      await document.fonts.ready;
+      prepared = prepareStageExport(node);
+      const { width, height } = prepared;
+      const dataUrl = await toPng(prepared.node, { width, height, pixelRatio: 2, backgroundColor: "#12221b", filter: includeStageExportNode });
+      const label = `${current.plan.sunday_date}-${department === "FIRST" ? "1부" : "2부"}-등단표`;
+      if (pdf) {
+        const { jsPDF } = await import("jspdf");
+        const output = new jsPDF({ orientation: width >= height ? "landscape" : "portrait", unit: "px", format: [width, height] });
+        output.addImage(dataUrl, "PNG", 0, 0, width, height);
+        output.save(`${label}.pdf`);
+      } else {
+        const link = document.createElement("a");
+        link.download = `${label}.png`; link.href = dataUrl; link.click();
+      }
+    } finally { prepared?.cleanup(); setBusy(false); }
+  }
 
   const meeting = Array.isArray(current.plan.meetings) ? current.plan.meetings[0] : current.plan.meetings;
   const term = Array.isArray(current.plan.terms) ? current.plan.terms[0] : current.plan.terms;
