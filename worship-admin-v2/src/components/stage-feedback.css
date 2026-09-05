@@ -1,0 +1,30 @@
+.stage-confirm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgb(0 0 0 / 45%);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+.stage-confirm-dialog {
+  width: min(100%, 36rem);
+  max-height: 85dvh;
+  overflow: auto;
+}
+.stage-confirm-dialog ul { padding-left: 1.5rem; }
+.stage-confirm-dialog li { margin-block: .5rem; }
+.stage-confirm-dialog .button-row { display: flex; gap: .75rem; margin-top: 1rem; }
+.sticky-actions [role="status"] { flex-basis: 100%; margin: 0; }
+.sticky-actions button:disabled { opacity: .55; cursor: wait; }
+.staff-only-control { display: flex; align-items: flex-start; gap: .75rem; padding: 1rem; margin-bottom: 1rem; border: 1px solid #c9d9d0; border-radius: .8rem; background: #eef5f0; }
+.staff-only-control input { margin-top: .25rem; width: 1.2rem; height: 1.2rem; accent-color: #155b47; }
+.staff-only-control small, .stage-attendance-count small { display: block; margin-top: .3rem; color: #61736a; font-size: .8rem; font-weight: normal; }
+.stage-attendance-count { margin: .4rem 0 .6rem; font-size: .9rem; }
+.stage-count-note { color: #61736a; font-size: .8rem; line-height: 1.6; margin-top: .75rem; }
+.stage-confirm-dialog { margin: auto; }
+.stage-confirm-dialog::backdrop { background: rgb(10 25 17 / .55); }
+.stage-control .target-control { grid-template-columns: 1fr 1fr; }
+.stage-control .target-control > strong, .stage-control .stage-attendance-count { grid-column: 1 / -1; }
+.stage-workspace .stage-canvas { grid-template-rows: auto 1fr 1fr auto; }
+.stage-export-title { margin: 0; text-align: center; color: #fff; font-size: 24px; font-weight: 800; letter-spacing: .03em; }
