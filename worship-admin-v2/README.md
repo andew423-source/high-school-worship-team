@@ -73,6 +73,8 @@ SUPABASE_PROJECT_ID=Supabase 프로젝트 ref
 
 마이그레이션 적용 후 `/admin/terms`에서 학기를 만들고 `/admin/people?termId=...`에서 승인 연결에 사용할 스탭을 등록합니다. 이후 Supabase access token이 설정된 터미널에서 `npm run db:generate`를 실행해 `src/types/database.ts`를 최신 스키마로 생성합니다.
 
+승인된 스탭의 다른 조 출결 대행 기능을 배포할 때는 `supabase/migrations/202609120008_shared_staff_attendance.sql`을 먼저 적용합니다. 기존 출결 데이터는 변경하지 않고 RLS와 저장 함수가 공통으로 사용하는 권한 함수만 교체합니다. 이후 앱을 배포하고 일반 스탭 계정으로 본인 조 기본 선택, 다른 조 조회·저장·미입력 복원, 휴강 잠금과 중지 계정 차단을 확인합니다. 함수 인자·반환형은 기존과 같습니다.
+
 ## 운영 준비 및 사용 순서
 
 1. `/admin/terms`에서 학기명, 시작일, 종료일을 입력합니다.

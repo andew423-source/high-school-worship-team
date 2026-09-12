@@ -1,4 +1,5 @@
 import { dataResponse, getOperationalApiContext } from "@/lib/api";
+import { attendanceGroupSelection } from "@/domain/attendance-groups";
 
 export async function GET(request: Request, { params }: { params: Promise<{ termId: string }> }) {
   const context = await getOperationalApiContext(); if (context.error) return context.error;
@@ -10,10 +11,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ term
     context.supabase.from("groups").select("id,name,sort_order").eq("version_id", version.id).order("sort_order"),
     context.supabase.from("group_staff_members").select("group_id,staff_id,staff(name)").eq("version_id", version.id),
   ]);
-  const allowedIds = context.profile.role === "ADMIN" ? new Set((allGroups ?? []).map((group) => group.id)) : new Set((staffLinks ?? []).filter((link) => link.staff_id === context.profile.staff_id).map((link) => link.group_id));
-  const groups = (allGroups ?? []).filter((group) => allowedIds.has(group.id)).map((group) => ({ ...group, staffNames: (staffLinks ?? []).filter((link) => link.group_id === group.id).map((link) => { const staff = Array.isArray(link.staff) ? link.staff[0] : link.staff; return staff?.name; }).filter(Boolean) }));
-  const groupId = requestedGroupId && allowedIds.has(requestedGroupId) ? requestedGroupId : groups[0]?.id;
-  if (!groupId) return dataResponse({ groups, meetings: [], students: [], attendance: [] }, { warnings: ["로그인 계정에 담당 조가 연결되지 않았습니다."] });
+  const selection = attendanceGroupSelection(allGroups ?? [], staffLinks ?? [], context.profile.role === "GROUP_STAFF" ? context.profile.staff_id : null, requestedGroupId);
+  const groups = selection.groups.map((group) => ({ ...group, staffNames: (staffLinks ?? []).filter((link) => link.group_id === group.id).map((link) => { const staff = Array.isArray(link.staff) ? link.staff[0] : link.staff; return staff?.name; }).filter(Boolean) }));
+  const groupId = selection.selectedGroupId;
+  if (!groupId) return dataResponse({ groups, meetings: [], students: [], attendance: [] }, { warnings: ["확정된 조 편성에 표시할 조가 없습니다."] });
   const { data: memberRows } = await context.supabase.from("group_student_members").select("term_student_id").eq("version_id", version.id).eq("group_id", groupId);
   const studentIds = (memberRows ?? []).map((item) => item.term_student_id);
   const [{ data: meetings }, { data: roster }, { data: attendance }] = await Promise.all([
